@@ -70,7 +70,7 @@ const Footer = () => {
     <>
       <div className="flex flex-col justify-center items-center">
         {/* Heading */}
-        <div className="w-10/12 flex justify-between items-center border-t-2 py-5">
+        <div className="w-11/12 flex justify-between items-center border-t-2 py-5">
           <div className="w-96 h-20 m-5 flex items-center  text-slate-400 gap-2">
             <i className="p-2 rounded-lg bg-slate-200">
               <SiFoodpanda size={35} />
@@ -89,7 +89,7 @@ const Footer = () => {
         </div>
 
         {/* Policy & Functions */}
-        <div className="w-10/12 flex flex-wrap justify-center md:justify-between items-start text-lg border-t-2 py-5 text-slate-800">
+        <div className="w-11/12 flex flex-wrap justify-center md:justify-between items-start text-lg border-t-2 py-5 text-slate-800">
           <p className="w-full h-auto md:w-96 flex justify-center py-1">
             © 2022 foodpanda
           </p>
@@ -127,7 +127,7 @@ const Footer = () => {
         </div>
 
         {/* Address */}
-        <div className="w-10/12 flex flex-wrap justify-center md:justify-start items-center border-t-2  md:gap-10 md:px-2  py-5  text-slate-600">
+        <div className="w-11/12 flex flex-wrap justify-center md:justify-start items-center border-t-2  md:gap-10 md:px-2  py-5  text-slate-600">
 
           <div className="w-96 h-auto md:w-1/5 md:h-72 py-5">
             <h1 className=" font-extrabold text-xl hover-link">
@@ -204,7 +204,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div className="w-96 mh-auto d:w-3/12 md:h-72 py-5">
+          <div className="w-96 h-auto d:w-3/12 md:h-72 py-5">
             <h1 className=" font-extrabold text-xl hover-link">
             ITALIAN FOOD DELIVERY IN CHITTAGONG
             </h1>
