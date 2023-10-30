@@ -128,7 +128,7 @@ const Footer = () => {
         </div>
 
         {/* Address */}
-        <div className="w-11/12 flex flex-wrap justify-center md:justify-start items-start border-t-2  md:gap-10 md:px-2  py-5  text-slate-600">
+        <div className="w-11/12 flex flex-wrap justify-center md:justify-start items-start border-t-2  md:gap-10 md:px-0  py-5  text-slate-600">
 
           <div className="w-96 h-auto md:w-1/5 md:h-auto py-5">
             <h1 className=" font-extrabold text-lg hover-link">
