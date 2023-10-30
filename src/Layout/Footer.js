@@ -90,11 +90,12 @@ const Footer = () => {
 
         {/* Policy & Functions */}
         <div className="w-11/12 flex flex-wrap justify-center md:justify-between items-start text-lg border-t-2 py-5 text-slate-800">
-          <p className="w-full h-auto md:w-96 flex justify-center py-1">
+          
+          <p className="w-full h-auto md:w-3/12 flex justify-center py-1">
             © 2022 foodpanda
           </p>
 
-          <ul className="w-full md:w-96 flex flex-wrap justify-start gap-2 py-1">
+          <ul className="w-full h-auto md:w-3/12 flex flex-wrap justify-start gap-2 py-1">
             <li className="hover-link">Press</li>
             <li className="hover-link">Help Center</li>
             <li className="hover-link">Terms and conditions</li>
@@ -105,7 +106,7 @@ const Footer = () => {
             <li className="hover-link">Pandapro Subscription</li>
           </ul>
 
-          <ul className="w-full md:w-96 flex flex-wrap justify-start gap-2 py-1">
+          <ul className="w-full h-auto md:w-3/12 flex flex-wrap justify-start gap-2 py-1">
             <li className="hover-link">Dine-in</li>
             <li className="hover-link">Security</li>
             <li className="hover-link">Partner with us</li>
@@ -115,7 +116,7 @@ const Footer = () => {
             <li className="hover-link">Corporate Customer</li>
           </ul>
 
-          <ul className="w-full md:w-96 flex flex-wrap justify-start gap-2 py-1">
+          <ul className="w-full h-auto md:w-3/12 flex flex-wrap justify-start gap-2 py-1">
             <li className="hover-link">pandago - Request a rider</li>
             <li className="hover-link">About pandago</li>
             <li className="hover-link">foodpanda Deals</li>
@@ -127,7 +128,7 @@ const Footer = () => {
         </div>
 
         {/* Address */}
-        <div className="w-11/12 flex flex-wrap justify-center md:justify-start items-center border-t-2  md:gap-10 md:px-2  py-5  text-slate-600">
+        <div className="w-11/12 flex flex-wrap justify-center md:justify-start items-center border-t-2  md:gap-10 md:px-0  py-5  text-slate-600">
 
           <div className="w-96 h-auto md:w-1/5 md:h-72 py-5">
             <h1 className=" font-extrabold text-xl hover-link">
