@@ -5,3 +5,7 @@
 .hover-link{
     @apply hover:text-pink-500 cursor-pointer duration-150
 }
+
+.address-ul{
+    @apply flex flex-wrap justify-start items-start gap-2 mt-3 text-lg
+}
