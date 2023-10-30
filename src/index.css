@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.hover-link{
+    @apply hover:text-pink-500 cursor-pointer duration-150
+}

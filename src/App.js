@@ -1,11 +1,17 @@
-
+import { Route, Routes } from "react-router-dom";
+import Navbar from "./Layout/Navbar";
+import Footer from "./Layout/Footer";
 
 const App = () => {
   return (
     <>
-      <h1>App</h1>
+      <Navbar />
+      <Routes>
+        <Route></Route>
+      </Routes>
+      <Footer />
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;
