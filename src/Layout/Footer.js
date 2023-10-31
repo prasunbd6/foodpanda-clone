@@ -89,9 +89,9 @@ const Footer = () => {
         </div>
 
         {/* Policy & Functions */}
-        <div className="w-11/12 flex flex-wrap justify-center md:justify-between items-start text-lg border-t-2 py-5 text-slate-800">
+        <div className="w-11/12 flex flex-wrap justify-center md:justify-between items-start text-lg border-t-2 py-3 md:py-10 text-slate-800">
 
-          <p className="w-full h-auto md:w-3/12 flex justify-center py-1">
+          <p className="w-full h-auto md:w-2/12 flex justify-center py-1">
             © 2022 foodpanda
           </p>
 
@@ -128,7 +128,7 @@ const Footer = () => {
         </div>
 
         {/* Address */}
-        <div className="w-11/12 flex flex-wrap justify-center md:justify-start items-start border-t-2  md:gap-10 md:px-0  py-5  text-slate-600">
+        <div className="w-11/12 flex flex-wrap justify-center md:justify-start items-start border-t-2  md:gap-12 md:px-1 py-5 md:py-10 text-slate-600">
 
           <div className="w-96 h-auto md:w-1/5 md:h-auto py-5">
             <h1 className=" font-extrabold text-lg hover-link">
