@@ -8,7 +8,7 @@ const Navbar = () => {
   return (
     <>
       <div className="flex felex-col justify-center items-center">
-        <div className="w-full h-auto md:w-11/12 md:h-20 flex flex-wrap justify-between items-center bg-white">
+        <div className="w-full h-auto md:w-11/12 md:h-20 flex flex-wrap justify-between items-center bg-white py-1">
           {/* User Logo & Brand */}
 
           <i className="w-2/12 md:w-2/12 px-1 text-pink-500 text-xl font-bold md:hidden order-1">
