@@ -3,8 +3,8 @@ import React from 'react'
 const Delivery = () => {
   return (
     <>
-    <div className='flex justify-center items-center'>
-      
+    <div className='h-screen flex justify-center items-center'>
+      <h1 className='2xl'> Home</h1>
     </div>
     </>
   )
