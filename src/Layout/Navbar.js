@@ -10,13 +10,7 @@ import {MdOutlineKeyboardArrowDown,MdOutlineDeliveryDining,MdOutlineEmojiPeople}
 
 
 const Navbar = () => {
-    const menu=[
-        {id:1,icon:"MdOutlineDeliveryDining",mname:"Delivery"},
-        {id:2,icon:"MdOutlineEmojiPeople",mname:"Pick-Up"},
-        {id:3,icon:"PiSuitcaseRollingThin",mname:"pandamart"},
-        {id:4,icon:"GiShoppingCart",mname:"shops"},
-        {id:5,icon:"GiForkKnifeSpoon",mname:"Dine-in"}
-    ]
+   
   return (
     <>
       <div className="flex felex-col justify-center items-center">
@@ -66,19 +60,32 @@ const Navbar = () => {
           
           <div className="w-11/12 md:h-12 md:w-11/12 flex justify-start items-center order-5 md:order-5 py-2 gap-1  px-1">
            
-          {menu.map(
-            menu=>{
-                return(
-                    <>
-                    <ul key={menu.id} className=" flex justify-center items-center text-pink-500 gap-1 px-2 hover:border-b-4 border-pink-600 hover:bg-pink-100  hover:rounded-t-lg focus:rounded-t-lg cursor-pointer">
-                <li><GiShoppingCart size={30}/></li>
-                <li className="text-sm">{menu.mname}</li>
-          </ul>
-                    </>
-                )
-            }
-          )}
           
+          <ul className="flex justify-center items-center text-pink-500 gap-1 px-2 hover:border-b-2 border-pink-600 hover:bg-pink-100 outline-none hover:rounded-t-lg  cursor-pointer duration-200 translate">
+                <li><MdOutlineDeliveryDining size={25}/></li>
+                <li className="text-sm">Delivery</li>
+          </ul>
+
+          <ul className="flex justify-center items-center text-pink-500 gap-1 px-2 hover:border-b-2 border-pink-600 hover:bg-pink-100 outline-none hover:rounded-t-lg  cursor-pointer duration-200 translate">
+                <li><MdOutlineEmojiPeople size={25}/></li>
+                <li className="text-sm">Pick-Up</li>
+          </ul>
+
+          <ul className="flex justify-center items-center text-pink-500 gap-1 px-2 hover:border-b-2 border-pink-600 hover:bg-pink-100 outline-none hover:rounded-t-lg  cursor-pointer duration-200 translate">
+                <li><PiSuitcaseRollingThin size={25}/></li>
+                <li className="text-sm">pandamart</li>
+          </ul>
+
+          <ul className="flex justify-center items-center text-pink-500 gap-1 px-2 hover:border-b-2 border-pink-600 hover:bg-pink-100 outline-none hover:rounded-t-lg  cursor-pointer duration-200 translate">
+                <li><GiShoppingCart size={25}/></li>
+                <li className="text-sm">Shops</li>
+          </ul>
+
+          <ul className="flex justify-center items-center text-pink-500 gap-1 px-2 hover:border-b-2 border-pink-600 hover:bg-pink-100 outline-none hover:rounded-t-lg  cursor-pointer duration-200 translate">
+                <li><GiForkKnifeSpoon size={25}/></li>
+                <li className="text-sm">Dine-in</li>
+          </ul>
+                   
 
           
           
