@@ -58,32 +58,32 @@ const Navbar = () => {
           </div>
           </div>
           
-          <div className="w-11/12 md:h-12 md:w-11/12 flex justify-start items-center order-5 md:order-5 py-2 gap-1  px-1">
+          <div className="w-full md:h-12 md:w-full flex justify-center md:justify-start items-center order-5 md:order-5 py-2 gap-1  px-1">
            
           
-          <ul className="flex justify-center items-center text-pink-500 gap-1 px-2 hover:border-b-2 border-pink-600 hover:bg-pink-100 outline-none hover:rounded-t-lg  cursor-pointer duration-200 translate">
-                <li><MdOutlineDeliveryDining size={25}/></li>
-                <li className="text-sm">Delivery</li>
+          <ul className="flex justify-center items-center text-pink-500 border-pink-600 outline-none cursor-pointer duration-200 gap-1 px-2 hover:border-b-2 hover:bg-pink-100 hover:rounded-t-lg active:border-b-2 active:bg-pink-100 active:rounded-t-lg">
+                <li><MdOutlineDeliveryDining size={15}/></li>
+                <li className="text-xs">Delivery</li>
           </ul>
 
-          <ul className="flex justify-center items-center text-pink-500 gap-1 px-2 hover:border-b-2 border-pink-600 hover:bg-pink-100 outline-none hover:rounded-t-lg  cursor-pointer duration-200 translate">
-                <li><MdOutlineEmojiPeople size={25}/></li>
-                <li className="text-sm">Pick-Up</li>
+          <ul className="flex justify-center items-center text-pink-500 border-pink-600 outline-none cursor-pointer duration-200 gap-1 px-2 hover:border-b-2 hover:bg-pink-100 hover:rounded-t-lg active:border-b-2 active:bg-pink-100 active:rounded-t-lg">
+                <li><MdOutlineEmojiPeople size={15}/></li>
+                <li className="text-xs">Pick-Up</li>
           </ul>
 
-          <ul className="flex justify-center items-center text-pink-500 gap-1 px-2 hover:border-b-2 border-pink-600 hover:bg-pink-100 outline-none hover:rounded-t-lg  cursor-pointer duration-200 translate">
-                <li><PiSuitcaseRollingThin size={25}/></li>
-                <li className="text-sm">pandamart</li>
+          <ul className="flex justify-center items-center text-pink-500 border-pink-600 outline-none cursor-pointer duration-200 gap-1 px-2 hover:border-b-2 hover:bg-pink-100 hover:rounded-t-lg active:border-b-2 active:bg-pink-100 active:rounded-t-lg">
+                <li><PiSuitcaseRollingThin size={15}/></li>
+                <li className="text-xs">pandamart</li>
           </ul>
 
-          <ul className="flex justify-center items-center text-pink-500 gap-1 px-2 hover:border-b-2 border-pink-600 hover:bg-pink-100 outline-none hover:rounded-t-lg  cursor-pointer duration-200 translate">
-                <li><GiShoppingCart size={25}/></li>
-                <li className="text-sm">Shops</li>
+          <ul className="flex justify-center items-center text-pink-500 border-pink-600 outline-none cursor-pointer duration-200 gap-1 px-2 hover:border-b-2 hover:bg-pink-100 hover:rounded-t-lg active:border-b-2 active:bg-pink-100 active:rounded-t-lg">
+                <li><GiShoppingCart size={15}/></li>
+                <li className="text-xs">Shops</li>
           </ul>
 
-          <ul className="flex justify-center items-center text-pink-500 gap-1 px-2 hover:border-b-2 border-pink-600 hover:bg-pink-100 outline-none hover:rounded-t-lg  cursor-pointer duration-200 translate">
-                <li><GiForkKnifeSpoon size={25}/></li>
-                <li className="text-sm">Dine-in</li>
+          <ul className="flex justify-center items-center text-pink-500 border-pink-600 outline-none cursor-pointer duration-200 gap-1 px-2 hover:border-b-2 hover:bg-pink-100 hover:rounded-t-lg active:border-b-2 active:bg-pink-100 active:rounded-t-lg">
+                <li><GiForkKnifeSpoon size={15}/></li>
+                <li className="text-xs">Dine-in</li>
           </ul>
                    
 
