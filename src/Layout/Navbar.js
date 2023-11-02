@@ -6,6 +6,8 @@ import { AiOutlineHeart } from "react-icons/ai";
 import { GiShoppingCart,GiForkKnifeSpoon } from "react-icons/gi";
 import {PiGlobeSimpleBold,PiSuitcaseRollingThin} from "react-icons/pi"
 import {MdOutlineKeyboardArrowDown,MdOutlineDeliveryDining,MdOutlineEmojiPeople} from "react-icons/md"
+import { NavLink } from "react-router-dom";
+
 
 
 
@@ -63,25 +65,25 @@ const Navbar = () => {
           <div className="w-full h-auto flex justify-around items-center cursor-pointer text-pink-500 gap-3 border-b-2 shadow-xl order-5  md:w-full md:h-auto md:justify-start md:items-center md:bg-white md:text-2xl md:order-5">
            
           
-          <a className="menu-decoration-standby menu-decoration-hover menu-decoration-active" href="#">
+          <NavLink className="menu-decoration-standby menu-decoration-hover menu-decoration-active" href="#">
                 <MdOutlineDeliveryDining size={20}/><p className=" px-1">Delivery</p>
-          </a>
+          </NavLink>
 
-          <a className="menu-decoration-standby menu-decoration-hover menu-decoration-active" href="#">
+          <NavLink className="menu-decoration-standby menu-decoration-hover menu-decoration-active" href="#">
                 <MdOutlineEmojiPeople size={20}/><p className=" px-1">Pick-Up</p>
-          </a>
-
-          <a className="menu-decoration-standby menu-decoration-hover menu-decoration-active" href="#">
+          </NavLink>
+          
+          <NavLink className="menu-decoration-standby menu-decoration-hover menu-decoration-active" href="#">
                 <PiSuitcaseRollingThin size={20}/><p className=" px-1">pandamart</p>
-          </a>
+          </NavLink>
 
-          <a className="menu-decoration-standby menu-decoration-hover menu-decoration-active" href="#">
+          <NavLink className="menu-decoration-standby menu-decoration-hover menu-decoration-active" href="#">
                 <GiShoppingCart size={20}/><p className=" px-1">Shops</p>
-          </a>
+          </NavLink>
 
-          <a className="menu-decoration-standby menu-decoration-hover menu-decoration-active" href="#">
+          <NavLink className="menu-decoration-standby menu-decoration-hover menu-decoration-active" href="#">
                 <GiForkKnifeSpoon size={20}/><p className=" px-1">Dine-in</p>
-          </a>
+          </NavLink>
           
           
           </div>
