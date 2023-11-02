@@ -13,8 +13,9 @@ const Navbar = () => {
    
   return (
     <>
-      <div className="flex felex-col justify-center items-center">
-        <div className="w-full h-auto md:w-11/12 md:h-20 flex flex-wrap justify-between items-center bg-white py-1">
+      <div className="flex flex-col justify-center items-center">
+
+        <div className="w-full h-auto mt-32 pt-2 flex flex-wrap justify-between items-center bg-white fixed md:w-11/12 md:h-20 md:mt-14">
           {/* User Logo & Brand */}
 
           <i className="w-2/12 px-1 text-pink-500 text-xl font-bold md:hidden order-1">
@@ -26,7 +27,7 @@ const Navbar = () => {
             <i className="p-1 rounded-lg bg-pink-500">
               <SiFoodpanda size={23} className="bg-white rounded-xl" />
             </i>
-            <p className=" font-bold text-2xl">foodpanda</p>
+            <p className=" font-bold text-2xl md:text-3xl">foodpanda</p>
           </div>
 
           
@@ -57,15 +58,22 @@ const Navbar = () => {
             <p>Ashraf Ali Road, Patharghata kotwali Chittagong.</p>
           </div>
           </div>
-          
-          <div className="w-full md:h-12 md:w-full flex justify-center md:justify-start items-center order-5 md:order-5 py-2 gap-1  px-1">
+
+          {/* Menu Operation */}
+          <div className="w-full flex justify-around items-center text-pink-500 gap-3  order-5  md:w-full md:h-24 md:justify-start md:items-center md:text-2xl md:order-5">
            
           
-          <ul className="flex justify-center items-center text-pink-500 border-pink-600 outline-none cursor-pointer duration-200 gap-1 px-2 hover:border-b-2 hover:bg-pink-100 hover:rounded-t-lg active:border-b-2 active:bg-pink-100 active:rounded-t-lg">
-                <li><MdOutlineDeliveryDining size={15}/></li>
-                <li className="text-xs">Delivery</li>
-          </ul>
+          <button className="w-26 flex justify-center items-center px-3 py-2 hover:border hover:border-b-2 hover:bottom-3 hover:bg-pink-100">
+                <MdOutlineDeliveryDining size={23}/><span>Delivery</span>
+          </button>
 
+          <button className="w-26 flex justify-center items-center px-3 py-2 hover:border hover:border-b-2 hover:bottom-3 hover:bg-pink-100">
+                <MdOutlineDeliveryDining size={23}/><span>Delivery</span>
+          </button>
+
+          
+
+          {/* 
           <ul className="flex justify-center items-center text-pink-500 border-pink-600 outline-none cursor-pointer duration-200 gap-1 px-2 hover:border-b-2 hover:bg-pink-100 hover:rounded-t-lg active:border-b-2 active:bg-pink-100 active:rounded-t-lg">
                 <li><MdOutlineEmojiPeople size={15}/></li>
                 <li className="text-xs">Pick-Up</li>
@@ -85,7 +93,7 @@ const Navbar = () => {
                 <li><GiForkKnifeSpoon size={15}/></li>
                 <li className="text-xs">Dine-in</li>
           </ul>
-                   
+              */}     
 
           
           

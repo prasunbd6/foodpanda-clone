@@ -9,3 +9,4 @@
 .address-ul{
     @apply flex flex-wrap justify-start items-start gap-2 mt-3 text-lg
 }
+
