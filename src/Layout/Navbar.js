@@ -60,45 +60,33 @@ const Navbar = () => {
           </div>
 
           {/* Menu Operation */}
-          <div className="w-full flex justify-around items-center text-pink-500 gap-3  order-5  md:w-full md:h-24 md:justify-start md:items-center md:text-2xl md:order-5">
+          <div className="w-full h-auto flex justify-around items-center cursor-pointer text-pink-500 gap-3 border-b-2 shadow-xl order-5  md:w-full md:h-auto md:justify-start md:items-center md:bg-white md:text-2xl md:order-5">
            
           
-          <button className="w-26 flex justify-center items-center px-3 py-2 hover:border hover:border-b-2 hover:bottom-3 hover:bg-pink-100">
-                <MdOutlineDeliveryDining size={23}/><span>Delivery</span>
-          </button>
+          <a className="menu-decoration-standby menu-decoration-hover menu-decoration-active" href="#">
+                <MdOutlineDeliveryDining size={20}/><p className=" px-1">Delivery</p>
+          </a>
 
-          <button className="w-26 flex justify-center items-center px-3 py-2 hover:border hover:border-b-2 hover:bottom-3 hover:bg-pink-100">
-                <MdOutlineDeliveryDining size={23}/><span>Delivery</span>
-          </button>
+          <a className="menu-decoration-standby menu-decoration-hover menu-decoration-active" href="#">
+                <MdOutlineEmojiPeople size={20}/><p className=" px-1">Pick-Up</p>
+          </a>
 
-          
+          <a className="menu-decoration-standby menu-decoration-hover menu-decoration-active" href="#">
+                <PiSuitcaseRollingThin size={20}/><p className=" px-1">pandamart</p>
+          </a>
 
-          {/* 
-          <ul className="flex justify-center items-center text-pink-500 border-pink-600 outline-none cursor-pointer duration-200 gap-1 px-2 hover:border-b-2 hover:bg-pink-100 hover:rounded-t-lg active:border-b-2 active:bg-pink-100 active:rounded-t-lg">
-                <li><MdOutlineEmojiPeople size={15}/></li>
-                <li className="text-xs">Pick-Up</li>
-          </ul>
+          <a className="menu-decoration-standby menu-decoration-hover menu-decoration-active" href="#">
+                <GiShoppingCart size={20}/><p className=" px-1">Shops</p>
+          </a>
 
-          <ul className="flex justify-center items-center text-pink-500 border-pink-600 outline-none cursor-pointer duration-200 gap-1 px-2 hover:border-b-2 hover:bg-pink-100 hover:rounded-t-lg active:border-b-2 active:bg-pink-100 active:rounded-t-lg">
-                <li><PiSuitcaseRollingThin size={15}/></li>
-                <li className="text-xs">pandamart</li>
-          </ul>
-
-          <ul className="flex justify-center items-center text-pink-500 border-pink-600 outline-none cursor-pointer duration-200 gap-1 px-2 hover:border-b-2 hover:bg-pink-100 hover:rounded-t-lg active:border-b-2 active:bg-pink-100 active:rounded-t-lg">
-                <li><GiShoppingCart size={15}/></li>
-                <li className="text-xs">Shops</li>
-          </ul>
-
-          <ul className="flex justify-center items-center text-pink-500 border-pink-600 outline-none cursor-pointer duration-200 gap-1 px-2 hover:border-b-2 hover:bg-pink-100 hover:rounded-t-lg active:border-b-2 active:bg-pink-100 active:rounded-t-lg">
-                <li><GiForkKnifeSpoon size={15}/></li>
-                <li className="text-xs">Dine-in</li>
-          </ul>
-              */}     
-
+          <a className="menu-decoration-standby menu-decoration-hover menu-decoration-active" href="#">
+                <GiForkKnifeSpoon size={20}/><p className=" px-1">Dine-in</p>
+          </a>
           
           
           </div>
         </div>
+
       </div>
     </>
   );
