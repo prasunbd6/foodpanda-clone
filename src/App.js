@@ -7,10 +7,12 @@ import Pandamart from "./Components/PandaMart";
 import Shops from "./Components/Shops";
 import Pickup from "./Components/PickUp";
 
+
 const App = () => {
   return (
     <>
       <Navbar />
+      
       <Routes>
         <Route path="/" element={<Delivery/>} />
         <Route path="/dinein" element={<Dinein/>} />
@@ -18,6 +20,7 @@ const App = () => {
         <Route path="/shops" element={<Shops/>} />
         <Route path="/pickup" element={<Pickup/>} />
       </Routes>
+      
       <Footer />
     </>
   );

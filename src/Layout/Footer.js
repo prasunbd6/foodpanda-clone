@@ -96,34 +96,34 @@ const Footer = () => {
           </p>
 
           <ul className="w-full h-auto md:w-3/12 flex flex-wrap justify-start gap-2 py-1">
-            <li className="hover-link">Press</li>
-            <li className="hover-link">Help Center</li>
-            <li className="hover-link">Terms and conditions</li>
-            <li className="hover-link">Privacy policy</li>
-            <li className="hover-link">Refund Account</li>
-            <li className="hover-link">Terms & Conditions</li>
-            <li className="hover-link">Cashback Program</li>
-            <li className="hover-link">Pandapro Subscription</li>
+            <li className="hover-link ">Press</li>
+            <li className="hover-link ">Help Center</li>
+            <li className="hover-link ">Terms and conditions</li>
+            <li className="hover-link ">Privacy policy</li>
+            <li className="hover-link ">Refund Account</li>
+            <li className="hover-link ">Terms & Conditions</li>
+            <li className="hover-link ">Cashback Program</li>
+            <li className="hover-link ">Pandapro Subscription</li>
           </ul>
 
           <ul className="w-full h-auto md:w-3/12 flex flex-wrap justify-start gap-2 py-1">
-            <li className="hover-link">Dine-in</li>
-            <li className="hover-link">Security</li>
-            <li className="hover-link">Partner with us</li>
-            <li className="hover-link">How foodpanda works</li>
-            <li className="hover-link">Download foodpanda Apps</li>
-            <li className="hover-link">Careers</li>
-            <li className="hover-link">Corporate Customer</li>
+            <li className="hover-link ">Dine-in</li>
+            <li className="hover-link ">Security</li>
+            <li className="hover-link ">Partner with us</li>
+            <li className="hover-link ">How foodpanda works</li>
+            <li className="hover-link ">Download foodpanda Apps</li>
+            <li className="hover-link ">Careers</li>
+            <li className="hover-link ">Corporate Customer</li>
           </ul>
 
           <ul className="w-full h-auto md:w-3/12 flex flex-wrap justify-start gap-2 py-1">
-            <li className="hover-link">pandago - Request a rider</li>
-            <li className="hover-link">About pandago</li>
-            <li className="hover-link">foodpanda Deals</li>
-            <li className="hover-link">Grocery delivery</li>
-            <li className="hover-link">Become an affiliate</li>
-            <li className="hover-link">All cities</li>
-            <li className="hover-link">Ramadan delivery</li>
+            <li className="hover-link ">pandago - Request a rider</li>
+            <li className="hover-link ">About pandago</li>
+            <li className="hover-link ">foodpanda Deals</li>
+            <li className="hover-link ">Grocery delivery</li>
+            <li className="hover-link ">Become an affiliate</li>
+            <li className="hover-link ">All cities</li>
+            <li className="hover-link ">Ramadan delivery</li>
           </ul>
         </div>
 
@@ -131,14 +131,14 @@ const Footer = () => {
         <div className="w-11/12 flex flex-wrap justify-center md:justify-start items-start border-t-2  md:gap-12 md:px-1 py-5 md:py-10 text-slate-600">
 
           <div className="w-96 h-auto md:w-1/5 md:h-auto py-5">
-            <h1 className=" font-extrabold text-lg hover-link">
+            <h1 className=" font-extrabold text-lg hover-link ">
               BENGALI FOOD DELIVERY IN CHITTAGONG
             </h1>
             <ul className="address-ul">
               {bengali.map((bengali) => {
                 return (
                   <>
-                    <li key={bengali.id} className="hover-link">{bengali.hname}</li>,
+                    <li key={bengali.id} className="hover-link ">{bengali.hname}</li>,
                   </>
                 );
               })}
@@ -146,14 +146,14 @@ const Footer = () => {
           </div>
 
           <div className="w-96 h-auto md:w-1/5 md:h-auto py-5">
-            <h1 className="font-extrabold text-lg hover-link">
+            <h1 className="font-extrabold text-lg hover-link ">
             FAST FOOD DELIVERY IN CHITTAGONG
             </h1>
             <ul className="address-ul">
               {fastFood.map((fastFood) => {
                 return (
                   <>
-                    <li key={fastFood.id} className="hover-link">{fastFood.hname}</li>,
+                    <li key={fastFood.id} className="hover-link ">{fastFood.hname}</li>,
                   </>
                 );
               })}
@@ -161,14 +161,14 @@ const Footer = () => {
           </div>
 
           <div className="w-96 h-auto md:w-1/5 md:h-auto py-5">
-            <h1 className="font-extrabold text-lg hover-link">
+            <h1 className="font-extrabold text-lg hover-link ">
             INDIAN FOOD DELIVERY IN CHITTAGONG
             </h1>
             <ul className="address-ul">
               {indian.map((indian) => {
                 return (
                   <>
-                    <li key={indian.id} className="hover-link">{indian.hname}</li>,
+                    <li key={indian.id} className="hover-link ">{indian.hname}</li>,
                   </>
                 );
               })}
@@ -176,14 +176,14 @@ const Footer = () => {
           </div>
 
           <div className="w-96 h-auto md:w-1/5 md:h-auto py-5">
-            <h1 className="font-extrabold text-lg hover-link">
+            <h1 className="font-extrabold text-lg hover-link ">
             CHINESE FOOD DELIVERY IN CHITTAGONG
             </h1>
             <ul className="address-ul">
               {chinese.map((chinese) => {
                 return (
                   <>
-                    <li key={chinese.id} className="hover-link">{chinese.hname}</li>,
+                    <li key={chinese.id} className="hover-link ">{chinese.hname}</li>,
                   </>
                 );
               })}
@@ -191,14 +191,14 @@ const Footer = () => {
           </div>
 
           <div className="w-96 h-auto md:w-1/5 md:h-auto py-5">
-            <h1 className=" font-extrabold text-lg hover-link">
+            <h1 className=" font-extrabold text-lg hover-link ">
             EUROPEAN FOOD DELIVERY IN CHITTAGONG
             </h1>
             <ul className="address-ul">
               {european.map((european) => {
                 return (
                   <>
-                    <li key={european.id} className="hover-link">{european.hname}</li>,
+                    <li key={european.id} className="hover-link ">{european.hname}</li>,
                   </>
                 );
               })}
@@ -206,14 +206,14 @@ const Footer = () => {
           </div>
 
           <div className="w-96 h-auto md:w-1/5 md:h-auto py-5">
-            <h1 className=" font-extrabold text-lg hover-link">
+            <h1 className=" font-extrabold text-lg hover-link ">
             ITALIAN FOOD DELIVERY IN CHITTAGONG
             </h1>
             <ul className="address-ul">
               {italian.map((italian) => {
                 return (
                   <>
-                    <li key={italian.id} className="hover-link">{italian.hname}</li>,
+                    <li key={italian.id} className="hover-link ">{italian.hname}</li>,
                   </>
                 );
               })}
@@ -230,7 +230,7 @@ const Footer = () => {
             {country.map((country) => {
               return (
                 <>
-                  <li key={country.id} className="hover-link cursor-pointer">
+                  <li key={country.id} className="hover-link ">
                     {country.cname}
                   </li>
                   <li>|</li>
