@@ -1,3 +1,4 @@
+import {SlBadge} from "react-icons/sl"
 
 const Delivery = () => {
 
@@ -68,50 +69,50 @@ const Delivery = () => {
 <div className='h-auto flex flex-col justify-center items-center mt-0 gap-4'>
 
 
-    <div className=' w-11/12 h-screen border-2  flex flex-wrap justify-center items-start md:justify-start md:items-start'>
+    <div className=' w-11/12 h-auto border-2 flex flex-wrap justify-center items-start text-slate-600 md:justify-start md:items-start'>
       
-      <div className='w-96 h-[840px] flex flex-col justify-start items-start px-4 overflow-y-scroll'>
-        <p>Filters</p>
+      <div className='hidden md:w-56 md:h-[840px] md:flex md:flex-col md:justify-start md:items-start md:px-4 md:gap-5 md:overflow-y-scroll'>
+        
+        <p className="text-xl font-bold">Filters</p>
   
         {/*Sort by*/}
-        <div className='w-full flex flex-wrap flex-col justify-start items-start'>
-          <p>Sort by</p>
+        <div className='w-full flex flex-wrap flex-col justify-start items-start gap-2'>
+          <p className="filter-heading-text">Sort by</p>
           <ul>
-          <li>Relevance</li>
-          <li>Fastest Delivery</li>
-          <li>Distance</li>
+          <li className="filter-list"><input type="radio" name="sort" className="hover:rounded-full hover:bg-pink-700"/>Relevance</li>
+          <li className="filter-list"><input type="radio" name="sort"/>Fastest Delivery</li>
+          <li className="filter-list"><input type="radio" name="sort"/>Distance</li>
         </ul>
         </div>
 
           {/*Quick Filters*/}
-        <div className='w-full flex flex-wrap flex-col justify-start items-start'>
-        <p>Quick filters</p>
-        <ul>
-        <li>Top restaurant button</li>
-      </ul>
+        <div className='w-full flex flex-wrap flex-col justify-start items-start gap-2'>
+        <p className="filter-heading-text">Quick filters</p>
+        
+        <button className="border rounded-full py-1 px-3 flex items-center gap-2 hover:bg-pink-50"><span className=" text-pink-600"><SlBadge/></span> Top restaurant</button>
+      
       </div>
 
        {/*Offers*/}
-       <div className='w-full flex flex-wrap flex-col justify-start items-start'>
-       <p>Offers</p>
+       <div className='w-full flex flex-wrap flex-col justify-start items-start gap-2'>
+       <p className="filter-heading-text">Offers</p>
        <ul>
-       <li>Relevance</li>
-       <li>Fastest Delivery</li>
-       <li>Distance</li>
+       <li className="filter-list"><input type="checkbox" value="Accepts vouchers"/>Accepts vouchers</li>
+       <li className="filter-list"><input type="checkbox" value="Deals"/>Deals</li>
      </ul>
      </div>
 
       {/*Cuisines*/}
-      <div className='w-full flex flex-wrap flex-col justify-start items-start'>
-      <p>Cuisines</p>
+      <div className='w-full flex flex-wrap flex-col justify-start items-start gap-2'>
+      <p className="filter-heading-text">Cuisines</p>
       <ul>
-      <li>Search bar</li>
+      <li className="filter-list">Search bar</li>
 
       {
         cuisines.map(x=>{
           return(
             <>
-            <li key={x.id}>{x.cname}</li>
+            <li key={x.id} className="filter-list"><input type="checkbox" value={x.cname}/>{x.cname}</li>
             </>
           )
         })
@@ -122,11 +123,7 @@ const Delivery = () => {
       </ul>
     </div>
         
-
-      </div>
-
-      
-      
+      </div> 
     </div>
 
     
