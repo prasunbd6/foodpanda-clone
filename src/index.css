@@ -10,6 +10,12 @@
     @apply md:w-4/12 md:h-14 md:flex md:justify-around md:items-center md:text-center md:py-1 md:order-4
 }
 
+/* Address */
+
+.address-ul{
+    @apply w-full flex flex-wrap justify-start items-center text-justify gap-1 
+}
+
 /* Menu Operation */
 
 .menu-operation-in-ul-config{
@@ -37,10 +43,3 @@
     @apply hover:text-pink-500 cursor-pointer
 }
 
-#circle{
-    background-color: limegreen;
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    margin: calc(100vh + 300px) auto;
-}
