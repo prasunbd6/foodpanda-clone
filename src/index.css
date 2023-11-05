@@ -44,7 +44,7 @@
 }
 
 .filter-list{
-    @apply flex justify-start items-center px-1 cursor-pointer gap-4 hover:text-pink-700
+    @apply flex justify-start items-center px-1 py-1 cursor-pointer gap-5 hover:text-pink-500
 }
 
 /* Footer */
