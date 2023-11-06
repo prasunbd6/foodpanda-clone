@@ -107,13 +107,28 @@ const Delivery = () => {
             <div className="w-full flex flex-wrap flex-col justify-start items-start gap-2">
               <p className="filter-heading-text">Offers</p>
               <ul>
-                <li className="filter-list">
-                  <input type="checkbox" value="Accepts vouchers" />
-                  Accepts vouchers
+                <li className="filter-list group">
+                  <label className="flex items-center gap-5">
+                    <input
+                      type="checkbox"
+                      value="Accepts vouchers"
+                      className="filter-list-label"
+                    />
+                    <p className="group-hover:text-pink-500">
+                      Accepts vouchers
+                    </p>
+                  </label>
                 </li>
-                <li className="filter-list">
-                  <input type="checkbox" value="Deals" />
-                  Deals
+
+                <li className="filter-list group">
+                  <label className="flex items-center gap-5">
+                    <input
+                      type="checkbox"
+                      value="Deals"
+                      className="filter-list-label"
+                    />
+                    <p className="group-hover:text-pink-500">Deals</p>
+                  </label>
                 </li>
               </ul>
             </div>
@@ -127,15 +142,17 @@ const Delivery = () => {
                 {cuisines.map((x) => {
                   return (
                     <>
-                      <li key={x.id} className="filter-list">
-                        <input
-                          type="checkbox"
-                          value={x.cname}
-                          className="appearance-none w-6 h-6 border-2 border-pink-500 rounded-md focus:outline-none checked:border-opacity-10 checked:bg-pink-600 hover:ring-2 hover:ring-pink-600"
-                        />
-                        
+                      <li key={x.id} className="filter-list group">
+                        <label className="flex items-center gap-5">
+                          <input
+                            type="checkbox"
+                            id={x.id} // Add an id to the checkbox
+                            value={x.cname}
+                            className="filter-list-label"
+                          />
 
-                        <p>{x.cname}</p>
+                          <p className="group-hover:text-pink-500">{x.cname}</p>
+                        </label>
                       </li>
                     </>
                   );
