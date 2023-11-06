@@ -70,7 +70,7 @@ const Footer = () => {
     <>
       <div className="flex flex-col justify-center items-center">
         {/* Heading */}
-        <div className="w-11/12 flex justify-between items-center border-t-2 py-5">
+        <div className="w-11/12 flex justify-between items-center border-t-2 py-5 mt-5">
           <div className="w-96 h-20 m-5 flex items-center  text-slate-400 gap-2">
             <i className="p-2 rounded-lg bg-slate-200">
               <SiFoodpanda size={35} />

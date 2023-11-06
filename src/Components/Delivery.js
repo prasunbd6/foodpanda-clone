@@ -1,7 +1,6 @@
 import { SlBadge } from "react-icons/sl";
 
 const Delivery = () => {
-  
   const cuisines = [
     { id: 1, cname: "American" },
     { id: 2, cname: "Asian" },
@@ -55,6 +54,12 @@ const Delivery = () => {
     { id: 50, cname: "Wraps" },
   ];
 
+  const sortby = [
+    { id: 1, type: "Relevance" },
+    { id: 2, type: "Fastest Delivery" },
+    { id: 3, type: "Distance" },
+  ];
+
   return (
     <>
       <div className="flex flex-col justify-center items-center mt-36 pt-1 md:mt-28">
@@ -65,30 +70,29 @@ const Delivery = () => {
       </div>
 
       <div className="h-auto flex flex-col justify-center items-center mt-0 gap-4">
-        <div className=" w-11/12 h-auto border-2 flex flex-wrap justify-center items-start text-slate-600 md:justify-start md:items-start">
-          <div className="hidden md:w-64 md:h-[840px] md:flex md:flex-col md:justify-start md:items-start md:px-4 md:gap-5 md:overflow-y-scroll">
+        <div className=" w-11/12 h-auto flex flex-wrap justify-center items-start text-slate-600 md:justify-start md:items-start md:mt-5">
+          
+        <div className="hidden md:mt-3 md:w-64 md:h-[840px] md:flex md:flex-col md:justify-start md:items-start md:px-4 md:gap-5 md:border md:border-l-2 rounded-s-2xl md:pt-5 md:overflow-y-scroll">
             <p className="text-xl font-bold">Filters</p>
 
             {/*Sort by*/}
             <div className="w-full flex flex-wrap flex-col justify-start items-start gap-2">
               <p className="filter-heading-text">Sort by</p>
               <ul>
-                <li className="filter-list">
-                  <input
-                    type="radio"
-                    name="sort"
-                    className="hover:rounded-full hover:bg-pink-700"
-                  />
-                  Relevance
-                </li>
-                <li className="filter-list">
-                  <input type="radio" name="sort" />
-                  Fastest Delivery
-                </li>
-                <li className="filter-list">
-                  <input type="radio" name="sort" />
-                  Distance
-                </li>
+                {sortby.map((y) => {
+                  return (
+                    <>
+                      <label className="flex items-center py-1 gap-5">
+                        <input type="radio" name="status" id={y.id} checked
+                          className="filter-list-label-round peer/draft"
+                        />
+                        <span className="group-hover:text-pink-500 peer-checked/draft:text-pink-500">
+                          {y.type}
+                        </span>
+                      </label>
+                    </>
+                  );
+                })}
               </ul>
             </div>
 
@@ -113,7 +117,7 @@ const Delivery = () => {
                     <input
                       type="checkbox"
                       value="Accepts vouchers"
-                      className="filter-list-label"
+                      className="filter-list-label-square"
                     />
                     <p className="group-hover:text-pink-500">
                       Accepts vouchers
@@ -126,7 +130,7 @@ const Delivery = () => {
                     <input
                       type="checkbox"
                       value="Deals"
-                      className="filter-list-label"
+                      className="filter-list-label-square"
                     />
                     <p className="group-hover:text-pink-500">Deals</p>
                   </label>
@@ -138,7 +142,9 @@ const Delivery = () => {
             <div className="w-full flex flex-wrap flex-col justify-start items-start gap-2">
               <p className="filter-heading-text">Cuisines</p>
               <ul>
-                <li className="filter-list">Search bar</li>
+                <li className="filter-list">
+                Search bar
+                </li>
 
                 {cuisines.map((x) => {
                   return (
@@ -149,7 +155,7 @@ const Delivery = () => {
                             type="checkbox"
                             id={x.id} // Add an id to the checkbox
                             value={x.cname}
-                            className="filter-list-label"
+                            className="filter-list-label-square"
                           />
 
                           <p className="group-hover:text-pink-500">{x.cname}</p>
