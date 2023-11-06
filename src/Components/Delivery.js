@@ -86,13 +86,13 @@ const Delivery = () => {
                 {sortby.map((y) => {
                   return (
                     <>
-                      <label className="flex items-center py-1 gap-5">
+                      <label className="flex items-center py-1 gap-5 group">
                         <input
                           type="radio"
                           name="status"
                           id={y.id}
                           checked
-                          className="filter-list-label-round peer/draft "
+                          className="filter-list-label-round peer/draft"
                         />
                         <span className="group-hover:text-pink-500 peer-checked/draft:text-pink-500">
                           {y.type}
