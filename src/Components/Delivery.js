@@ -1,6 +1,7 @@
 import { SlBadge } from "react-icons/sl";
 
 const Delivery = () => {
+  
   const cuisines = [
     { id: 1, cname: "American" },
     { id: 2, cname: "Asian" },

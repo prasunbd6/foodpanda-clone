@@ -7,7 +7,8 @@
 /* login, Signup & language */
 
 .login-signup-language-md-config{
-    @apply md:w-4/12 md:h-14 md:flex md:justify-around md:items-center md:text-center md:py-1 md:order-4
+    @apply md:w-4/12 md:h-14 md:flex md:justify-around md:items-center md:text-center md:py-1 
+    md:order-4
 }
 
 /* Address */
@@ -19,23 +20,28 @@
 /* Menu Operation */
 
 .menu-operation-in-ul-config{
-    @apply w-full h-auto flex justify-around items-center cursor-pointer text-pink-500 gap-3 border-b-2 shadow-xl order-5 
+    @apply w-full h-auto flex justify-around items-center cursor-pointer text-pink-500 gap-3 
+    border-b-2 shadow-xl order-5 
 }
 
 .menu-operation-in-md-config{
-    @apply md:w-full md:h-auto md:justify-start md:items-center md:bg-white md:text-2xl md:order-5
+    @apply md:w-full md:h-auto md:justify-start md:items-center md:bg-white md:text-2xl 
+    md:order-5
 }
 
 .menu-decoration-standby{
-    @apply w-auto flex flex-wrap justify-center items-center px-1 py-2 bg-white border-b-2 border-white
+    @apply w-auto flex flex-wrap justify-center items-center px-1 py-2 bg-white border-b-2 
+    border-white
 }
 
 .menu-decoration-hover{
-    @apply hover:bg-pink-100 hover:border-b-2 hover:border-pink-600 hover:rounded-t-md
+    @apply hover:bg-pink-100 hover:border-b-2 hover:border-pink-600 
+    hover:rounded-t-md
 }
 
 .menu-decoration-active{
-    @apply active:bg-pink-100 active:border-b-2 active:border-pink-600
+    @apply active:bg-pink-100 active:border-b-2 
+    active:border-pink-600
 }
 
 /* Filter */
@@ -48,7 +54,11 @@
 }
 
 .filter-list-label{
-    @apply appearance-none w-5 h-5 border-2 border-pink-500  rounded-md focus:outline-none checked:border-opacity-10 checked:bg-pink-600 group-hover:text-pink-500 group-hover:rounded-md group-hover:ring-2 group-hover:ring-pink-600  group-checked:border-opacity-10 group-checked:bg-pink-600
+    @apply appearance-none w-5 h-5 border-2 border-pink-500  rounded-md 
+    focus:outline-none checked:border-opacity-10 checked:bg-pink-600 
+    group-hover:text-pink-500 group-hover:rounded-md group-hover:ring-2 
+    group-hover:ring-pink-600  group-checked:border-opacity-10 
+    group-checked:bg-pink-600
 }
 
 /* Footer */
