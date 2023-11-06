@@ -65,7 +65,7 @@ const Navbar = () => {
 
           {/* Map Logo & Address */}
           <div className="w-full md:w-3/12 py-1 flex justify-center md:justify-end md:order-3 order-4">
-            <div className="w-96 md:w-auto rounded-md flex justify-center md:justify-end items-center text-sm py-1 text-center gap-2 cursor-pointer hover:bg-pink-100 duration-300">
+            <div className="w-96 md:w-auto rounded-md flex justify-center items-center md:justify-start  text-sm py-1 px-1 gap-1 text-center cursor-pointer hover:bg-pink-100 duration-300">
               <i>
                 <HiOutlineMapPin />
               </i>

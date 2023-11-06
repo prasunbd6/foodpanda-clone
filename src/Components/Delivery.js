@@ -54,6 +54,17 @@ const Delivery = () => {
     { id: 50, cname: "Wraps" },
   ];
 
+  const sortby = [
+    { id: 1, type: "Relevance" },
+    { id: 2, type: "Fastest Delivery" },
+    { id: 3, type: "Distance" },
+  ];
+
+  const offers = [
+    { id: 1, offers: "Accept vouchers" },
+    { id: 2, offers: "Deals" },
+  ];
+
   return (
     <>
       <div className="flex flex-col justify-center items-center mt-36 pt-1 md:mt-28">
@@ -64,30 +75,32 @@ const Delivery = () => {
       </div>
 
       <div className="h-auto flex flex-col justify-center items-center mt-0 gap-4">
-        <div className=" w-11/12 h-auto border-2 flex flex-wrap justify-center items-start text-slate-600 md:justify-start md:items-start">
-          <div className="hidden md:w-64 md:h-[840px] md:flex md:flex-col md:justify-start md:items-start md:px-4 md:gap-5 md:overflow-y-scroll">
+        <div className=" w-11/12 h-auto flex flex-wrap justify-center items-start text-slate-600 md:justify-start md:items-start md:mt-5">
+          <div className="hidden md:mt-3 md:w-64 md:h-[840px] md:flex md:flex-col md:justify-start md:items-start md:px-4 md:gap-5 md:border md:border-l-2 rounded-s-2xl md:pt-5 md:overflow-y-scroll">
             <p className="text-xl font-bold">Filters</p>
 
             {/*Sort by*/}
             <div className="w-full flex flex-wrap flex-col justify-start items-start gap-2">
               <p className="filter-heading-text">Sort by</p>
               <ul>
-                <li className="filter-list">
-                  <input
-                    type="radio"
-                    name="sort"
-                    className="hover:rounded-full hover:bg-pink-700"
-                  />
-                  Relevance
-                </li>
-                <li className="filter-list">
-                  <input type="radio" name="sort" />
-                  Fastest Delivery
-                </li>
-                <li className="filter-list">
-                  <input type="radio" name="sort" />
-                  Distance
-                </li>
+                {sortby.map((y) => {
+                  return (
+                    <>
+                      <label className="flex items-center py-1 gap-5">
+                        <input
+                          type="radio"
+                          name="status"
+                          id={y.id}
+                          checked
+                          className="filter-list-label-round peer/draft "
+                        />
+                        <span className="group-hover:text-pink-500 peer-checked/draft:text-pink-500">
+                          {y.type}
+                        </span>
+                      </label>
+                    </>
+                  );
+                })}
               </ul>
             </div>
 
@@ -98,7 +111,7 @@ const Delivery = () => {
               <button className="border rounded-full py-1 px-3 flex items-center gap-2 hover:bg-pink-50">
                 <span className=" text-pink-600">
                   <SlBadge />
-                </span>{" "}
+                </span>
                 Top restaurant
               </button>
             </div>
@@ -107,14 +120,24 @@ const Delivery = () => {
             <div className="w-full flex flex-wrap flex-col justify-start items-start gap-2">
               <p className="filter-heading-text">Offers</p>
               <ul>
-                <li className="filter-list">
-                  <input type="checkbox" value="Accepts vouchers" />
-                  Accepts vouchers
-                </li>
-                <li className="filter-list">
-                  <input type="checkbox" value="Deals" />
-                  Deals
-                </li>
+                {offers.map((o) => {
+                  return (
+                    <>
+                      <li className="filter-list group" key={o.id}>
+                        <label className="flex items-center gap-5">
+                          <input
+                            type="checkbox"
+                            value={o.offers}
+                            className="filter-list-label-square"
+                          />
+                          <p className="group-hover:text-pink-500">
+                            {o.offers}
+                          </p>
+                        </label>
+                      </li>
+                    </>
+                  );
+                })}
               </ul>
             </div>
 
@@ -127,15 +150,17 @@ const Delivery = () => {
                 {cuisines.map((x) => {
                   return (
                     <>
-                      <li key={x.id} className="filter-list">
-                        <input
-                          type="checkbox"
-                          value={x.cname}
-                          className="appearance-none w-6 h-6 border-2 border-pink-500 rounded-md focus:outline-none checked:border-opacity-10 checked:bg-pink-600 hover:ring-2 hover:ring-pink-600"
-                        />
-                        
+                      <li key={x.id} className="filter-list group">
+                        <label className="flex items-center gap-5">
+                          <input
+                            type="checkbox"
+                            id={x.id} // Add an id to the checkbox
+                            value={x.cname}
+                            className="filter-list-label-square"
+                          />
 
-                        <p>{x.cname}</p>
+                          <p className="group-hover:text-pink-500">{x.cname}</p>
+                        </label>
                       </li>
                     </>
                   );
