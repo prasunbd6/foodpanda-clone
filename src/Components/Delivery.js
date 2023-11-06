@@ -145,24 +145,11 @@ const Delivery = () => {
             <div className="w-full flex flex-wrap flex-col justify-start items-start gap-2">
               <p className="filter-heading-text">Cuisines</p>
               <ul>
-                <li className="filter-list">
-                Search bar
-                </li>
+                <li className="filter-list">Search bar</li>
 
                 {cuisines.map((x) => {
                   return (
                     <>
-                      <li key={x.id} className="filter-list group">
-                        <label className="flex items-center gap-5">
-                          <input
-                            type="checkbox"
-                            id={x.id} // Add an id to the checkbox
-                            value={x.cname}
-                            className="filter-list-label-square"
-                          />
-
-                          <p className="group-hover:text-pink-500">{x.cname}</p>
-                        </label>
                       <li key={x.id} className="filter-list group">
                         <label className="flex items-center gap-5">
                           <input
