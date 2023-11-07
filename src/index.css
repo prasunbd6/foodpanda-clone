@@ -55,17 +55,32 @@
 
 .filter-list-label-square{
     @apply appearance-none w-5 h-5 border-2 border-pink-500  rounded-md 
+
     focus:outline-none checked:border-opacity-10 checked:bg-pink-600 
-    group-hover:text-pink-500 group-hover:rounded-md group-hover:ring-2 
-    group-hover:ring-pink-600  group-checked:border-opacity-10 
+
+    group-hover:text-pink-500 
+    group-hover:rounded-md 
+    group-hover:ring-2 
+    group-hover:ring-pink-600  
+    
+    group-checked:border-opacity-10 
     group-checked:bg-pink-600
 }
 
 .filter-list-label-round{
-    @apply appearance-none w-5 h-5 border border-pink-500  rounded-full 
-    focus:outline-none checked:border-opacity-10 checked:bg-pink-600 
-    group-hover:text-pink-500 group-hover:rounded-full group-hover:ring-2 
-    group-hover:ring-pink-600   group-checked:border-opacity-10 
+    @apply appearance-none w-5 h-5 border border-pink-500 rounded-full 
+
+    focus:outline-none 
+
+    checked:border-opacity-10 
+    checked:bg-pink-600 
+
+    group-hover:text-pink-500 
+    group-hover:rounded-full 
+    group-hover:ring-2 
+    group-hover:ring-pink-600
+
+    group-checked:border-opacity-10 
     group-checked:bg-pink-600
 }
 

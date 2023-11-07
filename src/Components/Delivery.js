@@ -82,22 +82,57 @@ const Delivery = () => {
             {/*Sort by*/}
             <div className="w-full flex flex-wrap flex-col justify-start items-start gap-2">
               <p className="filter-heading-text">Sort by</p>
+
               <ul>
+                <li>
+                  <label className=" flex justify-start items-center gap-10 group">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="icon icon-tabler icon-tabler-circle-dot-filled absolute border rounded-full border-pink-500 text-white group-hover:border-2 group-hover:border-pink-500"
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      stroke-width="2"
+                      stroke="currentColor"
+                      fill="none"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                      <path
+                        d="M17 3.34a10 10 0 1 1 -14.995 8.984l-.005 -.324l.005 -.324a10 10 0 0 1 14.995 -8.336zm-5 6.66a2 2 0 0 0 -1.977 1.697l-.018 .154l-.005 .149l.005 .15a2 2 0 1 0 1.995 -2.15z"
+                        stroke-width="0"
+                        fill="currentColor"
+                      ></path>
+                    </svg>
+
+                    <input
+                      type="radio"
+                      className="relative appearance-none group-checked:text-pink-500"
+                      checked
+                    />
+
+                    <span className="group-hover:text-pink-500">test</span>
+                  </label>
+                </li>
+
                 {sortby.map((y) => {
                   return (
                     <>
-                      <label className="flex items-center py-1 gap-5 group">
-                        <input
-                          type="radio"
-                          name="status"
-                          id={y.id}
-                          checked
-                          className="filter-list-label-round peer/draft"
-                        />
-                        <span className="group-hover:text-pink-500 peer-checked/draft:text-pink-500">
-                          {y.type}
-                        </span>
-                      </label>
+                      <li>
+                        <label className="flex items-center py-1 gap-5 group">
+                          <input
+                            type="radio"
+                            name="status"
+                            id={y.id}
+                            checked
+                            className="filter-list-label-round peer/draft"
+                          />
+                          <span className="group-hover:text-pink-500 peer-checked/draft:text-pink-500">
+                            {y.type}
+                          </span>
+                        </label>
+                      </li>
                     </>
                   );
                 })}
