@@ -85,10 +85,10 @@ const Delivery = () => {
 
               <ul>
                 <li>
-                  <label className=" flex justify-start items-center gap-10 group">
+                  <label className=" flex justify-start items-center gap-3 group">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      className="icon icon-tabler icon-tabler-circle-dot-filled absolute border rounded-full border-pink-500 text-white group-hover:border-2 group-hover:border-pink-500"
+                      className="icon icon-tabler icon-tabler-circle-dot-filled border rounded-full border-pink-500 text-pink-500 group-hover:border-2 group-hover:border-pink-500"
                       width="18"
                       height="18"
                       viewBox="0 0 24 24"
@@ -108,7 +108,7 @@ const Delivery = () => {
 
                     <input
                       type="radio"
-                      className="relative appearance-none group-checked:text-pink-500"
+                      className="appearance-none group-checked:text-pink-500"
                       checked
                     />
 
