@@ -89,70 +89,14 @@ const Delivery = () => {
                     <>
                       <li>
                         <label className="flex items-center py-1 gap-2 group">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            strokeWidth={1.5}
-                            stroke="currentColor"
-                            className=" w-5 h-5 border border-pink-500 rounded-full 
-                            focus:outline-none 
-                            checked:border-opacity-10 
-                            checked:bg-pink-500 
-                            group-hover:rounded-full 
-                            group-hover:ring-2
-                            group-hover:text-pink-500  
-                            group-hover:ring-pink-500
-                            group-checked:text-pink-500"
-                          >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                            />
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              d="M9 9.563C9 9.252 9.252 9 9.563 9h4.874c.311 0 .563.252.563.563v4.874c0 .311-.252.563-.563.563H9.564A.562.562 0 019 14.437V9.564z"
-                            />
-                          </svg>
-
                           <input
                             type="radio"
                             name="status"
                             id={y.id}
                             checked
-                            className="appearance-none"
-                          />
-
-                          <span className="group-hover:text-pink-500">
-                            {y.type}
-                          </span>
-                        </label>
-                      </li>
-                    </>
-                  );
-                })}
-
-                {sortby.map((y) => {
-                  return (
-                    <>
-                      <li>
-                        <label className="flex items-center py-1 gap-5 group">
-                          <input
-                            type="radio"
-                            name="status"
-                            id={y.id}
-                            checked
-                            className="appearance-none w-5 h-5 border border-pink-500 rounded-full 
-                            focus:outline-none 
-                            checked:border-opacity-10 
-                            checked:bg-pink-600 
-                            group-hover:rounded-full 
-                            group-hover:ring-2
-                            group-hover:text-pink-500  
-                            group-hover:ring-pink-600
-                            group-checked:text-pink-600"
+                            className="appearance-none w-5 h-5 border ring-inset ring-4 ring-white border-pink-500 rounded-full 
+                            sort-checked sort-checked-focus sort-focus sort-group-hover
+                           "
                           />
 
                           <span className="group-hover:text-pink-500 ">
@@ -229,6 +173,14 @@ const Delivery = () => {
                 })}
               </ul>
             </div>
+          </div>
+
+          {/* Body */}
+          <div className="md:w-[980px] md:h-auto mt-3 bg-pink-500">
+            <div className=" flex flex-wrap justify-start items-center px-6">
+                Working Area
+            </div>
+          
           </div>
         </div>
       </div>
