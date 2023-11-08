@@ -67,8 +67,7 @@
     group-checked:bg-pink-600
 }
 
-.filter-list-label-round{
-    @apply 
+/* .filter-list-label-round{ *    @apply 
     
     appearance-none w-5 h-5 border border-pink-500 rounded-full 
 
@@ -84,7 +83,7 @@
 
     group-checked:border-opacity-10 
     group-checked:bg-pink-600
-}
+/* } 
 
 /* Footer */
 .hover-link{
