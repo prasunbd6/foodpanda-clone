@@ -105,7 +105,7 @@ const Delivery = () => {
         <div className=" w-11/12 h-auto flex flex-wrap justify-center items-start text-slate-600 md:justify-start md:items-start md:mt-5">
          
         {/* Left Side Bar */}
-        <div className="hidden md:mt-3 md:w-64 md:h-[840px] md:flex md:flex-col md:justify-start md:items-start md:px-4 md:gap-5 md:border md:border-l-2 rounded-s-2xl md:pt-5 md:overflow-y-scroll">
+        <div className="hidden md:sticky md:top-24 md:mt-3 md:w-56 md:h-[840px] md:flex md:flex-col md:justify-start md:items-start md:px-4 md:gap-5 md:border md:border-l-2 rounded-s-2xl md:pt-5 md:overflow-y-scroll">
             <p className="text-xl font-bold">Filters</p>
 
             {/*Sort by*/}
@@ -208,13 +208,14 @@ const Delivery = () => {
           </div>
 
           {/* Body */}
-          <div className="w-full h-auto flex flex-wrap justify-start gap-6  md:w-4/6 md:px-5 lg:w-9/12 lg:px-10  xl:w-10/12 xl:px-16">
+          <div className="w-full md:w-[475px] lg:w-[650px] xl:w-[950px] 2xl:w-[1200px] h-auto flex flex-col flex-wrap justify-start gap-10 md:px-4">
             {content.map((con) => {
               return (
                 <>
-                    <h1 className=" font-bold text-xl md:text-2xl lg:xl:text-3xl" key={con.id}>{con.heading}</h1>
-                    <p className="text-slate-600 text-lg md:lg:xl:text-2xl">{con.details}</p>
-                  
+                <div className="w-auto gap-4 md:lg:xl:px-6">
+                    <h1 className=" font-bold text-xl md:text-xl lg:xl:text-2xl" key={con.id}>{con.heading}</h1>
+                    <p className="text-slate-600 text-lg md:text-lg lg:xl:text-xl">{con.details}</p>
+                </div>
                 </>
               );
             })}

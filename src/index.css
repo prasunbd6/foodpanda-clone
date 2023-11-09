@@ -25,7 +25,7 @@
 }
 
 .menu-operation-in-md-config {
-  @apply md:w-full md:h-auto md:justify-start md:items-center md:bg-white md:text-2xl 
+  @apply md:w-full md:h-auto md:justify-start md:items-center md:bg-white md:text-xl 
     md:order-5;
 }
 
@@ -35,7 +35,7 @@
 }
 
 .menu-decoration-hover {
-  @apply hover:bg-pink-100 hover:border-b-2 hover:border-pink-600 
+  @apply hover:bg-pink-100 hover:border-b-2 hover:border-solid hover:border-pink-600 
     hover:rounded-t-md;
 }
 
