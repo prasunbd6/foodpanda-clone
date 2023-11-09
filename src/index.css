@@ -54,7 +54,7 @@
 }
 
 .filter-list-label-square {
-  @apply appearance-none w-5 h-5 border-2 border-pink-500  rounded-md 
+  @apply appearance-none w-5 h-5 border-2 border-pink-500  rounded-md ring-inset 
 
     focus:outline-none checked:border-opacity-10 checked:bg-pink-600 
 
@@ -66,6 +66,10 @@
     group-checked:border-opacity-10 
     group-checked:bg-pink-600;
 }
+
+.sort-marked {
+    @apply checked:bg-pink-500 checked:ring-inset checked:ring-pink-500;
+  }
 
 .sort-checked {
   @apply checked:ring-4 checked:ring-inset checked:ring-pink-500;
@@ -82,6 +86,11 @@
 .sort-group-hover {
   @apply group-hover:ring-2 group-hover:ring-inset group-hover:ring-pink-500;
 }
+
+.sort-hover-active{
+    @apply  hover:active:ring-4  hover:active:ring-inset  hover:active:ring-pink-500;
+  }
+
 
 /* Footer */
 .hover-link {
