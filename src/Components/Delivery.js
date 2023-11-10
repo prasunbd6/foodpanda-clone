@@ -94,7 +94,7 @@ const Delivery = () => {
 
   return (
     <>
-      <div className="flex flex-col justify-center items-center mt-36 pt-1 md:mt-28">
+      <div className="flex flex-col justify-center items-center mt-36 pt-1 md:mt-24">
         <p className="w-11/12 h-auto pt-1 bg-pink-50 text-center text-sm text-pink-700 md:text-lg md:py-2">
           YUMPANDA : 25% off up to Tk. 100 off on orders over Tk 199 (Valid 1
           time)
@@ -180,7 +180,11 @@ const Delivery = () => {
             <div className="w-full flex flex-wrap flex-col justify-start items-start gap-2">
               <p className="filter-heading-text">Cuisines</p>
               <ul>
-                <li className="filter-list">Search bar</li>
+                <li className="filter-list">
+                  <div className="w-full border rounded-full bg-slate-100">
+                  Search
+                    </div>
+                </li>
 
                 {cuisines.map((x) => {
                   return (

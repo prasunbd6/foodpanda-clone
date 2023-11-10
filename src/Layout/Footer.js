@@ -128,9 +128,9 @@ const Footer = () => {
         </div>
 
         {/* Address */}
-        <div className="w-11/12 flex flex-wrap justify-center md:justify-start items-start border-t-2  md:gap-12 md:px-1 py-5 md:py-10 text-slate-600">
+        <div className="w-11/12 flex flex-wrap justify-center md:justify-start items-start border-t-2  md:gap-10 lg:gap-6 md:px-1 py-5 md:py-10 text-slate-600">
 
-          <div className="w-full h-auto md:w-1/5 md:h-auto py-5">
+          <div className="w-full h-auto md:w-3/12 lg:w-2/12 md:h-auto py-5">
             <h1 className=" font-extrabold text-lg hover-link ">
               BENGALI FOOD DELIVERY IN CHITTAGONG
             </h1>
@@ -145,7 +145,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div className="w-full h-auto md:w-1/5 md:h-auto py-5">
+          <div className="w-full h-auto md:w-3/12 lg:w-2/12 md:h-auto py-5">
             <h1 className="font-extrabold text-lg hover-link ">
             FAST FOOD DELIVERY IN CHITTAGONG
             </h1>
@@ -160,7 +160,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div className="w-full h-auto md:w-1/5 md:h-auto py-5">
+          <div className="w-full h-auto md:w-3/12 lg:w-2/12 md:h-auto py-5">
             <h1 className="font-extrabold text-lg hover-link ">
             INDIAN FOOD DELIVERY IN CHITTAGONG
             </h1>
@@ -175,7 +175,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div className="w-full h-auto md:w-1/5 md:h-auto py-5">
+          <div className="w-full h-auto md:w-3/12 lg:w-2/12 md:h-auto py-5">
             <h1 className="font-extrabold text-lg hover-link ">
             CHINESE FOOD DELIVERY IN CHITTAGONG
             </h1>
@@ -190,7 +190,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div className="w-full h-auto md:w-1/5 md:h-auto py-5">
+          <div className="w-full h-auto md:w-3/12 lg:w-2/12 md:h-auto py-5">
             <h1 className=" font-extrabold text-lg hover-link ">
             EUROPEAN FOOD DELIVERY IN CHITTAGONG
             </h1>
@@ -205,7 +205,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div className="w-full h-auto md:w-1/5 md:h-auto py-5">
+          <div className="w-full h-auto md:w-3/12 lg:w-2/12 md:h-auto py-5">
             <h1 className=" font-extrabold text-lg hover-link ">
             ITALIAN FOOD DELIVERY IN CHITTAGONG
             </h1>

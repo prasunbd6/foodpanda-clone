@@ -31,15 +31,15 @@ const Navbar = () => {
           </div>
 
           {/* login, Signup & language */}
-
           <ul className="hidden login-signup-language-md-config md:justify-end gap-2">
+            
             <li className="md:w-20 border rounded-xl ring-1 ring-pink-500 text-pink-500 p-1 bg-white hover:bg-white hover:border hover:border-pink-500 hover:ring-inset hover:ring-1 hover:ring-pink-500 ease-in-out duration-500">
-              login
+              <p className="md:cursor-pointer">login</p>
             </li>
             <li className="md:w-20 border rounded-xl ring-1 ring-pink-500  text-white p-1 bg-pink-500 hover:bg-pink-600 hover:border hover:border-pink-500 ease-in-out duration-300">
-              Sign Up
+              <p className="md:cursor-pointer">Sign Up</p>
             </li>
-            <li className="md:w-20 rounded-lg p-2 gap-1 hover:bg-pink-100 duration-200 flex justify-around items-center">
+            <li className="md:w-20 rounded-lg p-2 gap-1 hover:bg-pink-100 duration-200 flex justify-around items-center md:cursor-pointer">
               <i>
                 <PiGlobeSimpleBold size={20} />
               </i>
@@ -69,7 +69,7 @@ const Navbar = () => {
               <i>
                 <HiOutlineMapPin />
               </i>
-              <p>Ashraf Ali Road, Patharghata kotwali Chittagong.</p>
+              <p className="md:cursor-pointer">Ashraf Ali Road, Patharghata kotwali Chittagong.</p>
             </div>
           </div>
 
@@ -77,27 +77,27 @@ const Navbar = () => {
           <ul className="menu-operation-in-ul-config menu-operation-in-md-config">
             <li className="menu-decoration-standby menu-decoration-hover menu-decoration-active">
               <MdOutlineDeliveryDining size={20} />
-              <p className=" px-1">Delivery</p>
+              <p className="px-1 md:cursor-pointer">Delivery</p>
             </li>
 
             <li className="menu-decoration-standby menu-decoration-hover menu-decoration-active">
               <MdOutlineEmojiPeople size={20} />
-              <p className=" px-1">Pick-Up</p>
+              <p className=" px-1 md:cursor-pointer">Pick-Up</p>
             </li>
 
             <li className="menu-decoration-standby menu-decoration-hover menu-decoration-active">
               <PiSuitcaseRollingThin size={20} />
-              <p className=" px-1">pandamart</p>
+              <p className=" px-1 md:cursor-pointer">pandamart</p>
             </li>
 
             <li className="menu-decoration-standby menu-decoration-hover menu-decoration-active">
               <GiShoppingCart size={20} />
-              <p className=" px-1">Shops</p>
+              <p className=" px-1 md:cursor-pointer">Shops</p>
             </li>
 
             <li className="menu-decoration-standby menu-decoration-hover menu-decoration-active">
               <GiForkKnifeSpoon size={20} />
-              <p className=" px-1">Dine-in</p>
+              <p className=" px-1 md:cursor-pointer">Dine-in</p>
             </li>
           </ul>
         </div>

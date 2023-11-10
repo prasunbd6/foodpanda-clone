@@ -14,7 +14,7 @@
 /* Address */
 
 .address-ul {
-  @apply w-full flex flex-wrap justify-start items-center text-justify gap-1;
+  @apply w-full flex flex-wrap justify-start items-center gap-1;
 }
 
 /* Menu Operation */
@@ -94,5 +94,5 @@
 
 /* Footer */
 .hover-link {
-  @apply hover:text-pink-500;
+  @apply hover:text-pink-500 md:cursor-pointer;
 }
