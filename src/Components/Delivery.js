@@ -1,4 +1,5 @@
 import { SlBadge } from "react-icons/sl";
+import { AiOutlineSearch } from "react-icons/ai";
 
 const Delivery = () => {
   const cuisines = [
@@ -103,9 +104,8 @@ const Delivery = () => {
 
       <div className="h-auto flex flex-col justify-center items-center mt-0 gap-4">
         <div className=" w-11/12 h-auto flex flex-wrap justify-center items-start text-slate-600 md:justify-start md:items-start md:mt-5">
-         
-        {/* Left Side Bar */}
-        <div className="hidden md:sticky md:top-24 md:mt-3 md:w-56 md:h-[840px] md:flex md:flex-col md:justify-start md:items-start md:px-4 md:gap-5 md:border md:border-l-2 rounded-s-2xl md:pt-5 md:overflow-y-scroll">
+          {/* Left Side Bar */}
+          <div className="hidden md:sticky md:top-24 md:mt-3 md:w-56 md:h-[840px] md:flex md:flex-col md:justify-start md:items-start md:px-4 md:gap-5 md:border md:border-l-2 rounded-s-2xl md:pt-5 md:overflow-y-scroll">
             <p className="text-xl font-bold">Filters</p>
 
             {/*Sort by*/}
@@ -181,9 +181,21 @@ const Delivery = () => {
               <p className="filter-heading-text">Cuisines</p>
               <ul>
                 <li className="filter-list">
-                  <div className="w-full border rounded-full bg-slate-100">
-                  Search
-                    </div>
+                  <div className="w-auto border rounded-full bg-slate-50 py-1 px-1 group">
+                    <form className=" flex justify-start items-center gap-2">
+                      <AiOutlineSearch
+                        size={20}
+                        className="text-slate-400 group-hover:text-pink-700 group-focus:text-pink-700"
+                      />
+                      <input
+                        type="text"
+                        name="search"
+                        autoComplete="off"
+                        className="w-28 focus:outline-none text-gray-600"
+                        placeholder="Search for Cuisine"
+                      />
+                    </form>
+                  </div>
                 </li>
 
                 {cuisines.map((x) => {
@@ -216,14 +228,21 @@ const Delivery = () => {
             {content.map((con) => {
               return (
                 <>
-                <div className="w-auto gap-4 md:lg:xl:px-6">
-                    <h1 className=" font-bold text-xl md:text-xl lg:xl:text-2xl" key={con.id}>{con.heading}</h1>
-                    <p className="text-slate-600 text-lg md:text-lg lg:xl:text-xl">{con.details}</p>
-                </div>
+                  <div className="w-auto gap-4 md:lg:xl:px-6">
+                    <h1
+                      className=" font-bold text-xl md:text-xl lg:xl:text-2xl"
+                      key={con.id}
+                    >
+                      {con.heading}
+                    </h1>
+                    <p className="text-slate-600 text-lg md:text-lg lg:xl:text-xl">
+                      {con.details}
+                    </p>
+                  </div>
                 </>
               );
             })}
-            </div>
+          </div>
         </div>
       </div>
     </>
