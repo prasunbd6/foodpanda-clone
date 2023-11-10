@@ -20,8 +20,8 @@
 /* Menu Operation */
 
 .menu-operation-in-ul-config {
-  @apply w-full h-auto flex justify-around items-center cursor-pointer text-pink-500 gap-3 
-    border-b-2 shadow-xl order-5;
+  @apply w-full h-auto flex justify-around items-center text-pink-500 gap-3 
+    border-b-2 shadow-xl order-5 ;
 }
 
 .menu-operation-in-md-config {
@@ -30,12 +30,12 @@
 }
 
 .menu-decoration-standby {
-  @apply w-auto flex flex-wrap justify-center items-center px-1 py-2 bg-white border-b-2 
+  @apply  w-auto flex flex-wrap justify-center items-center px-1 py-2 bg-white border-b-2 
     border-white;
 }
 
 .menu-decoration-hover {
-  @apply hover:bg-pink-100 hover:border-b-2 hover:border-solid hover:border-pink-600 
+  @apply  hover:bg-pink-100 hover:border-b-2 hover:border-solid hover:border-pink-600 
     hover:rounded-t-md;
 }
 
@@ -50,7 +50,7 @@
 }
 
 .filter-list {
-  @apply flex justify-start items-center px-1 py-1 cursor-pointer gap-5;
+  @apply flex justify-start items-center px-1 py-1 gap-5;
 }
 
 .filter-list-label-square {
@@ -94,5 +94,5 @@
 
 /* Footer */
 .hover-link {
-  @apply hover:text-pink-500 cursor-pointer;
+  @apply hover:text-pink-500;
 }

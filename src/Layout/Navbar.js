@@ -14,7 +14,7 @@ import {
 const Navbar = () => {
   return (
     <>
-      <div className="flex flex-col justify-center items-center ">
+      <div className="flex flex-col justify-center items-center">
         <div className="w-full h-auto mt-32 pt-2 flex flex-wrap justify-between items-center bg-white fixed order-1 md:w-full md:h-20 md:mt-14 lg:w-11/12 z-50">
           {/* User Logo & Brand */}
 
@@ -32,14 +32,14 @@ const Navbar = () => {
 
           {/* login, Signup & language */}
 
-          <ul className="hidden login-signup-language-md-config md:justify-end gap-2 ">
-            <li className="md:w-20 border rounded-xl ring-1 ring-pink-500 text-pink-500 cursor-pointer p-1 bg-white hover:bg-white hover:border hover:border-pink-500 hover:ring-inset hover:ring-1 hover:ring-pink-500 ease-in-out duration-500">
+          <ul className="hidden login-signup-language-md-config md:justify-end gap-2">
+            <li className="md:w-20 border rounded-xl ring-1 ring-pink-500 text-pink-500 p-1 bg-white hover:bg-white hover:border hover:border-pink-500 hover:ring-inset hover:ring-1 hover:ring-pink-500 ease-in-out duration-500">
               login
             </li>
-            <li className="md:w-20 border rounded-xl ring-1 ring-pink-500  text-white cursor-pointer p-1 bg-pink-500 hover:bg-pink-600 hover:border hover:border-pink-500 ease-in-out duration-300">
+            <li className="md:w-20 border rounded-xl ring-1 ring-pink-500  text-white p-1 bg-pink-500 hover:bg-pink-600 hover:border hover:border-pink-500 ease-in-out duration-300">
               Sign Up
             </li>
-            <li className="md:w-20 rounded-lg p-2 cursor-pointer gap-1 hover:bg-pink-100 duration-200 flex justify-around items-center">
+            <li className="md:w-20 rounded-lg p-2 gap-1 hover:bg-pink-100 duration-200 flex justify-around items-center">
               <i>
                 <PiGlobeSimpleBold size={20} />
               </i>
@@ -65,7 +65,7 @@ const Navbar = () => {
 
           {/* Map Logo & Address */}
           <div className="w-full md:w-4/12 py-1 flex justify-center md:justify-end md:order-3 order-4">
-            <div className="w-96 md:w-auto rounded-md flex justify-center items-center md:justify-start  text-sm py-1 px-1 gap-1 text-center cursor-pointer hover:bg-pink-100 duration-300">
+            <div className="w-96 md:w-auto rounded-md flex justify-center items-center md:justify-start  text-sm py-1 px-1 gap-1 text-center hover:bg-pink-100 duration-300">
               <i>
                 <HiOutlineMapPin />
               </i>

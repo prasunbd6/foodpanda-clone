@@ -138,7 +138,7 @@ const Footer = () => {
               {bengali.map((bengali) => {
                 return (
                   <>
-                    <li key={bengali.id} className="hover-link ">{bengali.hname}</li>,
+                    <li key={bengali.id} className="hover-link">{bengali.hname}</li>,
                   </>
                 );
               })}
