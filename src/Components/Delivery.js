@@ -1,6 +1,6 @@
 import { SlBadge } from "react-icons/sl";
 import { AiOutlineSearch } from "react-icons/ai";
-import {RiEqualizerLine} from "react-icons/ri"
+import { RiEqualizerLine } from "react-icons/ri";
 
 const Delivery = () => {
   const cuisines = [
@@ -103,7 +103,6 @@ const Delivery = () => {
         </p>
       </div>
 
-
       <div className="h-auto flex flex-col justify-center items-center mt-0 gap-4">
         <div className=" w-11/12 h-auto flex flex-wrap justify-center items-start text-slate-600 md:justify-start md:items-start md:mt-5">
           {/* Left Side Bar in MD > LG > XL > 2xl */}
@@ -183,21 +182,24 @@ const Delivery = () => {
               <p className="filter-heading-text">Cuisines</p>
               <ul>
                 <li className="filter-list">
-                  <div className="w-auto border rounded-full bg-slate-50 py-1 px-1 group focus:outline-none focus:border-sky-500 focus:ring-2 focus:ring-violet-300">
-                    <form className=" flex justify-start items-center gap-2">
-                      <AiOutlineSearch
-                        size={20}
-                        className="text-slate-400 group-hover:text-pink-700 group-focus:text-pink-700"
-                      />
-                      <input
-                        type="text"
-                        name="search"
-                        autoComplete="off"
-                        className="w-28 focus:outline-none text-gray-600"
-                        placeholder="Search for Cuisine"
-                      />
-                    </form>
-                  </div>
+
+                <form>
+              <label className="flex justify-start items-center relative group">
+                <AiOutlineSearch
+                  size={23}
+                  className="text-slate-400 absolute left-2 group-hover:text-pink-500 group-focus:text-pink-500 "
+                />
+                <input
+                  type="text"
+                  name="search"
+                  autoComplete="off"
+                  placeholder="Search for Cuisine"
+                  className="w-44 h-8 bg-slate-50 px-10 border rounded-3xl focus:outline-none focus:ring-2 focus:ring-pink-200"
+                />
+              </label>
+            </form>
+
+
                 </li>
 
                 {cuisines.map((x) => {
@@ -227,27 +229,29 @@ const Delivery = () => {
 
           {/* Body */}
 
+          <div className="w-11/12 h-auto flex justify-between items-center gap-4 py-2 px-1 md:hidden mt-5">
+            <form>
+              <label className="flex justify-start items-center relative group">
+                <AiOutlineSearch
+                  size={23}
+                  className="text-slate-400 absolute left-2 group-hover:text-pink-500 "
+                />
+                <input
+                  type="text"
+                  name="search"
+                  autoComplete="off"
+                  placeholder="Search for Cuisine"
+                  className="w-[435px] h-10 bg-slate-50 px-10 border rounded-3xl focus:outline-none focus:ring-2 focus:ring-pink-200"
+                />
+              </label>
+            </form>
 
-          <div className="w-11/12 h-auto flex justify-between items-center py-2 px-1 md:hidden mt-5">
-
-          <form className="w-2/3 border rounded-md flex justify-center items-center gap-2">
-          <AiOutlineSearch
-            size={20}
-            className="text-slate-400"
-          />
-          <input
-            type="text"
-            name="search"
-            autoComplete="off"
-            className="w-auto h-12 focus:outline-none text-gray-600"
-            placeholder="Search for Cuisine"
-          />
-        </form>
-
-                <div className="flex justify-center items-center border rounded-full py-2 px-4 gap-2 focus:outline-none ring-2 ring-slate-200 ">
-                  <span><RiEqualizerLine size={18}/></span> 
-                  <p className="font-bold text-lg">Filters</p>
-                </div>
+            <div className="flex justify-center items-center border rounded-full py-2 px-4 gap-2 focus:outline-none ring-2 ring-slate-200 hover:ring-slate-300 md:cursor-pointer">
+              <span>
+                <RiEqualizerLine size={18} />
+              </span>
+              <p className="font-bold text-lg">Filters</p>
+            </div>
           </div>
 
           <div className="w-full md:w-[475px] lg:w-[650px] xl:w-[950px] 2xl:w-[1200px] h-auto flex flex-col flex-wrap justify-start gap-10 md:px-4">
