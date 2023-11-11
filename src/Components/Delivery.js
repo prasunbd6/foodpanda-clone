@@ -1,5 +1,6 @@
 import { SlBadge } from "react-icons/sl";
 import { AiOutlineSearch } from "react-icons/ai";
+import {RiEqualizerLine} from "react-icons/ri"
 
 const Delivery = () => {
   const cuisines = [
@@ -95,16 +96,17 @@ const Delivery = () => {
 
   return (
     <>
-      <div className="flex flex-col justify-center items-center mt-36 pt-1 md:mt-24">
-        <p className="w-11/12 h-auto pt-1 bg-pink-50 text-center text-sm text-pink-700 md:text-lg md:py-2">
+      <div className="flex flex-col justify-center items-center mt-32 pt-1 md:mt-24">
+        <p className="w-full md:w-11/12 h-auto pt-1 bg-pink-50 text-center text-sm text-pink-700 md:text-lg md:py-2">
           YUMPANDA : 25% off up to Tk. 100 off on orders over Tk 199 (Valid 1
           time)
         </p>
       </div>
 
+
       <div className="h-auto flex flex-col justify-center items-center mt-0 gap-4">
         <div className=" w-11/12 h-auto flex flex-wrap justify-center items-start text-slate-600 md:justify-start md:items-start md:mt-5">
-          {/* Left Side Bar */}
+          {/* Left Side Bar in MD > LG > XL > 2xl */}
           <div className="hidden md:sticky md:top-24 md:mt-3 md:w-56 md:h-[840px] md:flex md:flex-col md:justify-start md:items-start md:px-4 md:gap-5 md:border md:border-l-2 rounded-s-2xl md:pt-5 md:overflow-y-scroll">
             <p className="text-xl font-bold">Filters</p>
 
@@ -181,7 +183,7 @@ const Delivery = () => {
               <p className="filter-heading-text">Cuisines</p>
               <ul>
                 <li className="filter-list">
-                  <div className="w-auto border rounded-full bg-slate-50 py-1 px-1 group">
+                  <div className="w-auto border rounded-full bg-slate-50 py-1 px-1 group focus:outline-none focus:border-sky-500 focus:ring-2 focus:ring-violet-300">
                     <form className=" flex justify-start items-center gap-2">
                       <AiOutlineSearch
                         size={20}
@@ -224,6 +226,30 @@ const Delivery = () => {
           </div>
 
           {/* Body */}
+
+
+          <div className="w-11/12 h-auto flex justify-between items-center py-2 px-1 md:hidden mt-5">
+
+          <form className="w-2/3 border rounded-md flex justify-center items-center gap-2">
+          <AiOutlineSearch
+            size={20}
+            className="text-slate-400"
+          />
+          <input
+            type="text"
+            name="search"
+            autoComplete="off"
+            className="w-auto h-12 focus:outline-none text-gray-600"
+            placeholder="Search for Cuisine"
+          />
+        </form>
+
+                <div className="flex justify-center items-center border rounded-full py-2 px-4 gap-2 focus:outline-none ring-2 ring-slate-200 ">
+                  <span><RiEqualizerLine size={18}/></span> 
+                  <p className="font-bold text-lg">Filters</p>
+                </div>
+          </div>
+
           <div className="w-full md:w-[475px] lg:w-[650px] xl:w-[950px] 2xl:w-[1200px] h-auto flex flex-col flex-wrap justify-start gap-10 md:px-4">
             {content.map((con) => {
               return (
