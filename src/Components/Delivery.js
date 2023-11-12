@@ -1,6 +1,8 @@
 import { SlBadge } from "react-icons/sl";
 import { AiOutlineSearch } from "react-icons/ai";
 import { RiEqualizerLine } from "react-icons/ri";
+import LeftSidebar from "../Slices/LeftSidebar";
+import RightSideBody from "../Slices/RightSideBody";
 
 const Delivery = () => {
   const cuisines = [
@@ -105,174 +107,17 @@ const Delivery = () => {
 
       <div className="h-auto flex flex-col justify-center items-center mt-0 gap-4">
         <div className=" w-11/12 h-auto flex flex-wrap justify-center items-start text-slate-600 md:justify-start md:items-start md:mt-5">
-          {/* Left Side Bar in MD > LG > XL > 2xl */}
-          <div className="hidden md:sticky md:top-24 md:mt-3 md:w-56 md:h-[840px] md:flex md:flex-col md:justify-start md:items-start md:px-4 md:gap-5 md:border md:border-l-2 rounded-s-2xl md:pt-5 md:overflow-y-scroll">
-            <p className="text-xl font-bold">Filters</p>
+          
+        {/* Left Side Bar in MD > LG > XL > 2xl */}
 
-            {/*Sort by*/}
-            <div className="w-full flex flex-wrap flex-col justify-start items-start gap-2">
-              <p className="filter-heading-text">Sort by</p>
+          <LeftSidebar SlBadge={SlBadge} cuisines={cuisines} sortby={sortby} offers={offers} AiOutlineSearch={AiOutlineSearch}/>
 
-              <ul>
-                {sortby.map((y) => {
-                  return (
-                    <>
-                      <li>
-                        <label className="flex items-center py-1 gap-2 group">
-                          <input
-                            type="radio"
-                            name="status"
-                            id={y.id}
-                            checked
-                            className="appearance-none w-5 h-5 border ring-inset ring-4 ring-white border-pink-500 rounded-full transition ease-in-out duration-300
-                            sort-checked sort-checked-focus sort-focus sort-group-hover sort-hover-active
-                           "
-                          />
+          {/*Right Side Body */}
 
-                          <span className="group-hover:text-pink-500 ">
-                            {y.type}
-                          </span>
-                        </label>
-                      </li>
-                    </>
-                  );
-                })}
-              </ul>
-            </div>
+          <RightSideBody RiEqualizerLine={RiEqualizerLine} content={content} AiOutlineSearch={AiOutlineSearch}/>
 
-            {/*Quick Filters*/}
-            <div className="w-full flex flex-wrap flex-col justify-start items-start gap-2">
-              <p className="filter-heading-text">Quick filters</p>
+          
 
-              <button className="border rounded-full py-1 px-3 flex items-center gap-2 hover:bg-pink-50">
-                <span className=" text-pink-600">
-                  <SlBadge />
-                </span>
-                Top restaurant
-              </button>
-            </div>
-
-            {/*Offers*/}
-            <div className="w-full flex flex-wrap flex-col justify-start items-start gap-2">
-              <p className="filter-heading-text">Offers</p>
-              <ul>
-                {offers.map((o) => {
-                  return (
-                    <>
-                      <li className="filter-list group" key={o.id}>
-                        <label className="flex items-center gap-5">
-                          <input
-                            type="checkbox"
-                            value={o.offers}
-                            className="filter-list-label-square transition ease-in-out duration-300"
-                          />
-                          <p className="group-hover:text-pink-500">
-                            {o.offers}
-                          </p>
-                        </label>
-                      </li>
-                    </>
-                  );
-                })}
-              </ul>
-            </div>
-
-            {/*Cuisines*/}
-            <div className="w-full flex flex-wrap flex-col justify-start items-start gap-2">
-              <p className="filter-heading-text">Cuisines</p>
-              <ul>
-                <li className="filter-list">
-
-                <form>
-              <label className="flex justify-start items-center relative group">
-                <AiOutlineSearch
-                  size={23}
-                  className="text-slate-400 absolute left-2 group-hover:text-pink-500 group-focus:text-pink-500 "
-                />
-                <input
-                  type="text"
-                  name="search"
-                  autoComplete="off"
-                  placeholder="Search for Cuisine"
-                  className="w-44 h-8 bg-slate-50 px-10 border rounded-3xl focus:outline-none focus:ring-2 focus:ring-pink-200"
-                />
-              </label>
-            </form>
-
-
-                </li>
-
-                {cuisines.map((x) => {
-                  return (
-                    <>
-                      <li key={x.id} className="filter-list group">
-                        <label className="flex items-center gap-5">
-                          <input
-                            type="checkbox"
-                            id={x.id} // Add an id to the checkbox
-                            value={x.cname}
-                            className=" appearance-none w-5 h-5 border-2 border-pink-500  rounded-md ring-inset 
-                            transition ease-in-out duration-300
-                            sort-group-hover
-                            sort-marked
-                            "
-                          />
-                          <p className="group-hover:text-pink-500">{x.cname}</p>
-                        </label>
-                      </li>
-                    </>
-                  );
-                })}
-              </ul>
-            </div>
-          </div>
-
-          {/* Body */}
-
-          <div className="w-11/12 h-auto flex justify-between items-center gap-4 py-2 px-1 md:hidden mt-5">
-            <form>
-              <label className="flex justify-start items-center relative group">
-                <AiOutlineSearch
-                  size={23}
-                  className="text-slate-400 absolute left-2 group-hover:text-pink-500 "
-                />
-                <input
-                  type="text"
-                  name="search"
-                  autoComplete="off"
-                  placeholder="Search for Cuisine"
-                  className="w-[300px] h-10 bg-slate-50 px-10 border rounded-3xl focus:outline-none focus:ring-2 focus:ring-pink-200"
-                />
-              </label>
-            </form>
-
-            <div className="flex justify-center items-center border rounded-full py-2 px-4 gap-2 focus:outline-none ring-2 ring-slate-200 hover:ring-slate-300 md:cursor-pointer">
-              <span>
-                <RiEqualizerLine size={18} />
-              </span>
-              <p className="font-bold text-lg">Filters</p>
-            </div>
-          </div>
-
-          <div className="w-full md:w-[475px] lg:w-[650px] xl:w-[950px] 2xl:w-[1200px] h-auto flex flex-col flex-wrap justify-start gap-10 md:px-4">
-            {content.map((con) => {
-              return (
-                <>
-                  <div className="w-auto gap-4 md:lg:xl:px-6">
-                    <h1
-                      className=" font-bold text-xl md:text-xl lg:xl:text-2xl"
-                      key={con.id}
-                    >
-                      {con.heading}
-                    </h1>
-                    <p className="text-slate-600 text-lg md:text-lg lg:xl:text-xl">
-                      {con.details}
-                    </p>
-                  </div>
-                </>
-              );
-            })}
-          </div>
         </div>
       </div>
     </>
