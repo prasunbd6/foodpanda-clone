@@ -90,7 +90,7 @@ const LeftSidebar = ({SlBadge, cuisines,sortby, offers,AiOutlineSearch}) => {
                 name="search"
                 autoComplete="off"
                 placeholder="Search for Cuisine"
-                className="w-[150px] h-8 bg-slate-50 px-10 border rounded-3xl focus:outline-none focus:ring-2 focus:ring-pink-200"
+                className=" overflow-hidden w-[200px] h-8 bg-slate-50 px-10 border rounded-3xl focus:outline-none focus:ring-2 focus:ring-pink-200"
               />
             </label>
           </form>
