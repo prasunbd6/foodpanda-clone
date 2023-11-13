@@ -3,7 +3,7 @@ import React from 'react'
 const LeftSidebar = ({SlBadge, cuisines,sortby, offers,AiOutlineSearch}) => {
   return (
     <>
-    <div className="hidden md:sticky md:top-24 md:mt-3 md:w-60 lg:w-64 md:h-[840px] md:flex md:flex-col md:justify-start md:items-start md:px-4 md:gap-5 md:border md:border-l-2 rounded-s-2xl md:pt-5 md:overflow-y-scroll">
+    <div className="hidden md:sticky md:top-24 md:mt-3 md:w-64 lg: w-72 md:h-[840px] md:flex md:flex-col md:justify-start md:items-start md:px-4 md:gap-5 md:border md:border-l-2 rounded-s-2xl md:pt-5 md:overflow-y-scroll">
     <p className="text-xl font-bold">Filters</p>
 
     {/*Sort by*/}
@@ -90,7 +90,7 @@ const LeftSidebar = ({SlBadge, cuisines,sortby, offers,AiOutlineSearch}) => {
                 name="search"
                 autoComplete="off"
                 placeholder="Search for Cuisine"
-                className=" overflow-hidden w-[200px] h-8 bg-slate-50 px-10 border rounded-3xl focus:outline-none focus:ring-2 focus:ring-pink-200"
+                className="md:w-[150px] lg:w-[155px] xl:w-[160px] 2xl:w-[161px] h-8 bg-slate-50 px-10 border rounded-3xl focus:outline-none focus:ring-2 focus:ring-pink-200"
               />
             </label>
           </form>
