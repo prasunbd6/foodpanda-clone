@@ -47,7 +47,7 @@ const RightSideBody = ({ RiEqualizerLine, content, AiOutlineSearch }) => {
           <div className="max-w-lg">
           <Carousal autoSlide={true}>
               {slides.map((s) => (
-                <img src={s} width="640" height="480" alt="" />
+                <img src={s} alt="" />
               ))}
             </Carousal>
           </div>
