@@ -3,10 +3,56 @@ import Carousal from "./Carousal";
 
 const RightSideBody = ({ RiEqualizerLine, content, AiOutlineSearch }) => {
   const slides = [
-    "https://images.pexels.com/photos/1448721/pexels-photo-1448721.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    "https://images.pexels.com/photos/8471703/pexels-photo-8471703.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    "https://images.pexels.com/photos/1426715/pexels-photo-1426715.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    "https://images.pexels.com/photos/2814828/pexels-photo-2814828.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    {
+      id:1,
+      photo_url:"https://images.pexels.com/photos/1448721/pexels-photo-1448721.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      restaurant_name:"Govinda's",
+      ratings:3.5/5,
+      subscriber:1000,
+      food_type:"Bangladeshi",
+      service_charge:"delivery"
+    },
+
+    {
+      id:2,
+      photo_url:"https://images.pexels.com/photos/8471703/pexels-photo-8471703.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      restaurant_name:"Radison Blu",
+      ratings:4/5,
+      subscriber:2000,
+      food_type:"Bangladeshi",
+      service_charge:"delivery"
+    },
+
+    {
+      id:3,
+      photo_url:"https://images.pexels.com/photos/1426715/pexels-photo-1426715.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      restaurant_name:"Rodela Bikel",
+      ratings:3.5/5,
+      subscriber:5000,
+      food_type:"Bangladeshi",
+      service_charge:"delivery"
+    },
+
+    {
+      id:4,
+      photo_url:"https://images.pexels.com/photos/2814828/pexels-photo-2814828.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      restaurant_name:"Laziza",
+      ratings:4.5/5,
+      subscriber:3000,
+      food_type:"Bangladeshi",
+      service_charge:"delivery"
+    },
+
+    {
+      id:5,
+      photo_url:"https://images.pexels.com/photos/4393021/pexels-photo-4393021.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      restaurant_name:"Laham's",
+      ratings:3/5,
+      subscriber:4000,
+      food_type:"Bangladeshi",
+      service_charge:"delivery"
+    },
+  
   ];
 
 
@@ -43,16 +89,10 @@ const RightSideBody = ({ RiEqualizerLine, content, AiOutlineSearch }) => {
           {/************** Search Content (SM Device) - END ******************/}
         </div>
 
-        <div className="w-full h-auto flex justify-center items-center">
-          <div className="max-w-lg">
-          <Carousal autoSlide={true}>
-              {slides.map((s) => (
-                <img src={s} alt="" />
-              ))}
-            </Carousal>
-          </div>
-            
-          
+        <div className="w-11/12 h-auto m-auto p-1">
+          <div className="flex items-center gap-2">
+          <Carousal slides={slides}/>
+          </div> 
         </div>
 
         <div className="w-full md:w-[475px] lg:w-[650px] xl:w-[915px] 2xl:w-[1148px]  h-auto flex flex-col flex-wrap justify-start gap-10 md:px-4">
