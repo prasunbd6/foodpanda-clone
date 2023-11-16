@@ -1,16 +1,13 @@
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-
 const RightSideBody = ({ RiEqualizerLine, content, AiOutlineSearch }) => {
-
   const settings = {
-    dots: false,
-    infinite: true,
+    infinite: false,
     speed: 500,
     slidesToShow: 4,
-    slidesToScroll: 1
+    slidesToScroll: 1,
   };
 
   const slides = [
@@ -125,8 +122,6 @@ const RightSideBody = ({ RiEqualizerLine, content, AiOutlineSearch }) => {
     },
   ];
 
- 
-
   return (
     <>
       <div className=" md:w-[460px] lg:w-[680px] xl:w-[900px]  2xl:w-[1160px] h-auto flex flex-col justify-start items-center gap-4">
@@ -159,36 +154,20 @@ const RightSideBody = ({ RiEqualizerLine, content, AiOutlineSearch }) => {
           {/************** Search Content (SM Device) - END ******************/}
         </div>
 
-{/*Slider*/}
-        <div className="w-full md:w-11/12 mx-auto">
-        
-<div className="mt-16">
-    <Slider {...settings}>
-    {
-      slides.map(
-        (d)=>{
-          return(
-            <>
-              <div className=" bg-slate-50 h-[280px] text-black rounded-xl">
-                <div className=" h-56 rounded-t-xl bg-indigo-500 flex justify-center items-center">
-                  <img src={d.photo_url} alt="" className="h-44 w-44 rounded-full"/>
-                </div>
-
-                <div className="flex flex-col justify-center items-center gap-4 p-4">
-                  <p className=" text-xl font-semibold">{d.restaurant_name}</p>
-                  <p>Ratings {d.ratings}</p>
-                  <button className="mx-auto bg-indigo-500 text-white text-lg px-4 py-1 rounded-xl">Read More</button>
-                </div>
-                
-                
-              </div>
-            </>
-          )
-        }
-      )
-    }
-    </Slider>
-</div>
+        {/*Slider*/}
+        <div className="w-[580px] h-auto">
+          <Slider {...settings}>
+            {slides.map((d) => {
+              return (
+                <>
+                  <div className="w-32 flex flex-col">
+                    <img src={d.photo_url} alt="" />
+                    <p className="text-center">{d.restaurant_name}</p>
+                  </div>
+                </>
+              );
+            })}
+          </Slider>
 
           
         </div>
