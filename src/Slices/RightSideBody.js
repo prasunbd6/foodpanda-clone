@@ -155,7 +155,7 @@ const RightSideBody = ({ RiEqualizerLine, content, AiOutlineSearch }) => {
         </div>
 
         {/*Slider*/}
-        <div className="w-[400px] h-auto">
+        <div className="w-[500px] h-auto">
           <Slider {...settings}>
             {slides.map((d) => {
               return (
