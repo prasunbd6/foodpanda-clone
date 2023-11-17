@@ -6,8 +6,8 @@ const RightSideBody = ({ RiEqualizerLine, content, AiOutlineSearch }) => {
   const settings = {
     infinite: false,
     speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 1,
+    slidesToShow: 3,
+    slidesToScroll: 2,
   };
 
   const slides = [
@@ -155,7 +155,7 @@ const RightSideBody = ({ RiEqualizerLine, content, AiOutlineSearch }) => {
         </div>
 
         {/*Slider*/}
-        <div className="w-[580px] h-auto">
+        <div className="w-[400px] h-auto">
           <Slider {...settings}>
             {slides.map((d) => {
               return (
@@ -172,6 +172,7 @@ const RightSideBody = ({ RiEqualizerLine, content, AiOutlineSearch }) => {
           
         </div>
 
+        
         <div className="w-full md:w-[475px] lg:w-[650px] xl:w-[915px] 2xl:w-[1148px]  h-auto flex flex-col flex-wrap justify-start gap-10 md:px-4">
           {content.map((con) => {
             return (
