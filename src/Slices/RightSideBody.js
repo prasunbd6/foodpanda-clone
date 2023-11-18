@@ -1,3 +1,4 @@
+import { slides } from "./Slidesdb";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -9,12 +10,17 @@ const RightSideBody = ({ RiEqualizerLine, content, AiOutlineSearch }) => {
     return (
       <div
         className={className}
-        style={{ ...style, display: "block", background: "red" }}
+        style={{
+          ...style,
+          display: "block",
+          background: "pink",
+          
+        }}
         onClick={onClick}
       />
     );
   }
-  
+
   function SamplePrevArrow(props) {
     const { className, style, onClick } = props;
     return (
@@ -25,7 +31,7 @@ const RightSideBody = ({ RiEqualizerLine, content, AiOutlineSearch }) => {
       />
     );
   }
-  
+
   var settings = {
     dots: true,
     infinite: false,
@@ -33,145 +39,57 @@ const RightSideBody = ({ RiEqualizerLine, content, AiOutlineSearch }) => {
     slidesToShow: 4,
     slidesToScroll: 4,
     initialSlide: 0,
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
+
     responsive: [
+      {
+        breakpoint: 1536,
+        settings: {
+          slidesToShow: 5,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 1280,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true,
+        },
+      },
       {
         breakpoint: 1024,
         settings: {
           slidesToShow: 3,
-          slidesToScroll: 3,
+          slidesToScroll: 1,
           infinite: true,
-          dots: true
-        }
+          dots: true,
+        },
       },
       {
-        breakpoint: 600,
+        breakpoint: 768,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2
-        }
+          slidesToScroll: 1,
+          initialSlide: 3,
+        },
       },
       {
-        breakpoint: 480,
+        breakpoint: 640,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
-    ]
+          slidesToScroll: 1,
+          initialSlide: 1,
+        },
+      },
+      
+      
+    ],
   };
-
-  const slides = [
-    {
-      id: 1,
-      photo_url:
-        "https://images.pexels.com/photos/1448721/pexels-photo-1448721.jpeg?auto=compress&cs=tinysrgb&w=1600",
-      restaurant_name: "Govinda's",
-      ratings: 3.5 / 5,
-      subscriber: 1000,
-      food_type: "Bangladeshi",
-      service_charge: "delivery",
-    },
-
-    {
-      id: 2,
-      photo_url:
-        "https://images.pexels.com/photos/8471703/pexels-photo-8471703.jpeg?auto=compress&cs=tinysrgb&w=1600",
-      restaurant_name: "Radison Blu",
-      ratings: 4 / 5,
-      subscriber: 2000,
-      food_type: "Bangladeshi",
-      service_charge: "delivery",
-    },
-
-    {
-      id: 3,
-      photo_url:
-        "https://images.pexels.com/photos/1956974/pexels-photo-1956974.jpeg?auto=compress&cs=tinysrgb&w=1600",
-      restaurant_name: "Rodela Bikel",
-      ratings: 3.5 / 5,
-      subscriber: 5000,
-      food_type: "Bangladeshi",
-      service_charge: "delivery",
-    },
-
-    {
-      id: 4,
-      photo_url:
-        "https://images.pexels.com/photos/2814828/pexels-photo-2814828.jpeg?auto=compress&cs=tinysrgb&w=1600",
-      restaurant_name: "Laziza",
-      ratings: 4.5 / 5,
-      subscriber: 3000,
-      food_type: "Bangladeshi",
-      service_charge: "delivery",
-    },
-
-    {
-      id: 5,
-      photo_url:
-        "https://images.pexels.com/photos/4393021/pexels-photo-4393021.jpeg?auto=compress&cs=tinysrgb&w=1600",
-      restaurant_name: "Laham's",
-      ratings: 3 / 5,
-      subscriber: 4000,
-      food_type: "Bangladeshi",
-      service_charge: "delivery",
-    },
-
-    {
-      id: 6,
-      photo_url:
-        "https://images.pexels.com/photos/1448721/pexels-photo-1448721.jpeg?auto=compress&cs=tinysrgb&w=1600",
-      restaurant_name: "Govinda's",
-      ratings: 3.5 / 5,
-      subscriber: 1000,
-      food_type: "Bangladeshi",
-      service_charge: "delivery",
-    },
-
-    {
-      id: 7,
-      photo_url:
-        "https://images.pexels.com/photos/8471703/pexels-photo-8471703.jpeg?auto=compress&cs=tinysrgb&w=1600",
-      restaurant_name: "Radison Blu",
-      ratings: 4 / 5,
-      subscriber: 2000,
-      food_type: "Bangladeshi",
-      service_charge: "delivery",
-    },
-
-    {
-      id: 8,
-      photo_url:
-        "https://images.pexels.com/photos/1956974/pexels-photo-1956974.jpeg?auto=compress&cs=tinysrgb&w=1600",
-      restaurant_name: "Rodela Bikel",
-      ratings: 3.5 / 5,
-      subscriber: 5000,
-      food_type: "Bangladeshi",
-      service_charge: "delivery",
-    },
-
-    {
-      id: 9,
-      photo_url:
-        "https://images.pexels.com/photos/2814828/pexels-photo-2814828.jpeg?auto=compress&cs=tinysrgb&w=1600",
-      restaurant_name: "Laziza",
-      ratings: 4.5 / 5,
-      subscriber: 3000,
-      food_type: "Bangladeshi",
-      service_charge: "delivery",
-    },
-
-    {
-      id: 10,
-      photo_url:
-        "https://images.pexels.com/photos/4393021/pexels-photo-4393021.jpeg?auto=compress&cs=tinysrgb&w=1600",
-      restaurant_name: "Laham's",
-      ratings: 3 / 5,
-      subscriber: 4000,
-      food_type: "Bangladeshi",
-      service_charge: "delivery",
-    },
-  ];
 
   return (
     <>
@@ -206,13 +124,13 @@ const RightSideBody = ({ RiEqualizerLine, content, AiOutlineSearch }) => {
         </div>
 
         {/*Slider*/}
-        <div className="w-[580px] h-auto">
+        <div className="w-[500px] md:w-[410px] lg:w-[600px] xl:w-[800px] 2xl:w-[900px] h-auto">
           <Slider {...settings}>
             {slides.map((d) => {
               return (
                 <>
-                  <div className="w-32 flex flex-col">
-                    <img src={d.photo_url} alt="" />
+                  <div className="w-full md:w-48 flex flex-col px-5">
+                    <img src={d.photo_url} alt="" className="object-cover" />
                     <p className="text-center">{d.restaurant_name}</p>
                     <bottom></bottom>
                   </div>
@@ -222,7 +140,6 @@ const RightSideBody = ({ RiEqualizerLine, content, AiOutlineSearch }) => {
           </Slider>
         </div>
 
-        
         <div className="w-full md:w-[475px] lg:w-[650px] xl:w-[915px] 2xl:w-[1148px]  h-auto flex flex-col flex-wrap justify-start gap-10 md:px-4">
           {content.map((con) => {
             return (
