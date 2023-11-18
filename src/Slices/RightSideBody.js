@@ -8,77 +8,39 @@ import "slick-carousel/slick/slick-theme.css";
 const RightSideBody = ({ RiEqualizerLine, content, AiOutlineSearch }) => {
 
   // Previous
-  const SamplePrevArrow = ({onClick}) => {
+  function SamplePrevArrow(props) {
+    const {style, onClick } = props;
     return (
-      <div onClick={onClick} className='absolute -left-5 top-32 '>
-        <div 
-        className=" h-6 w-6 rounded-full cursor-pointer 
-        bg-pink-600 text-white
-         hover:ring-2 hover:ring-pink-600
-          transition ease-in duration-100
-         ">
-          <IoIosArrowRoundBack size={23}/>
+      <div
+        className="text-white bg-pink-600 w-6 h-6 px-1 pt-1 rounded-full absolute top-14 -left-8 hover:ring-2 hover:ring-pink-600"
+        
+        onClick={onClick}>
+        <IoIosArrowRoundBack/>
         </div>
-      </div>
-    )
+      
+    );
   }
   
 // Next
-  const SampleNextArrow = ({onClick}) => {
-    return (
-      <div onClick={onClick} className='absolute top-32 right-20'>
-      <div 
-      className=" h-6 w-6 rounded-full cursor-pointer 
-      bg-pink-600 text-white
-       hover:ring-2 hover:ring-pink-600
-        transition ease-in duration-100
-       ">
-        <IoIosArrowRoundForward size={23}/>
+function SampleNextArrow(props) {
+  const {onClick } = props;
+  return (
+    <div
+      className="text-white bg-pink-600 w-6 h-6 px-1 pt-1 rounded-full absolute top-14 -right-8 hover:ring-2 hover:ring-pink-600"
+      onClick={onClick}>
+      <IoIosArrowRoundForward/>
       </div>
-      </div>
-    )
-  }
+  );
+}
 
   
-  
- 
-
-  var settings = {
+  const settings = {
     dots: true,
-    infinite: false,
-    speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 4,
-    initialSlide: 0,
-    nextArrow: < SampleNextArrow/>,
-    prevArrow: < SamplePrevArrow/>,
-
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-          dots: true
-        }
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
-    ]
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />
   };
 
   return (
@@ -133,7 +95,7 @@ const RightSideBody = ({ RiEqualizerLine, content, AiOutlineSearch }) => {
 
         </div>
 
-        <div className="w-full md:w-[475px] lg:w-[650px] xl:w-[915px] 2xl:w-[1148px]  h-auto flex flex-col flex-wrap justify-start gap-10 md:px-4">
+        <div className="w-full md:w-[47px] lg:w-[650px] xl:w-[915px] 2xl:w-[1148px]  h-auto flex flex-col flex-wrap justify-start gap-10 md:px-4">
           {content.map((con) => {
             return (
               <>
