@@ -1,36 +1,47 @@
 import { slides } from "./Slidesdb";
+import { IoIosArrowRoundBack,IoIosArrowRoundForward } from "react-icons/io";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+
 const RightSideBody = ({ RiEqualizerLine, content, AiOutlineSearch }) => {
 
-  function SampleNextArrow(props) {
-    const { className, style, onClick } = props;
+  // Previous
+  const SamplePrevArrow = ({onClick}) => {
     return (
-      <div
-        className={className}
-        style={{
-          ...style,
-          display: "block",
-          background: "pink",
-          
-        }}
-        onClick={onClick}
-      />
-    );
+      <div onClick={onClick} className='absolute -left-5 top-32 '>
+        <div 
+        className=" h-6 w-6 rounded-full cursor-pointer 
+        bg-pink-600 text-white
+         hover:ring-2 hover:ring-pink-600
+          transition ease-in duration-100
+         ">
+          <IoIosArrowRoundBack size={23}/>
+        </div>
+      </div>
+    )
+  }
+  
+// Next
+  const SampleNextArrow = ({onClick}) => {
+    return (
+      <div onClick={onClick} className='absolute top-32 right-20'>
+      <div 
+      className=" h-6 w-6 rounded-full cursor-pointer 
+      bg-pink-600 text-white
+       hover:ring-2 hover:ring-pink-600
+        transition ease-in duration-100
+       ">
+        <IoIosArrowRoundForward size={23}/>
+      </div>
+      </div>
+    )
   }
 
-  function SamplePrevArrow(props) {
-    const { className, style, onClick } = props;
-    return (
-      <div
-        className={className}
-        style={{ ...style, display: "block", background: "green" }}
-        onClick={onClick}
-      />
-    );
-  }
+  
+  
+ 
 
   var settings = {
     dots: true,
@@ -39,56 +50,35 @@ const RightSideBody = ({ RiEqualizerLine, content, AiOutlineSearch }) => {
     slidesToShow: 4,
     slidesToScroll: 4,
     initialSlide: 0,
-    nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />,
+    nextArrow: < SampleNextArrow/>,
+    prevArrow: < SamplePrevArrow/>,
 
     responsive: [
-      {
-        breakpoint: 1536,
-        settings: {
-          slidesToShow: 5,
-          slidesToScroll: 1,
-          infinite: true,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 1280,
-        settings: {
-          slidesToShow: 4,
-          slidesToScroll: 1,
-          infinite: true,
-          dots: true,
-        },
-      },
       {
         breakpoint: 1024,
         settings: {
           slidesToShow: 3,
-          slidesToScroll: 1,
+          slidesToScroll: 3,
           infinite: true,
-          dots: true,
-        },
+          dots: true
+        }
       },
       {
-        breakpoint: 768,
+        breakpoint: 600,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 1,
-          initialSlide: 3,
-        },
+          slidesToScroll: 2,
+          initialSlide: 2
+        }
       },
       {
-        breakpoint: 640,
+        breakpoint: 480,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1,
-          initialSlide: 1,
-        },
-      },
-      
-      
-    ],
+          slidesToScroll: 1
+        }
+      }
+    ]
   };
 
   return (
@@ -124,12 +114,14 @@ const RightSideBody = ({ RiEqualizerLine, content, AiOutlineSearch }) => {
         </div>
 
         {/*Slider*/}
-        <div className="w-[500px] md:w-[410px] lg:w-[600px] xl:w-[800px] 2xl:w-[900px] h-auto">
+        <div className="w-[500px] md:w-[410px] lg:w-[600px] xl:w-[800px] 2xl:w-[900px] h-auto relative">
+        
           <Slider {...settings}>
+          
             {slides.map((d) => {
               return (
                 <>
-                  <div className="w-full md:w-48 flex flex-col px-5">
+                  <div className="w-full md:w-48 flex flex-col">
                     <img src={d.photo_url} alt="" className="object-cover" />
                     <p className="text-center">{d.restaurant_name}</p>
                     <bottom></bottom>
@@ -138,6 +130,7 @@ const RightSideBody = ({ RiEqualizerLine, content, AiOutlineSearch }) => {
               );
             })}
           </Slider>
+
         </div>
 
         <div className="w-full md:w-[475px] lg:w-[650px] xl:w-[915px] 2xl:w-[1148px]  h-auto flex flex-col flex-wrap justify-start gap-10 md:px-4">
