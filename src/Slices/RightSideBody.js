@@ -1,46 +1,111 @@
 import { slides } from "./Slidesdb";
-import { IoIosArrowRoundBack,IoIosArrowRoundForward } from "react-icons/io";
+import { IoIosArrowRoundBack, IoIosArrowRoundForward } from "react-icons/io";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-
 const RightSideBody = ({ RiEqualizerLine, content, AiOutlineSearch }) => {
-
   // Previous
   function SamplePrevArrow(props) {
-    const {style, onClick } = props;
+    const { onClick } = props;
     return (
       <div
-        className="text-white bg-pink-600 w-6 h-6 px-1 pt-1 rounded-full absolute top-14 -left-8 hover:ring-2 hover:ring-pink-600"
-        
-        onClick={onClick}>
-        <IoIosArrowRoundBack/>
-        </div>
-      
+        className="text-white bg-pink-600 rounded-full transition ease-in-out duration-300
+        flex justify-center items-center
+        w-5 h-5
+        absolute top-32 -left-8
+        md:top-10 
+        hover:ring-2 hover:ring-pink-600 "
+        onClick={onClick}
+      >
+        <IoIosArrowRoundBack size={20} />
+      </div>
     );
   }
-  
-// Next
-function SampleNextArrow(props) {
-  const {onClick } = props;
-  return (
-    <div
-      className="text-white bg-pink-600 w-6 h-6 px-1 pt-1 rounded-full absolute top-14 -right-8 hover:ring-2 hover:ring-pink-600"
-      onClick={onClick}>
-      <IoIosArrowRoundForward/>
-      </div>
-  );
-}
 
-  
+  // Next
+  function SampleNextArrow(props) {
+    const { onClick } = props;
+    return (
+      <div
+        className="text-white bg-pink-600 rounded-full transition ease-in-out duration-300
+      flex justify-center items-center
+      w-5 h-5
+      absolute top-32 -right-8
+      md:top-10 
+      hover:ring-2 hover:ring-pink-600"
+        onClick={onClick}
+      >
+        <IoIosArrowRoundForward size={20} />
+      </div>
+    );
+  }
+
   const settings = {
-    dots: true,
-    infinite: true,
-    slidesToShow: 3,
-    slidesToScroll: 1,
+    dots: false,
+    infinite: false,
+    slidesToShow: 6,
     nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />
+    prevArrow: <SamplePrevArrow />,
+    responsive: [
+      {
+        breakpoint: 1536,
+        settings: {
+          slidesToShow: 6,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 1535,
+        settings: {
+          slidesToShow: 5,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 1280,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        },
+      },
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
 
   return (
@@ -76,14 +141,16 @@ function SampleNextArrow(props) {
         </div>
 
         {/*Slider*/}
-        <div className="w-[500px] md:w-[410px] lg:w-[600px] xl:w-[800px] 2xl:w-[900px] h-auto relative">
-        
+        <div className="w-[450px] md:w-[395px] lg:w-[600px] xl:w-[800px] 2xl:w-[1040px] 3xl:w-[11px] h-auto relative">
           <Slider {...settings}>
-          
             {slides.map((d) => {
               return (
                 <>
-                  <div className="w-full md:w-48 flex flex-col">
+                  <div
+                    className="w-[432px] md:flex flex-col mx-2 px-2
+                  md:w-40
+                  "
+                  >
                     <img src={d.photo_url} alt="" className="object-cover" />
                     <p className="text-center">{d.restaurant_name}</p>
                     <bottom></bottom>
@@ -92,10 +159,9 @@ function SampleNextArrow(props) {
               );
             })}
           </Slider>
-
         </div>
 
-        <div className="w-full md:w-[47px] lg:w-[650px] xl:w-[915px] 2xl:w-[1148px]  h-auto flex flex-col flex-wrap justify-start gap-10 md:px-4">
+        <div className="w-full md:w-[399px] lg:w-[650px] xl:w-[915px] 2xl:w-[1148px]  h-auto flex flex-col flex-wrap justify-start gap-10 md:px-4">
           {content.map((con) => {
             return (
               <>
