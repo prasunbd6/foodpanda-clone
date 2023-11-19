@@ -3,8 +3,10 @@ import { IoIosArrowRoundBack, IoIosArrowRoundForward } from "react-icons/io";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Allrestaurant from "./Allrestaurant";
 
 const RightSideBody = ({ RiEqualizerLine, content, AiOutlineSearch }) => {
+
   // Previous
   function SamplePrevArrow(props) {
     const { onClick } = props;
@@ -160,6 +162,14 @@ const RightSideBody = ({ RiEqualizerLine, content, AiOutlineSearch }) => {
             })}
           </Slider>
         </div>
+
+        <div className="w-11/12 mt-5">
+
+        <Allrestaurant/>
+
+        </div>
+      
+        
 
         <div className="w-full md:w-[399px] lg:w-[650px] xl:w-[915px] 2xl:w-[1148px]  h-auto flex flex-col flex-wrap justify-start gap-10 md:px-4">
           {content.map((con) => {
