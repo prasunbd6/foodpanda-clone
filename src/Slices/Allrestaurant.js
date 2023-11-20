@@ -102,9 +102,9 @@ const Allrestaurant = () => {
         {imgAddress.map((data) => {
           return (
             <>
-              <div className="w-[500px] md:w-64 h-auto border rounded-xl p-2" key={data.id}>
-                <img src={data.photo} className="bg-cover w-full h-full  hover:scale-100 scale-90 transition ease-in duration-300" alt="" />
-                <div className="flex flex-col py-3">
+              <div className="w-[500px] h-auto md:w-64 border rounded-xl overflow-hidden group" key={data.id}>
+                <img src={data.photo} className="bg-cover w-full h-full duration-700  group-hover:scale-110" alt="" />
+                <div className="flex flex-col py-3 group-hover:shadow-md">
                   <div className="flex justify-between">
                     <p className="px-2 text-xl font-bold">Res Name</p>
                     <div className="flex justify-between items-center gap-1">
