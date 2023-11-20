@@ -46,15 +46,15 @@ const RightSideBody = ({ RiEqualizerLine, content, AiOutlineSearch }) => {
   const settings = {
     dots: false,
     infinite: false,
-    slidesToShow: 6,
+    slidesToShow: 5,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
     responsive: [
       {
         breakpoint: 1536,
         settings: {
-          slidesToShow: 6,
-          slidesToScroll: 3,
+          slidesToShow: 5,
+          slidesToScroll: 1,
           infinite: true,
           dots: true,
         },
@@ -63,7 +63,7 @@ const RightSideBody = ({ RiEqualizerLine, content, AiOutlineSearch }) => {
         breakpoint: 1535,
         settings: {
           slidesToShow: 5,
-          slidesToScroll: 3,
+          slidesToScroll: 1,
           infinite: true,
           dots: true,
         },
@@ -72,7 +72,7 @@ const RightSideBody = ({ RiEqualizerLine, content, AiOutlineSearch }) => {
         breakpoint: 1280,
         settings: {
           slidesToShow: 4,
-          slidesToScroll: 3,
+          slidesToScroll: 1,
           infinite: true,
           dots: true,
         },
