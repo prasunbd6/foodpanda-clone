@@ -145,14 +145,14 @@ const Allrestaurant = () => {
                 </div>
 
                 <div className="w-56 h-36 absolute top-3 left-3 flex flex-col gap-1 text-white">
-                  <span className="w-32 flex gap-1 p-1 rounded-lg bg-gradient-to-r from-pink-500 to-pink-700">
+                  <span className="w-32 flex items-center gap-1 px-1 rounded-lg bg-gradient-to-r from-pink-500 to-pink-700">
                     <i>
                       <LuBadgePercent size={15} />
                     </i>
                     <p>Free Delivery</p>
                   </span>
 
-                  <span className="w-44 flex gap-1 p-1 rounded-lg bg-gradient-to-r from-pink-500 to-pink-700">
+                  <span className="w-44 flex items-center gap-1 px-1 rounded-lg bg-gradient-to-r from-pink-500 to-pink-700">
                     <i>
                       <LuBadgePercent size={15} />
                     </i>
