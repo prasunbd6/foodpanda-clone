@@ -99,12 +99,13 @@ const Allrestaurant = () => {
 
   return (
     <>
+    <p className="text-xl font-bold py-5">All Restaurants</p>
       <div className="flex flex-wrap justify-center items-center md:justify-start md:mx-3 gap-4">
         {imgAddress.map((data) => {
           return (
             <>
               <div
-                className="w-[500px] h-auto md:w-64 border rounded-xl group relative"
+                className="w-[500px] h-auto md:w-64  rounded-xl group relative"
                 key={data.id}
               >
                 <div className=" overflow-hidden">
@@ -115,7 +116,7 @@ const Allrestaurant = () => {
                   />
                 </div>
 
-                <div className="flex flex-col py-3 group-hover:shadow-sm group-hover:shadow-pink-100 duration-200">
+                <div className="flex flex-col py-3">
                   <div className="flex justify-between">
                     <p className="px-2 text-xl font-bold">Res Name</p>
                     <div className="flex justify-between items-center gap-1">

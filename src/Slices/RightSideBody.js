@@ -1,9 +1,9 @@
 import { slides } from "./Slidesdb";
 import { IoIosArrowRoundBack, IoIosArrowRoundForward } from "react-icons/io";
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import Allrestaurant from "./Allrestaurant";
+import FavCuisines from "./FavCuisines";
+
 
 const RightSideBody = ({ RiEqualizerLine, content, AiOutlineSearch }) => {
 
@@ -144,7 +144,8 @@ const RightSideBody = ({ RiEqualizerLine, content, AiOutlineSearch }) => {
 
         {/*Slider*/}
         <div className="w-[450px] md:w-[395px] lg:w-[600px] xl:w-[800px] 2xl:w-[1040px] 3xl:w-[11px] h-auto relative">
-          <Slider {...settings}>
+        
+        <Slider {...settings}>
             {slides.map((d) => {
               return (
                 <>
@@ -161,6 +162,11 @@ const RightSideBody = ({ RiEqualizerLine, content, AiOutlineSearch }) => {
               );
             })}
           </Slider>
+        </div>
+
+       
+        <div className="w-11/12 mt-5">
+            <FavCuisines/>
         </div>
 
         <div className="w-11/12 mt-5">
