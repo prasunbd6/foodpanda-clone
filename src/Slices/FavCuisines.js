@@ -12,8 +12,8 @@ const FavCuisines = () => {
         className="text-white bg-pink-600 rounded-full transition ease-in-out duration-300
         flex justify-center items-center
         w-5 h-5
-        absolute top-32 -left-8
-        md:top-10 
+        absolute top-16 -left-6
+        md:top-8 
         hover:ring-2 hover:ring-pink-600 "
         onClick={onClick}
       >
@@ -30,8 +30,8 @@ const FavCuisines = () => {
         className="text-white bg-pink-600 rounded-full transition ease-in-out duration-300
       flex justify-center items-center
       w-5 h-5
-      absolute top-32 -right-6
-      md:top-10 
+      absolute top- -right-6
+      md:top-8 
       hover:ring-2 hover:ring-pink-600"
         onClick={onClick}
       >
@@ -52,26 +52,14 @@ const FavCuisines = () => {
         settings: {
           slidesToShow: 5,
           slidesToScroll: 1,
-          infinite: true,
-          dots: true,
         },
       },
-      {
-        breakpoint: 1535,
-        settings: {
-          slidesToShow: 5,
-          slidesToScroll: 1,
-          infinite: true,
-          dots: true,
-        },
-      },
+      
       {
         breakpoint: 1280,
         settings: {
           slidesToShow: 4,
           slidesToScroll: 1,
-          infinite: true,
-          dots: true,
         },
       },
       {
@@ -79,19 +67,18 @@ const FavCuisines = () => {
         settings: {
           slidesToShow: 3,
           slidesToScroll: 1,
-          infinite: true,
-          dots: true,
         },
       },
       {
         breakpoint: 768,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 2,
+          slidesToScroll: 1,
         },
       },
+      
       {
-        breakpoint: 767,
+        breakpoint: 640,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -156,15 +143,21 @@ const FavCuisines = () => {
 
   return (
     <>
-      <p className="text-xl font-bold py-5">Your favourite Cuisines</p>
-      <div className="w-[479px] md:w-[350px] relative">
+
+    
+    <p className="w-96 text-xl font-bold py-1">Your favourite Cuisines</p>
+  
+
+
+    <div className="pt-5 mx-auto w-[500px] md:w-[401px] lg:w-[600px] xl:w-[800px] 2xl:w-[1040px] 3xl:w-[11px] h-auto relative">
+   <div>
         <Slider {...settings}>
           {icecream.map((i) => {
             return (
               <>
-                <div className=" md:w-40 flex flex-wrap flex-col justify-center items-center">
-                  <div  key={i.id} className="w-[450px] md:w-40  rounded-xl overflow-hidden">
-                    <img src={i.link} className="w-full h-full bg-cover hover:scale-110 transition  duration-500 ease-in text-center" alt="" />
+                <div className="flex flex-col justify-center items-center">
+                  <div  key={i.id} className="w-[220px] md:w-[130px] lg:w-[142px] rounded-lg overflow-hidden">
+                    <img src={i.link} className="w-full h-full bg-cover hover:scale-110 transition  duration-300 ease-in text-center" alt="" />
                   </div>
                   <p className="text-center">{i.type}</p>
                   </div>
@@ -172,7 +165,11 @@ const FavCuisines = () => {
             );
           })}
           </Slider>
+</div>
       </div>
+    
+
+
     </>
   );
 };
