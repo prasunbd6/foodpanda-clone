@@ -142,6 +142,7 @@ const RightSideBody = ({ RiEqualizerLine, content, AiOutlineSearch }) => {
           {/************** Search Content (SM Device) - END ******************/}
         </div>
 
+        <div className="w-11/12 mt-5">
         {/*Slider*/}
         <div className="w-[450px] md:w-[395px] lg:w-[600px] xl:w-[800px] 2xl:w-[1040px] 3xl:w-[11px] h-auto relative">
         
@@ -163,7 +164,7 @@ const RightSideBody = ({ RiEqualizerLine, content, AiOutlineSearch }) => {
             })}
           </Slider>
         </div>
-
+</div>
        
         <div className="w-11/12 mt-5">
             <FavCuisines/>

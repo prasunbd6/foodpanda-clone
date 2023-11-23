@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import { IoIosArrowRoundBack, IoIosArrowRoundForward } from "react-icons/io";
 
 const FavCuisines = () => {
+
   // Previous
   function SamplePrevArrow(props) {
     const { onClick } = props;
@@ -29,7 +30,7 @@ const FavCuisines = () => {
         className="text-white bg-pink-600 rounded-full transition ease-in-out duration-300
       flex justify-center items-center
       w-5 h-5
-      absolute top-32 -right-8
+      absolute top-32 -right-6
       md:top-10 
       hover:ring-2 hover:ring-pink-600"
         onClick={onClick}
@@ -127,6 +128,28 @@ const FavCuisines = () => {
       id:4,
       link:"https://images.pexels.com/photos/1352296/pexels-photo-1352296.jpeg?auto=compress&cs=tinysrgb&w=1600",
       type:"shop",
+    },
+
+    {
+      id: 11,
+      link: "https://images.pexels.com/photos/1362534/pexels-photo-1362534.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      type:"cone",
+    },
+    {
+      id: 12,
+      link: "https://images.pexels.com/photos/108370/pexels-photo-108370.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      type:"colorful cone",
+    },
+    {
+      id:13,
+      link:"https://images.pexels.com/photos/1343504/pexels-photo-1343504.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      type:"variety",
+    },
+
+    {
+      id:14,
+      link:"https://images.pexels.com/photos/1352296/pexels-photo-1352296.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      type:"shop",
     }
 
   ];
@@ -134,18 +157,14 @@ const FavCuisines = () => {
   return (
     <>
       <p className="text-xl font-bold py-5">Your favourite Cuisines</p>
-      <div>
+      <div className="w-[479px] md:w-[350px] relative">
         <Slider {...settings}>
           {icecream.map((i) => {
             return (
               <>
-                <div className="flex flex-wrap flex-col justify-center items-center">
-                  <div  key={i.id} className="w-44 rounded-3xl overflow-hidden">
-                    <img
-                      src={i.link}
-                      className="w-full h-full bg-cover hover:scale-110 transition  duration-500 ease-in text-center"
-                      alt=""
-                    />
+                <div className=" md:w-40 flex flex-wrap flex-col justify-center items-center">
+                  <div  key={i.id} className="w-[450px] md:w-40  rounded-xl overflow-hidden">
+                    <img src={i.link} className="w-full h-full bg-cover hover:scale-110 transition  duration-500 ease-in text-center" alt="" />
                   </div>
                   <p className="text-center">{i.type}</p>
                   </div>
