@@ -15,7 +15,7 @@ const RightSideBody = ({ RiEqualizerLine, content, AiOutlineSearch }) => {
         className="text-white bg-pink-600 rounded-full transition ease-in-out duration-300
         flex justify-center items-center
         w-5 h-5
-        absolute top-28 -left-5
+        absolute top-28 -left-4
         md:top-10 
         hover:ring-2 hover:ring-pink-600 "
         onClick={onClick}
@@ -33,7 +33,7 @@ const RightSideBody = ({ RiEqualizerLine, content, AiOutlineSearch }) => {
         className="text-white bg-pink-600 rounded-full transition ease-in-out duration-300
       flex justify-center items-center
       w-5 h-5
-      absolute top-28 -right-5
+      absolute top-28 -right-4
       md:top-10 
       hover:ring-2 hover:ring-pink-600"
         onClick={onClick}
