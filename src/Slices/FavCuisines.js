@@ -12,8 +12,8 @@ const FavCuisines = () => {
         className="text-white bg-pink-600 rounded-full transition ease-in-out duration-300
         flex justify-center items-center
         w-5 h-5
-        absolute top-16 -left-5
-        md:top-9 
+        absolute top-28 -left-5
+        md:top-10 
         hover:ring-2 hover:ring-pink-600 "
         onClick={onClick}
       >
@@ -30,8 +30,8 @@ const FavCuisines = () => {
         className="text-white bg-pink-600 rounded-full transition ease-in-out duration-300
       flex justify-center items-center
       w-5 h-5
-      absolute top-16 -right-5
-      md:top-9 
+      absolute top-28 -right-5
+      md:top-10 
       hover:ring-2 hover:ring-pink-600"
         onClick={onClick}
       >
@@ -164,7 +164,7 @@ const FavCuisines = () => {
             return (
               <>
                 <div className="flex flex-col justify-center items-center">
-                  <div  key={i.id} className="w-[220px] md:w-[130px] lg:w-[142px] rounded-lg overflow-hidden">
+                  <div  key={i.id} className="w-[350px] md:w-[130px] lg:w-[142px] rounded-lg overflow-hidden">
                     <img src={i.link} className="w-full h-full bg-cover hover:scale-110 transition  duration-300 ease-in text-center" alt="" />
                   </div>
                   <p className="text-center">{i.type}</p>
