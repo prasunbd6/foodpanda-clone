@@ -13,7 +13,7 @@ const FavCuisines = () => {
         flex justify-center items-center
         w-5 h-5
         absolute top-28 -left-4
-        md:top-10 
+        md:top-10 md:-left-4
         hover:ring-2 hover:ring-pink-600 "
         onClick={onClick}
       >
@@ -31,7 +31,7 @@ const FavCuisines = () => {
       flex justify-center items-center
       w-5 h-5
       absolute top-28 -right-4
-      md:top-10 
+      md:top-10 md:-right-4
       hover:ring-2 hover:ring-pink-600"
         onClick={onClick}
       >
