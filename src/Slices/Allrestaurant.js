@@ -5,6 +5,7 @@ import { MdOutlineDeliveryDining } from "react-icons/md";
 import { LuBadgePercent } from "react-icons/lu";
 
 const Allrestaurant = () => {
+  
   const imgAddress = [
     {
       id: 1,
@@ -99,21 +100,17 @@ const Allrestaurant = () => {
 
   return (
     <>
-    <p className="text-xl font-bold py-5">All Restaurants</p>
+    <p className="text-2xl font-bold py-5">All Restaurants</p>
+
       <div className="flex flex-wrap justify-center items-center md:justify-start md:mx-3 gap-4">
+
+
         {imgAddress.map((data) => {
           return (
             <>
-              <div
-                className="w-[500px] h-auto md:w-64  rounded-xl group relative"
-                key={data.id}
-              >
-                <div className=" overflow-hidden">
-                  <img
-                    src={data.photo}
-                    className="bg-cover w-full h-full duration-700  group-hover:scale-110"
-                    alt=""
-                  />
+              <div className="w-[500px] h-auto md:w-64  rounded-xl group relative" key={data.id} >
+                <div className="overflow-hidden">
+                  <img src={data.photo} className="bg-cover w-full h-full duration-700  group-hover:scale-110" alt="" />
                 </div>
 
                 <div className="flex flex-col py-3">
@@ -164,6 +161,8 @@ const Allrestaurant = () => {
             </>
           );
         })}
+
+
       </div>
     </>
   );

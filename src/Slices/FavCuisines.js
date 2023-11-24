@@ -54,7 +54,7 @@ const FavCuisines = () => {
           slidesToScroll: 1,
         },
       },
-      
+
       {
         breakpoint: 1280,
         settings: {
@@ -84,7 +84,7 @@ const FavCuisines = () => {
           slidesToScroll: 1,
         },
       },
-      
+
       {
         breakpoint: 640,
         settings: {
@@ -106,45 +106,45 @@ const FavCuisines = () => {
     {
       id: 1,
       link: "https://images.pexels.com/photos/1362534/pexels-photo-1362534.jpeg?auto=compress&cs=tinysrgb&w=1600",
-      type:"cone",
+      type: "cone",
     },
     {
       id: 2,
       link: "https://images.pexels.com/photos/108370/pexels-photo-108370.jpeg?auto=compress&cs=tinysrgb&w=1600",
-      type:"colorful cone",
+      type: "colorful cone",
     },
     {
-      id:3,
-      link:"https://images.pexels.com/photos/1343504/pexels-photo-1343504.jpeg?auto=compress&cs=tinysrgb&w=1600",
-      type:"variety",
+      id: 3,
+      link: "https://images.pexels.com/photos/1343504/pexels-photo-1343504.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      type: "variety",
     },
 
     {
-      id:4,
-      link:"https://images.pexels.com/photos/1352296/pexels-photo-1352296.jpeg?auto=compress&cs=tinysrgb&w=1600",
-      type:"shop",
+      id: 4,
+      link: "https://images.pexels.com/photos/1352296/pexels-photo-1352296.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      type: "shop",
     },
 
     {
       id: 11,
       link: "https://images.pexels.com/photos/1362534/pexels-photo-1362534.jpeg?auto=compress&cs=tinysrgb&w=1600",
-      type:"cone",
+      type: "cone",
     },
     {
       id: 12,
       link: "https://images.pexels.com/photos/108370/pexels-photo-108370.jpeg?auto=compress&cs=tinysrgb&w=1600",
-      type:"colorful cone",
+      type: "colorful cone",
     },
     {
-      id:13,
-      link:"https://images.pexels.com/photos/1343504/pexels-photo-1343504.jpeg?auto=compress&cs=tinysrgb&w=1600",
-      type:"variety",
+      id: 13,
+      link: "https://images.pexels.com/photos/1343504/pexels-photo-1343504.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      type: "variety",
     },
 
     {
-      id:14,
-      link:"https://images.pexels.com/photos/1352296/pexels-photo-1352296.jpeg?auto=compress&cs=tinysrgb&w=1600",
-      type:"shop",
+      id: 14,
+      link: "https://images.pexels.com/photos/1352296/pexels-photo-1352296.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      type: "shop",
     }
 
   ];
@@ -152,30 +152,30 @@ const FavCuisines = () => {
   return (
     <>
 
-    <div className="pt-5 ">
-      <p className="w-96 text-xl font-bold py-1">Your favourite Cuisines</p>
+      <div className="pt-5 ">
+        <p className="w-96 text-xl font-bold py-1">Your favourite Cuisines</p>
 
-      <div className="mx-auto w-[490px] md:w-[401px] lg:w-[600px] xl:w-[800px] 2xl:w-[1040px] 3xl:w-[11px] h-auto relative">
-   <div>
-        <Slider {...settings}>
-          {icecream.map((i) => {
-            return (
-              <>
-                <div className="flex flex-col justify-center items-center">
-                  <div  key={i.id} className="w-[350px] md:w-[130px] lg:w-[142px] rounded-lg overflow-hidden">
-                    <img src={i.link} className="w-full h-full bg-cover hover:scale-110 transition  duration-300 ease-in text-center" alt="" />
-                  </div>
-                  <p className="text-center">{i.type}</p>
-                  </div>
-              </>
-            );
-          })}
-          </Slider>
-</div>
+        <div className="mx-auto w-[490px] md:w-[401px] lg:w-[600px] xl:w-[800px] 2xl:w-[1040px] 3xl:w-[11px] h-auto relative">
+          <div>
+            <Slider {...settings}>
+              {icecream.map((i) => {
+                return (
+                  <>
+                    <div className="flex flex-col justify-center items-center">
+                      <div key={i.id} className="w-[350px] md:w-[130px] lg:w-[142px] rounded-lg overflow-hidden">
+                        <img src={i.link} className="w-full h-full bg-cover hover:scale-110 transition  duration-300 ease-in text-center" alt="" />
+                      </div>
+                      <p className="text-center">{i.type}</p>
+                    </div>
+                  </>
+                );
+              })}
+            </Slider>
+          </div>
+        </div>
+
       </div>
 
-    </div>
-    
 
 
     </>

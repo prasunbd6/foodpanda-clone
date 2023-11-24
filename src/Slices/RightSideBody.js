@@ -3,6 +3,8 @@ import { IoIosArrowRoundBack, IoIosArrowRoundForward } from "react-icons/io";
 import Slider from "react-slick";
 import Allrestaurant from "./Allrestaurant";
 import FavCuisines from "./FavCuisines";
+import Ghorerkhabar from "./Ghorerkhabar";
+import Allrestaurantdemo from "./Allrestaurantdemo";
 
 
 const RightSideBody = ({ RiEqualizerLine, content, AiOutlineSearch }) => {
@@ -105,6 +107,7 @@ const RightSideBody = ({ RiEqualizerLine, content, AiOutlineSearch }) => {
       <div className=" md:w-[440px] lg:w-[680px] xl:w-[900px]  2xl:w-[1160px] h-auto flex flex-col justify-start items-center gap-4">
         {/************************************************* Working Area - START *****************************************************/}
 
+        {/* Search Bar */}
         <div className="w-11/12 h-auto flex justify-center items-center mt-5 md:justify-start">
           {/************** Search Content (SM Device) - END ********************/}
           <div className="w-4/5 flex justify-center items-center gap-4 md:justify-between">
@@ -134,32 +137,23 @@ const RightSideBody = ({ RiEqualizerLine, content, AiOutlineSearch }) => {
           {/************** Search Content (SM Device) - END ******************/}
         </div>
 
-        <div className="w-11/12 h-auto flex justify-center items-center mt-5">
-          {/*Slider*/}
-          <div className="pt-5 mx-auto w-[500px] md:w-[401px] lg:w-[600px] xl:w-[800px] 2xl:w-[1040px] 3xl:w-[11px] h-auto relative">
-  
-        <Slider {...settings}>
-          {slides.map((i) => {
-            return (
-              <>
-                <div className="flex flex-col justify-center items-center">
-                  <div  key={i.id} className="w-[350px] md:w-[130px] lg:w-[142px] rounded-lg overflow-hidden">
-                    <img src={i.photo_url} className="w-full h-full bg-cover hover:scale-110 transition  duration-300 ease-in text-center" alt="" />
-                  </div>
-                  <p className="text-center">{i.restaurant_name}</p>
-                  </div>
-              </>
-            );
-          })}
-          </Slider>
+        {/* All Restaurant Demo */}
 
-      </div>
+        <div className="w-11/12 h-auto flex justify-center items-center mt-5">
+          <Allrestaurantdemo settings={settings} Slider={Slider} slides={slides} />
         </div>
 
+        {/* Favourate Cuisines */}
         <div className="w-11/12 h-auto mt-5">
           <FavCuisines />
         </div>
 
+        {/* Ghorer Khabar */}
+        <div className="w-11/12 h-auto mt-5">
+          <Ghorerkhabar />
+        </div>
+
+        {/* All Restaurant */}
         <div className="w-11/12 h-auto mt-5">
 
           <Allrestaurant />
@@ -167,7 +161,7 @@ const RightSideBody = ({ RiEqualizerLine, content, AiOutlineSearch }) => {
         </div>
 
 
-
+        {/*Ghorer Khabar */}
         <div className="w-full md:w-[399px] lg:w-[650px] xl:w-[915px] 2xl:w-[1148px]  h-auto flex flex-col flex-wrap justify-start gap-10 md:px-4">
           {content.map((con) => {
             return (
