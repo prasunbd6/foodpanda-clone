@@ -12,8 +12,8 @@ const FavCuisines = () => {
         className="text-white bg-pink-600 rounded-full transition ease-in-out duration-300
         flex justify-center items-center
         w-5 h-5
-        absolute top-16 -left-6
-        md:top-8 
+        absolute top-16 -left-5
+        md:top-9 
         hover:ring-2 hover:ring-pink-600 "
         onClick={onClick}
       >
@@ -30,8 +30,8 @@ const FavCuisines = () => {
         className="text-white bg-pink-600 rounded-full transition ease-in-out duration-300
       flex justify-center items-center
       w-5 h-5
-      absolute top- -right-6
-      md:top-8 
+      absolute top-16 -right-5
+      md:top-9 
       hover:ring-2 hover:ring-pink-600"
         onClick={onClick}
       >
@@ -73,6 +73,14 @@ const FavCuisines = () => {
         breakpoint: 768,
         settings: {
           slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 1,
           slidesToScroll: 1,
         },
       },
