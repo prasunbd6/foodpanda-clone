@@ -136,7 +136,7 @@ const RightSideBody = ({ RiEqualizerLine, content, AiOutlineSearch }) => {
 
         <div className="w-11/12 h-auto flex justify-center items-center mt-5">
           {/*Slider*/}
-          <div className="pt-5 mx-auto w-[500px]  md:w-[401px] lg:w-[600px] xl:w-[800px] 2xl:w-[1040px] 3xl:w-[11px] h-auto relative">
+          <div className="pt-5 mx-auto w-[500px] md:w-[401px] lg:w-[600px] xl:w-[800px] 2xl:w-[1040px] 3xl:w-[11px] h-auto relative">
   
         <Slider {...settings}>
           {slides.map((i) => {

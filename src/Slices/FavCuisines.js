@@ -152,12 +152,10 @@ const FavCuisines = () => {
   return (
     <>
 
-    
-    <p className="w-96 text-xl font-bold py-1">Your favourite Cuisines</p>
-  
+    <div className="pt-5 ">
+      <p className="w-96 text-xl font-bold py-1">Your favourite Cuisines</p>
 
-
-    <div className="pt-5 mx-auto w-[500px] md:w-[401px] lg:w-[600px] xl:w-[800px] 2xl:w-[1040px] 3xl:w-[11px] h-auto relative">
+      <div className="mx-auto w-[490px] md:w-[401px] lg:w-[600px] xl:w-[800px] 2xl:w-[1040px] 3xl:w-[11px] h-auto relative">
    <div>
         <Slider {...settings}>
           {icecream.map((i) => {
@@ -175,6 +173,8 @@ const FavCuisines = () => {
           </Slider>
 </div>
       </div>
+
+    </div>
     
 
 
