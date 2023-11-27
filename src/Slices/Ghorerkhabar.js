@@ -171,7 +171,7 @@ const Ghorerkhabar = () => {
                 className="text-white bg-pink-600 rounded-full transition ease-in-out duration-300
         flex justify-center items-center
         w-5 h-5
-        absolute top-28 -left-4
+        absolute top-40 -left-3
         md:top-10 md:-left-4
         hover:ring-2 hover:ring-pink-600 "
                 onClick={onClick}
@@ -189,7 +189,7 @@ const Ghorerkhabar = () => {
                 className="text-white bg-pink-600 rounded-full transition ease-in-out duration-300
       flex justify-center items-center
       w-5 h-5
-      absolute top-28 -right-4
+      absolute top-40 -right-3
       md:top-10 md:-right-4
       hover:ring-2 hover:ring-pink-600"
                 onClick={onClick}
@@ -203,15 +203,15 @@ const Ghorerkhabar = () => {
     return (
         <>
             <p className="text-2xl font-bold py-5">Ghorer khabar</p>
-
-            <div className="flex justify-center items-center md:justify-start md:mx-3 gap-4">
+            <div className="mx-auto w-[490px] md:w-[401px] lg:w-[600px] xl:w-[800px] 2xl:w-[1040px] 3xl:w-[11px] h-auto">
+            <div>
               
                     <Slider {...settings}>
                         {imgAddress.map((data) => {
                             return (
                                 <>
                                     <div
-                                        className="w-[500px] h-auto md:w-64  rounded-xl group relative"
+                                        className="w-[450px] h-auto mx-auto md:w-64  rounded-xl group relative"
                                         key={data.id}
                                     >
                                         <div className=" overflow-hidden">
@@ -269,11 +269,11 @@ const Ghorerkhabar = () => {
 
                                         </div>
 
-                                        <div className=" absolute w-10 h-10 bg-white drop-shadow-xl bottom-[231px] left-[216px]">
+                                        <div className=" absolute w-10 h-10 bg-white drop-shadow-xl top-[0px] right-[0px]">
                                             <p className="text-sm text-center">40 MIN</p>
                                         </div>
 
-                                        <div className="absolute w-6 h-6 rounded-full flex justify-center items-center drop-shadow-lg bg-white text-pink-700 bottom-[106px] left-[225px]">
+                                        <div className="absolute w-6 h-6 rounded-full flex justify-center items-center drop-shadow-lg bg-white text-pink-700 bottom-[106px] left-[420px]">
                                             <FaRegHeart />
                                         </div>
 
@@ -285,6 +285,7 @@ const Ghorerkhabar = () => {
                         })}
                     </Slider>
                 
+            </div>
             </div>
         </>
     )
