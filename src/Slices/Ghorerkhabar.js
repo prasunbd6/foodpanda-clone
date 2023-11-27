@@ -111,7 +111,7 @@ const Ghorerkhabar = () => {
             {
                 breakpoint: 1536,
                 settings: {
-                    slidesToShow: 5,
+                    slidesToShow: 4,
                     slidesToScroll: 1,
                 },
             },
@@ -119,7 +119,7 @@ const Ghorerkhabar = () => {
             {
                 breakpoint: 1280,
                 settings: {
-                    slidesToShow: 4,
+                    slidesToShow: 3,
                     slidesToScroll: 1,
                 },
             },
@@ -127,6 +127,13 @@ const Ghorerkhabar = () => {
                 breakpoint: 1024,
                 settings: {
                     slidesToShow: 3,
+                    slidesToScroll: 1,
+                },
+            },
+            {
+                breakpoint: 1023,
+                settings: {
+                    slidesToShow: 2,
                     slidesToScroll: 1,
                 },
             },
@@ -211,7 +218,7 @@ const Ghorerkhabar = () => {
                             return (
                                 <>
                                     <div
-                                        className="w-[450px] h-auto mx-auto md:w-64  rounded-xl group relative"
+                                        className="w-[450px] h-auto mx-auto md:w-[180px]  rounded-xl group relative"
                                         key={data.id}
                                     >
                                         <div className=" overflow-hidden">
@@ -223,54 +230,54 @@ const Ghorerkhabar = () => {
                                         </div>
 
                                         <div className="flex flex-col py-3">
-                                            <div className="flex justify-between">
-                                                <p className="px-2 text-xl font-bold">Res Name</p>
+                                            <div className="flex justify-between items-center">
+                                                <p className="md:text-sm font-bold">Res Name</p>
                                                 <div className="flex justify-between items-center gap-1">
                                                     <i className="text-pink-600">
                                                         <PiStar size={13} />
                                                     </i>
-                                                    <p>2.1</p>
-                                                    <p>(2000+)</p>
+                                                    <p className="md:text-xs">2.1</p>
+                                                    <p className="md:text-xs">(2000+)</p>
                                                 </div>
                                             </div>
                                             <div className="flex items-center">
                                                 <i className="flex items-center">
                                                     <TbCurrencyTaka size={20} />
                                                 </i>
-                                                <p>Category</p>
+                                                <p className="md:text-xs">Category</p>
                                             </div>
                                             <div className="flex items-center gap-2">
                                                 <i className="text-slate-400 px-2">
                                                     <GoClock size={11} />
                                                 </i>
-                                                <p className="text-slate-400">45 min</p>
-                                                <i className="text-pink-400">
+                                                <p className="text-slate-400 md:text-sm">45 min</p>
+                                                <i className="text-pink-400 md:text-sm">
                                                     <MdOutlineDeliveryDining size={20} />
                                                 </i>
-                                                <p className="text-pink-400">delivery</p>
+                                                <p className="text-pink-400 md:text-sm">delivery</p>
                                             </div>
                                         </div>
 
                                         <div className="w-56 h-36 absolute top-3 left-3 flex flex-col gap-1 text-white">
-                                            <span className="w-32 flex items-center gap-1 px-1 rounded-lg bg-gradient-to-r from-pink-500 to-pink-700">
+                                            <span className="w-32 flex items-center gap-1 px-1 rounded-lg bg-gradient-to-r from-pink-500 to-pink-700 md:w-[100px]">
                                                 <i>
                                                     <LuBadgePercent size={15} />
                                                 </i>
-                                                <p>Free Delivery</p>
+                                                <p className="text-xs">Free Delivery</p>
                                             </span>
 
-                                            <span className="w-44 flex items-center gap-1 px-1 rounded-lg bg-gradient-to-r from-pink-500 to-pink-700">
+                                            <span className="w-44 flex items-center gap-1 px-1 rounded-lg bg-gradient-to-r from-pink-500 to-pink-700 md:w-[125px]">
                                                 <i>
                                                     <LuBadgePercent size={15} />
                                                 </i>
-                                                <p>Voucher </p>
+                                                <p className="text-xs">Voucher </p>
                                             </span>
 
 
                                         </div>
 
-                                        <div className=" absolute w-10 h-10 bg-white drop-shadow-xl top-[0px] right-[0px]">
-                                            <p className="text-sm text-center">40 MIN</p>
+                                        <div className=" absolute w-10 h-10 md:w-7 md:h-8 bg-white drop-shadow-xl top-[0px] right-[0px]">
+                                            <p className="md:text-xs text-center">40 MIN</p>
                                         </div>
 
                                         <div className="absolute w-6 h-6 rounded-full flex justify-center items-center drop-shadow-lg bg-white text-pink-700 bottom-[106px] left-[420px]">
