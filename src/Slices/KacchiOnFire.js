@@ -7,71 +7,76 @@ import { LuBadgePercent } from "react-icons/lu";
 import Slider from "react-slick";
 import { FaRegHeart } from "react-icons/fa";
 
-const Ghorerkhabar = () => {
+const KacchiOnFire = () => {
   const imgAddress = [
     {
       id: 1,
-      photo: "https://i.ibb.co/Fn6cPx3/4.jpg",
+      photo: "https://i.ibb.co/hsc59FH/1.jpg",
     },
 
     {
       id: 2,
-      photo: "https://i.ibb.co/0fkbqwf/5.jpg",
+      photo: "https://i.ibb.co/WyBGKJh/2.jpg",
     },
 
     {
       id: 3,
-      photo: "https://i.ibb.co/Kwgy77h/6.jpg",
+      photo: "https://i.ibb.co/YL28JVc/3.jpg",
     },
 
     {
       id: 4,
-      photo: "https://i.ibb.co/gFk8R8V/7.jpg",
+      photo: "https://i.ibb.co/sPVtJYc/4.jpg",
     },
 
     {
       id: 5,
-      photo: "https://i.ibb.co/wgVJrPF/8.jpg",
+      photo: "https://i.ibb.co/W69nSsJ/5.jpg",
     },
 
     {
       id: 6,
-      photo: "https://i.ibb.co/41csLCc/9.jpg",
+      photo: "https://i.ibb.co/R7K9Mb5/6.jpg",
     },
 
     {
       id: 7,
-      photo: "https://i.ibb.co/2h53w5G/10.jpg",
+      photo: "https://i.ibb.co/nLH5TW6/7.jpg",
     },
 
     {
       id: 8,
-      photo: "https://i.ibb.co/FVWrfwt/11.jpg",
+      photo: "https://i.ibb.co/TWpKZxj/8.jpg",
     },
 
     {
       id: 9,
-      photo: "https://i.ibb.co/HH8TH7j/12.jpg",
+      photo: "https://i.ibb.co/BnKKNnt/9.jpg",
     },
 
     {
       id: 10,
-      photo: "https://i.ibb.co/WPFWPmx/13.jpg",
+      photo: "https://i.ibb.co/vBgn752/10.jpg",
     },
 
     {
       id: 12,
-      photo: "https://i.ibb.co/dcPh6hd/1.jpg",
+      photo: "https://i.ibb.co/8sngRsV/11.jpg",
     },
 
     {
       id: 13,
-      photo: "https://i.ibb.co/RCwqtbh/2.jpg",
+      photo: "https://i.ibb.co/BL6rvK8/12.jpg",
     },
 
     {
       id: 11,
-      photo: "https://i.ibb.co/QckpWfX/3.jpg",
+      photo: "https://i.ibb.co/WBdqZtd/13.jpg",
+    },
+
+    {
+      id: 22,
+      photo: "https://i.ibb.co/g4Nzg7w/14.jpg",
     },
   ];
 
@@ -182,7 +187,7 @@ const Ghorerkhabar = () => {
 
   return (
     <>
-      <p className="text-2xl font-bold py-5">Ghorer khabar</p>
+      <p className="text-2xl font-bold py-5">Kacchi on Fire</p>
       <div className="mx-auto w-[490px] md:w-[401px] lg:w-[600px] xl:w-[800px] 2xl:w-[1040px] 3xl:w-[11px] h-auto">
         <div>
           <Slider {...settings}>
@@ -190,7 +195,7 @@ const Ghorerkhabar = () => {
               return (
                 <>
                   <div
-                    className="w-[450px] h-auto mx-auto md:w-[180px]  rounded-xl group relative"
+                    className="w-[450px] h-auto mx-auto md:w-[180px] rounded-xl group relative"
                     key={data.id}
                   >
                     <div className=" overflow-hidden">
@@ -252,10 +257,9 @@ const Ghorerkhabar = () => {
 
                     <div
                       className="absolute w-6 h-6 rounded-full 
-                                        flex justify-center items-center drop-shadow-lg 
-                                        bg-white text-pink-700 
-                                        bottom-[106px] left-[420px]
-                                        md:bottom-[80px] md:left-[155px]"
+                                flex justify-center items-center drop-shadow-lg bg-white text-pink-700 
+                                bottom-[106px] left-[420px]
+                                md:bottom-[80px] md:left-[155px]"
                     >
                       <FaRegHeart />
                     </div>
@@ -270,4 +274,4 @@ const Ghorerkhabar = () => {
   );
 };
 
-export default Ghorerkhabar;
+export default KacchiOnFire;

@@ -5,10 +5,9 @@ import Allrestaurant from "./Allrestaurant";
 import FavCuisines from "./FavCuisines";
 import Ghorerkhabar from "./Ghorerkhabar";
 import Allrestaurantdemo from "./Allrestaurantdemo";
-
+import KacchiOnFire from "./KacchiOnFire";
 
 const RightSideBody = ({ RiEqualizerLine, content, AiOutlineSearch }) => {
-
   // Previous
   function SamplePrevArrow(props) {
     const { onClick } = props;
@@ -57,7 +56,6 @@ const RightSideBody = ({ RiEqualizerLine, content, AiOutlineSearch }) => {
         settings: {
           slidesToShow: 5,
           slidesToScroll: 1,
-
         },
       },
       {
@@ -65,7 +63,6 @@ const RightSideBody = ({ RiEqualizerLine, content, AiOutlineSearch }) => {
         settings: {
           slidesToShow: 4,
           slidesToScroll: 1,
-
         },
       },
       {
@@ -73,7 +70,6 @@ const RightSideBody = ({ RiEqualizerLine, content, AiOutlineSearch }) => {
         settings: {
           slidesToShow: 3,
           slidesToScroll: 1,
-
         },
       },
       {
@@ -138,9 +134,12 @@ const RightSideBody = ({ RiEqualizerLine, content, AiOutlineSearch }) => {
         </div>
 
         {/* All Restaurant Demo */}
-
         <div className="w-11/12 h-auto flex justify-center items-center mt-5">
-          <Allrestaurantdemo settings={settings} Slider={Slider} slides={slides} />
+          <Allrestaurantdemo
+            settings={settings}
+            Slider={Slider}
+            slides={slides}
+          />
         </div>
 
         {/* Favourate Cuisines */}
@@ -153,15 +152,17 @@ const RightSideBody = ({ RiEqualizerLine, content, AiOutlineSearch }) => {
           <Ghorerkhabar />
         </div>
 
-        {/* All Restaurant */}
+        {/* Kacchi on Fire */}
         <div className="w-11/12 h-auto mt-5">
-
-          <Allrestaurant />
-
+          <KacchiOnFire />
         </div>
 
+        {/* All Restaurant */}
+        <div className="w-11/12 h-auto mt-5">
+          <Allrestaurant />
+        </div>
 
-        {/*Ghorer Khabar */}
+        {/* Details */}
         <div className="w-full md:w-[399px] lg:w-[650px] xl:w-[915px] 2xl:w-[1148px]  h-auto flex flex-col flex-wrap justify-start gap-10 md:px-4">
           {content.map((con) => {
             return (
