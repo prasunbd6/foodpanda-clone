@@ -1,6 +1,4 @@
-import { slides } from "./Slidesdb";
-import { IoIosArrowRoundBack, IoIosArrowRoundForward } from "react-icons/io";
-import Slider from "react-slick";
+
 import Allrestaurant from "./Allrestaurant";
 import FavCuisines from "./FavCuisines";
 import Ghorerkhabar from "./Ghorerkhabar";
@@ -8,95 +6,6 @@ import Allrestaurantdemo from "./Allrestaurantdemo";
 import KacchiOnFire from "./KacchiOnFire";
 
 const RightSideBody = ({ RiEqualizerLine, content, AiOutlineSearch }) => {
-  // Previous
-  function SamplePrevArrow(props) {
-    const { onClick } = props;
-    return (
-      <div
-        className="text-white bg-pink-600 rounded-full transition ease-in-out duration-300
-        flex justify-center items-center
-        w-5 h-5
-        absolute top-28 -left-4
-        md:top-10 md:-left-4
-        hover:ring-2 hover:ring-pink-600 "
-        onClick={onClick}
-      >
-        <IoIosArrowRoundBack size={20} />
-      </div>
-    );
-  }
-
-  // Next
-  function SampleNextArrow(props) {
-    const { onClick } = props;
-    return (
-      <div
-        className="text-white bg-pink-600 rounded-full transition ease-in-out duration-300
-      flex justify-center items-center
-      w-5 h-5
-      absolute top-28 -right-4
-      md:top-10 md:-right-4
-      hover:ring-2 hover:ring-pink-600"
-        onClick={onClick}
-      >
-        <IoIosArrowRoundForward size={20} />
-      </div>
-    );
-  }
-
-  const settings = {
-    dots: false,
-    infinite: false,
-    slidesToShow: 5,
-    nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />,
-    responsive: [
-      {
-        breakpoint: 1536,
-        settings: {
-          slidesToShow: 5,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 1280,
-        settings: {
-          slidesToShow: 4,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-        },
-      },
-
-      {
-        breakpoint: 767,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-
-      {
-        breakpoint: 640,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
 
   return (
     <>
@@ -135,11 +44,7 @@ const RightSideBody = ({ RiEqualizerLine, content, AiOutlineSearch }) => {
 
         {/* All Restaurant Demo */}
         <div className="w-11/12 h-auto flex justify-center items-center mt-5">
-          <Allrestaurantdemo
-            settings={settings}
-            Slider={Slider}
-            slides={slides}
-          />
+          <Allrestaurantdemo />
         </div>
 
         {/* Favourate Cuisines */}

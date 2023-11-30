@@ -158,7 +158,7 @@ const KacchiOnFire = () => {
       flex justify-center items-center
       w-7 h-7
       absolute top-48 -left-3
-      md:top-20 md:-left-4
+      md:top-12 md:-left-5
       hover:ring-2 hover:ring-pink-600 "
       onClick={onClick}
     >
@@ -176,7 +176,7 @@ function SampleNextArrow(props) {
     flex justify-center items-center
     w-7 h-7
     absolute top-48 -right-3
-    md:top-20 md:-right-4
+    md:top-12 md:-right-5
     hover:ring-2 hover:ring-pink-600"
       onClick={onClick}
     >
@@ -259,7 +259,7 @@ function SampleNextArrow(props) {
                       className="absolute w-6 h-6 rounded-full 
                                 flex justify-center items-center drop-shadow-lg bg-white text-pink-700 
                                 bottom-[106px] left-[420px]
-                                md:bottom-[80px] md:left-[155px]"
+                                md:bottom-[85px] md:left-[155px]"
                     >
                       <FaRegHeart />
                     </div>

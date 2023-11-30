@@ -154,7 +154,7 @@ const Ghorerkhabar = () => {
         flex justify-center items-center
         w-7 h-7
         absolute top-44 -left-3
-        md:top-20 md:-left-4
+        md:top-14 md:-left-5
         hover:ring-2 hover:ring-pink-600 "
         onClick={onClick}
       >
@@ -172,7 +172,7 @@ const Ghorerkhabar = () => {
       flex justify-center items-center
       w-7 h-7
       absolute top-44 -right-3
-      md:top-20 md:-right-4
+      md:top-14 md:-right-5
       hover:ring-2 hover:ring-pink-600"
         onClick={onClick}
       >
@@ -256,7 +256,7 @@ const Ghorerkhabar = () => {
                                         flex justify-center items-center drop-shadow-lg 
                                         bg-white text-pink-700 
                                         bottom-[106px] left-[420px]
-                                        md:bottom-[80px] md:left-[155px]"
+                                        md:bottom-[85px] md:left-[155px]"
                     >
                       <FaRegHeart />
                     </div>
