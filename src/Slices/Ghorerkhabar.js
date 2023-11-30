@@ -8,6 +8,7 @@ import Slider from "react-slick";
 import { FaRegHeart } from "react-icons/fa";
 
 const Ghorerkhabar = () => {
+  
   const imgAddress = [
     {
       id: 1,
@@ -151,9 +152,9 @@ const Ghorerkhabar = () => {
       <div
         className="text-white bg-pink-600 rounded-full transition ease-in-out duration-300
         flex justify-center items-center
-        w-5 h-5
-        absolute top-48 -left-3
-        md:top-16 md:-left-4
+        w-7 h-7
+        absolute top-44 -left-3
+        md:top-20 md:-left-4
         hover:ring-2 hover:ring-pink-600 "
         onClick={onClick}
       >
@@ -169,9 +170,9 @@ const Ghorerkhabar = () => {
       <div
         className="text-white bg-pink-600 rounded-full transition ease-in-out duration-300
       flex justify-center items-center
-      w-5 h-5
-      absolute top-48 -right-3
-      md:top-16 md:-right-4
+      w-7 h-7
+      absolute top-44 -right-3
+      md:top-20 md:-right-4
       hover:ring-2 hover:ring-pink-600"
         onClick={onClick}
       >
