@@ -191,10 +191,10 @@ const Ghorerkhabar = () => {
               return (
                 <>
                   <div
-                    className="w-[450px] h-auto mx-auto md:w-[180px]  rounded-xl group relative"
+                    className="w-[450px] h-auto mx-auto md:w-[180px]  rounded-xl border group relative"
                     key={data.id}
                   >
-                    <div className=" overflow-hidden">
+                    <div className="rounded-t-xl overflow-hidden">
                       <img
                         src={data.photo}
                         className="bg-cover w-full h-full duration-700  group-hover:scale-110"
@@ -204,8 +204,8 @@ const Ghorerkhabar = () => {
 
                     <div className="flex flex-col py-3">
                       <div className="flex justify-between items-center">
-                        <p className="md:text-sm font-bold">Res Name</p>
-                        <div className="flex justify-between items-center gap-1">
+                        <p className="md:text-sm font-bold px-1">Res Name</p>
+                        <div className="flex justify-between items-center gap-1 px-1">
                           <i className="text-pink-600">
                             <PiStar size={13} />
                           </i>
@@ -256,7 +256,10 @@ const Ghorerkhabar = () => {
                                         flex justify-center items-center drop-shadow-lg 
                                         bg-white text-pink-700 
                                         bottom-[106px] left-[420px]
-                                        md:bottom-[85px] md:left-[155px]"
+                                        md:bottom-[87px] md:left-[151px]
+                                        hover:ring-2 ring-white
+                                        transition duration-300
+                                        "
                     >
                       <FaRegHeart />
                     </div>
