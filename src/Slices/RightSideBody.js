@@ -27,7 +27,7 @@ const RightSideBody = ({ RiEqualizerLine, content, AiOutlineSearch }) => {
                   name="search"
                   autoComplete="off"
                   placeholder="Search for Cuisine"
-                  className="w-[400px] md:w-[280px] h-10 md:h-12 bg-slate-50 px-10 border rounded-3xl md:rounded-sm focus:outline-none focus:ring-2 focus:ring-pink-400 md:focus:ring-2 md:focus:ring-sky-100"
+                  className="w-[400px] md:w-[280px] lg:w-[380px] xl:w-[430px] h-10 md:h-12 bg-slate-50 px-10 border rounded-3xl focus:outline-none focus:ring-2 focus:ring-pink-400 md:focus:ring-2 md:focus:ring-sky-100"
                 />
               </label>
             </form>
