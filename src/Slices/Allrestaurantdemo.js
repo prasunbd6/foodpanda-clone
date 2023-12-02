@@ -12,8 +12,8 @@ const Allrestaurantdemo = () => {
                 className="text-white bg-pink-600 rounded-full transition ease-in-out duration-300
         flex justify-center items-center
         w-7 h-7
-        absolute top-28 -left-4
-        md:top-10 md:-left-5
+        absolute top-48 -left-4
+        md:top-16 md:-left-5
         hover:ring-2 hover:ring-pink-600"
                 onClick={onClick}
             >
@@ -30,8 +30,8 @@ const Allrestaurantdemo = () => {
                 className="text-white bg-pink-600 rounded-full transition ease-in-out duration-300
       flex justify-center items-center
       w-7 h-7
-      absolute top-28 -right-4
-      md:top-10 md:-right-5
+      absolute top-48 -right-4
+      md:top-16 md:-right-5
       hover:ring-2 hover:ring-pink-600"
                 onClick={onClick}
             >

@@ -3,7 +3,6 @@ import Slider from "react-slick";
 import { IoIosArrowRoundBack, IoIosArrowRoundForward } from "react-icons/io";
 
 const FavCuisines = () => {
-
   const icecream = [
     {
       id: 1,
@@ -47,8 +46,7 @@ const FavCuisines = () => {
       id: 14,
       link: "https://images.pexels.com/photos/1352296/pexels-photo-1352296.jpeg?auto=compress&cs=tinysrgb&w=1600",
       type: "shop",
-    }
-
+    },
   ];
 
   const settings = {
@@ -128,8 +126,8 @@ const FavCuisines = () => {
         className="text-white bg-pink-600 rounded-full transition ease-in-out duration-300
         flex justify-center items-center
         w-7 h-7
-        absolute top-36 -left-3
-        md:top-12 md:-left-5
+        absolute top-44 -left-3
+        md:top-16 md:-left-5
         hover:ring-2 hover:ring-pink-600 "
         onClick={onClick}
       >
@@ -146,8 +144,8 @@ const FavCuisines = () => {
         className="text-white bg-pink-600 rounded-full transition ease-in-out duration-300
       flex justify-center items-center
       w-7 h-7
-      absolute top-36 -right-3
-      md:top-12 md:-right-5
+      absolute top-44 -right-3
+      md:top-16 md:-right-5
       hover:ring-2 hover:ring-pink-600"
         onClick={onClick}
       >
@@ -158,7 +156,6 @@ const FavCuisines = () => {
 
   return (
     <>
-
       <div className="pt-5 ">
         <p className="w-96 text-xl font-bold py-1">Your favourite Cuisines</p>
 
@@ -169,8 +166,15 @@ const FavCuisines = () => {
                 return (
                   <>
                     <div className="flex flex-col justify-center items-center relative">
-                      <div key={i.id} className="w-[450px] h-auto mx-auto md:w-[180px]  rounded-xl group overflow-hidden">
-                        <img src={i.link} className="w-full h-full bg-cover hover:scale-110 transition  duration-300 ease-in text-center" alt="" />
+                      <div
+                        key={i.id}
+                        className="w-[450px] h-auto mx-auto md:w-[180px]  rounded-xl group overflow-hidden"
+                      >
+                        <img
+                          src={i.link}
+                          className="w-full h-full bg-cover hover:scale-110 transition  duration-300 ease-in text-center"
+                          alt=""
+                        />
                       </div>
                       <p className="text-center">{i.type}</p>
                     </div>
@@ -180,11 +184,7 @@ const FavCuisines = () => {
             </Slider>
           </div>
         </div>
-
       </div>
-
-
-
     </>
   );
 };

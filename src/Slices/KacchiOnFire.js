@@ -157,8 +157,8 @@ const KacchiOnFire = () => {
       className="text-white bg-pink-600 rounded-full transition ease-in-out duration-300
       flex justify-center items-center
       w-7 h-7
-      absolute top-48 -left-3
-      md:top-12 md:-left-5
+      absolute top-52 -left-3
+      md:top-20 md:-left-5
       hover:ring-2 hover:ring-pink-600 "
       onClick={onClick}
     >
@@ -175,8 +175,8 @@ function SampleNextArrow(props) {
       className="text-white bg-pink-600 rounded-full transition ease-in-out duration-300
     flex justify-center items-center
     w-7 h-7
-    absolute top-48 -right-3
-    md:top-12 md:-right-5
+    absolute top-52 -right-3
+    md:top-20 md:-right-5
     hover:ring-2 hover:ring-pink-600"
       onClick={onClick}
     >
