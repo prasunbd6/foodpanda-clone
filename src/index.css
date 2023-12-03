@@ -25,22 +25,10 @@
 
 /* Menu Operation */
 
-.menu-operation-in-ul-config {
-  @apply 
-  w-full 
-  h-auto flex 
-  justify-around 
-  items-center 
-  text-pink-500 
-  gap-3 
-    border-b-2 
-    shadow-xl 
-    order-5 ;
-}
+
 
 .menu-operation-in-md-config {
-  @apply md:w-full md:h-auto md:justify-start md:items-center md:bg-white md:text-xl 
-    md:order-5;
+  @apply md:justify-start md:bg-white md:text-xl;
 }
 
 .menu-decoration-standby {

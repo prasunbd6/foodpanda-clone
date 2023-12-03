@@ -32,7 +32,6 @@ const Navbar = () => {
 
           {/* login, Signup & language */}
           <ul className="hidden login-signup-language-md-config md:justify-end gap-2">
-            
             <li className="md:w-20 border rounded-xl ring-1 ring-pink-500 text-pink-500 p-1 bg-white hover:bg-white hover:border hover:border-pink-500 hover:ring-inset hover:ring-1 hover:ring-pink-500 ease-in-out duration-500">
               <p className="md:cursor-pointer">login</p>
             </li>
@@ -69,12 +68,16 @@ const Navbar = () => {
               <i>
                 <HiOutlineMapPin />
               </i>
-              <p className="md:cursor-pointer">Ashraf Ali Road, Patharghata kotwali Chittagong.</p>
+              <p className="md:cursor-pointer">
+                Ashraf Ali Road, Patharghata kotwali Chittagong.
+              </p>
             </div>
           </div>
 
           {/* Menu Operation */}
-          <ul className="menu-operation-in-ul-config menu-operation-in-md-config">
+          <ul
+            className="w-full h-auto flex justify-around items-center text-pink-500 gap-3 border-b-2 shadow-xl order-5 menu-operation-in-md-config"
+          >
             <li className="menu-decoration-standby menu-decoration-hover menu-decoration-active">
               <MdOutlineDeliveryDining size={20} />
               <p className="px-1 md:cursor-pointer">Delivery</p>
