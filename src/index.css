@@ -32,18 +32,15 @@
 }
 
 .menu-decoration-standby {
-  @apply  w-auto flex flex-wrap justify-center items-center px-1 py-2 bg-white border-b-2 
-    border-white;
+  @apply  w-[150px] flex flex-wrap justify-center items-center px-1 py-2 bg-white;
 }
 
 .menu-decoration-hover {
-  @apply  hover:bg-pink-100 hover:border-b-2 hover:border-solid hover:border-pink-600 
-    hover:rounded-t-md;
+  @apply  hover:bg-pink-100 hover:border-solid hover:border-pink-600 hover:rounded-t-md;
 }
 
 .menu-decoration-active {
-  @apply active:bg-pink-100 active:border-b-2 
-    active:border-pink-600;
+  @apply active:bg-pink-100 active:border-pink-600;
 }
 
 /* Filter */

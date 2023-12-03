@@ -76,7 +76,7 @@ const Navbar = () => {
 
           {/* Menu Operation */}
           <ul
-            className="w-full h-auto flex justify-around items-center text-pink-500 gap-3 border-b-2 shadow-xl order-5 menu-operation-in-md-config"
+            className="w-full h-auto flex justify-around items-center text-pink-500 gap-3 border-b-2 shadow-xl order-5 menu-operation-in-md-config relative"
           >
             <li className="menu-decoration-standby menu-decoration-hover menu-decoration-active">
               <MdOutlineDeliveryDining size={20} />
