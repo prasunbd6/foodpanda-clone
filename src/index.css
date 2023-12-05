@@ -29,11 +29,13 @@
 }
 
 .menu-decoration-standby {
-  @apply w-auto flex flex-wrap justify-center items-center px-1 py-2;
+  @apply w-36 flex flex-wrap justify-center items-center px-1 py-2 hover:bg-pink-200 transition duration-150;
 }
 
 .menu-decoration-hover-active {
-  @apply flex justify-center items-center border-b-4 border-pink-700 rounded-md group-hover:w-10 group-hover:border-pink-700 group-focus:w-28 focus:w-28 focus:border-pink-700 focus:border-b-4;
+  @apply flex justify-center items-center border-b-4 
+  border-pink-600 rounded-md group-hover:w-6
+  group-hover:border-pink-600 group-focus:w-24;
 }
 
 /* Filter */
