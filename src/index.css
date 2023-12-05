@@ -14,8 +14,7 @@
 /* Address */
 
 .address-ul {
-  @apply 
-  w-full 
+  @apply w-full 
   flex 
   flex-wrap 
   justify-start 
@@ -25,22 +24,16 @@
 
 /* Menu Operation */
 
-
-
 .menu-operation-in-md-config {
-  @apply md:justify-start md:bg-white md:text-xl;
+  @apply md:justify-start  md:text-xl bg-white;
 }
 
 .menu-decoration-standby {
-  @apply  w-[150px] flex flex-wrap justify-center items-center px-1 py-2 bg-white;
+  @apply w-auto flex flex-wrap justify-center items-center px-1 py-2;
 }
 
-.menu-decoration-hover {
-  @apply  hover:bg-pink-100 hover:border-solid hover:border-pink-600 hover:rounded-t-md;
-}
-
-.menu-decoration-active {
-  @apply active:bg-pink-100 active:border-pink-600;
+.menu-decoration-hover-active {
+  @apply flex justify-center items-center border-b-4 border-pink-700 rounded-md group-hover:w-10 group-hover:border-pink-700 group-focus:w-28 focus:w-28 focus:border-pink-700 focus:border-b-4;
 }
 
 /* Filter */
@@ -67,8 +60,8 @@
 }
 
 .sort-marked {
-    @apply checked:bg-pink-500 checked:ring-inset checked:ring-pink-500;
-  }
+  @apply checked:bg-pink-500 checked:ring-inset checked:ring-pink-500;
+}
 
 .sort-checked {
   @apply checked:ring-4 checked:ring-inset checked:ring-pink-500;
@@ -86,9 +79,9 @@
   @apply group-hover:ring-2 group-hover:ring-inset group-hover:ring-pink-500;
 }
 
-.sort-hover-active{
-    @apply  hover:active:ring-4  hover:active:ring-inset  hover:active:ring-pink-500;
-  }
+.sort-hover-active {
+  @apply hover:active:ring-4  hover:active:ring-inset  hover:active:ring-pink-500;
+}
 
 /* Footer */
 .hover-link {
@@ -96,5 +89,3 @@
 }
 
 /* Slick Slider */
-
-

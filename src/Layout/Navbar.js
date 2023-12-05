@@ -10,6 +10,7 @@ import {
   MdOutlineDeliveryDining,
   MdOutlineEmojiPeople,
 } from "react-icons/md";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -75,32 +76,60 @@ const Navbar = () => {
           </div>
 
           {/* Menu Operation */}
-          <ul
-            className="w-full h-auto flex justify-around items-center text-pink-500 gap-3 border-b-2 shadow-xl order-5 menu-operation-in-md-config relative"
-          >
-            <li className="menu-decoration-standby menu-decoration-hover menu-decoration-active">
-              <MdOutlineDeliveryDining size={20} />
-              <p className="px-1 md:cursor-pointer">Delivery</p>
+          <ul className="w-full h-auto flex justify-around items-center text-pink-500 gap-3 border-b-2 shadow-xl order-5 menu-operation-in-md-config">
+            <li>
+              <NavLink
+                to="#"
+                className=" menu-decoration-standby group relative"
+              >
+                <MdOutlineDeliveryDining size={20} />
+                <p className="px-1 md:cursor-pointer">Delivery</p>
+                <span className="absolute top-9 menu-decoration-hover-active"></span>
+              </NavLink>
             </li>
 
-            <li className="menu-decoration-standby menu-decoration-hover menu-decoration-active">
-              <MdOutlineEmojiPeople size={20} />
-              <p className=" px-1 md:cursor-pointer">Pick-Up</p>
+            <li>
+              <NavLink
+                to="#"
+                className="menu-decoration-standby group relative"
+              >
+                <MdOutlineEmojiPeople size={20} />
+                <p className=" px-1 md:cursor-pointer">Pick-Up</p>
+                <span className="absolute top-9 menu-decoration-hover-active"></span>
+              </NavLink>
             </li>
 
-            <li className="menu-decoration-standby menu-decoration-hover menu-decoration-active">
-              <PiSuitcaseRollingThin size={20} />
-              <p className=" px-1 md:cursor-pointer">pandamart</p>
+            <li>
+              <NavLink
+                to="#"
+                className=" menu-decoration-standby group relative"
+              >
+                <PiSuitcaseRollingThin size={20} />
+                <p className=" px-1 md:cursor-pointer">pandamart</p>
+                <span className="absolute top-9 menu-decoration-hover-active"></span>
+              </NavLink>
             </li>
 
-            <li className="menu-decoration-standby menu-decoration-hover menu-decoration-active">
-              <GiShoppingCart size={20} />
-              <p className=" px-1 md:cursor-pointer">Shops</p>
+            <li>
+              <NavLink
+                to="#"
+                className=" menu-decoration-standby group relative"
+              >
+                <GiShoppingCart size={20} />
+                <p className=" px-1 md:cursor-pointer">Shops</p>
+                <span className="absolute top-9 menu-decoration-hover-active"></span>
+              </NavLink>
             </li>
 
-            <li className="menu-decoration-standby menu-decoration-hover menu-decoration-active">
-              <GiForkKnifeSpoon size={20} />
-              <p className=" px-1 md:cursor-pointer">Dine-in</p>
+            <li>
+              <NavLink
+                to="#"
+                className=" menu-decoration-standby group relative"
+              >
+                <GiForkKnifeSpoon size={20} />
+                <p className=" px-1 md:cursor-pointer">Dine-in</p>
+                <span className="absolute top-9 menu-decoration-hover-active"></span>
+              </NavLink>
             </li>
           </ul>
         </div>
