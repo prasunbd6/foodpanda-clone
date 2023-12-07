@@ -102,7 +102,7 @@ const Allrestaurant = () => {
     <>
     <p className="text-2xl font-bold py-5">All Restaurants</p>
 
-      <div className="flex flex-wrap justify-center items-center md:justify-start md:mx-3 gap-4">
+      <div className="flex flex-wrap justify-center items-center md:mx-auto gap-5">
 
 
         {imgAddress.map((data) => {

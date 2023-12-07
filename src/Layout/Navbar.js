@@ -19,9 +19,11 @@ const Navbar = () => {
         <div className="w-full h-auto mt-32 pt-2 flex flex-wrap justify-between items-center bg-white fixed order-1 md:w-full md:h-20 md:mt-14 lg:w-11/12 z-50">
           {/* User Logo & Brand */}
 
-          <i className="w-2/12 px-1 text-pink-500 text-xl font-bold md:hidden order-1">
-            <CiUser size={30} />
-          </i>
+          <ul className="w-2/12 flex justify-start items-center text-pink-500 gap-4 p-2 md:hidden order-1">
+            <li className="rounded md:rounded flex justify-center hover:rounded-full hover:bg-pink-100 p-2 duration-200">
+            <CiUser size={25} />
+            </li>
+            </ul>
 
           {/* Logo & Brand Name */}
           <div className="md:w-auto flex items-center  text-pink-500 gap-2 md:order-2 order-2">
@@ -56,10 +58,10 @@ const Navbar = () => {
           {/* Heart & Shopping Logo */}
           <ul className="w-2/12 md:w-24 flex justify-end md:justify-end items-center text-pink-500 gap-4 p-1 md:order-5 order-3">
             <li className="rounded md:rounded flex justify-center hover:rounded-full hover:bg-pink-100 p-2 duration-200">
-              <AiOutlineHeart size={20} />
+              <AiOutlineHeart size={25} />
             </li>
             <li className="rounded md:rounded flex justify-center hover:rounded-full hover:bg-pink-100 p-2 duration-200">
-              <HiOutlineShoppingBag size={20} />
+              <HiOutlineShoppingBag size={25} />
             </li>
           </ul>
 
