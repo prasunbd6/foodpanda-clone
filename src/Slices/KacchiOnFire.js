@@ -6,79 +6,10 @@ import { MdOutlineDeliveryDining } from "react-icons/md";
 import { LuBadgePercent } from "react-icons/lu";
 import Slider from "react-slick";
 import { FaRegHeart } from "react-icons/fa";
+import slides from "../Slices/Slidesdb"
 
 const KacchiOnFire = () => {
-  const imgAddress = [
-    {
-      id: 1,
-      photo: "https://i.ibb.co/hsc59FH/1.jpg",
-    },
-
-    {
-      id: 2,
-      photo: "https://i.ibb.co/WyBGKJh/2.jpg",
-    },
-
-    {
-      id: 3,
-      photo: "https://i.ibb.co/YL28JVc/3.jpg",
-    },
-
-    {
-      id: 4,
-      photo: "https://i.ibb.co/sPVtJYc/4.jpg",
-    },
-
-    {
-      id: 5,
-      photo: "https://i.ibb.co/W69nSsJ/5.jpg",
-    },
-
-    {
-      id: 6,
-      photo: "https://i.ibb.co/R7K9Mb5/6.jpg",
-    },
-
-    {
-      id: 7,
-      photo: "https://i.ibb.co/nLH5TW6/7.jpg",
-    },
-
-    {
-      id: 8,
-      photo: "https://i.ibb.co/TWpKZxj/8.jpg",
-    },
-
-    {
-      id: 9,
-      photo: "https://i.ibb.co/BnKKNnt/9.jpg",
-    },
-
-    {
-      id: 10,
-      photo: "https://i.ibb.co/vBgn752/10.jpg",
-    },
-
-    {
-      id: 12,
-      photo: "https://i.ibb.co/8sngRsV/11.jpg",
-    },
-
-    {
-      id: 13,
-      photo: "https://i.ibb.co/BL6rvK8/12.jpg",
-    },
-
-    {
-      id: 11,
-      photo: "https://i.ibb.co/WBdqZtd/13.jpg",
-    },
-
-    {
-      id: 22,
-      photo: "https://i.ibb.co/g4Nzg7w/14.jpg",
-    },
-  ];
+  
 
   const settings = {
     dots: false,
@@ -191,7 +122,7 @@ function SampleNextArrow(props) {
       <div className="mx-auto w-[490px] md:w-[401px] lg:w-[600px] xl:w-[800px] 2xl:w-[1040px] 3xl:w-[11px] h-auto">
         <div>
           <Slider {...settings}>
-            {imgAddress.map((data) => {
+            {slides.map((data) => {
               return (
                 <>
                   <div
@@ -200,7 +131,7 @@ function SampleNextArrow(props) {
                   >
                     <div className="rounded-t-xl overflow-hidden">
                       <img
-                        src={data.photo}
+                        src={data.photo_url}
                         className="bg-cover w-full h-full duration-700  group-hover:scale-110"
                         alt=""
                       />
