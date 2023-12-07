@@ -12,7 +12,7 @@ const Allrestaurantdemo = () => {
                 className="text-white bg-pink-600 rounded-full transition ease-in-out duration-300
         flex justify-center items-center
         w-7 h-7
-        absolute top-48 -left-4
+        absolute top-[130px] -left-4
         md:top-16 md:-left-5
         hover:ring-2 hover:ring-pink-600"
                 onClick={onClick}
@@ -30,7 +30,7 @@ const Allrestaurantdemo = () => {
                 className="text-white bg-pink-600 rounded-full transition ease-in-out duration-300
       flex justify-center items-center
       w-7 h-7
-      absolute top-48 -right-4
+      absolute top-[130px] -right-4
       md:top-16 md:-right-5
       hover:ring-2 hover:ring-pink-600"
                 onClick={onClick}
@@ -120,10 +120,12 @@ const Allrestaurantdemo = () => {
                             return (
                                 <>
                                     <div className="flex flex-col justify-center items-center relative">
+
                                         <div key={i.id} className="w-[450px] h-auto mx-auto md:w-[180px]  rounded-xl group overflow-hidden">
                                             <img src={i.photo_url} className="w-full h-full bg-cover hover:scale-110 transition  duration-300 ease-in text-center" alt="" />
                                         </div>
                                         <p className="text-center">{i.restaurant_name}</p>
+
                                     </div>
                                 </>
                             );

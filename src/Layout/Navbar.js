@@ -78,7 +78,7 @@ const Navbar = () => {
           </div>
 
           {/* Menu Operation */}
-          <ul className="w-full h-auto flex justify-around items-center text-pink-500 gap-3 border-b-2 shadow-xl order-5 menu-operation-in-md-config">
+          <ul className="w-full h-auto flex justify-around items-center text-pink-500 gap-1 border-b-2 shadow-xl order-5 menu-operation-in-md-config">
             <li>
               <NavLink
                 to="#"
