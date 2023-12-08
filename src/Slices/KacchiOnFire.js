@@ -157,7 +157,7 @@ const KacchiOnFire = () => {
                         <p className="md:text-xs">{data.food_type}</p>
                       </div>
 
-                      <div className="flex justify-between items-center">
+                      <div className="flex justify-start items-center gap-2 md:justify-between md:gap-0">
                         <div className="flex justify-start items-center px-1">
                           <i className="text-slate-400 px-1">
                             <GoClock size={11} />
@@ -168,7 +168,7 @@ const KacchiOnFire = () => {
                           <i className="text-pink-400 md:text-sm">
                             <MdOutlineDeliveryDining size={20} />
                           </i>
-                          <p className="text-pink-400 md:text-sm">delivery</p>
+                          <p className="text-pink-400 md:text-sm">{data.service_charge}</p>
                         </div>
                       </div>
                     </div>

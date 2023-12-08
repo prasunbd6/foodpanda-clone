@@ -13,7 +13,7 @@ const Allrestaurantdemo = () => {
         flex justify-center items-center
         w-7 h-7
         absolute top-[130px] -left-4
-        md:top-16 md:-left-5
+        md:top-12 md:-left-5
         hover:ring-2 hover:ring-pink-600"
                 onClick={onClick}
             >
@@ -31,7 +31,7 @@ const Allrestaurantdemo = () => {
       flex justify-center items-center
       w-7 h-7
       absolute top-[130px] -right-4
-      md:top-16 md:-right-5
+      md:top-12 md:-right-5
       hover:ring-2 hover:ring-pink-600"
                 onClick={onClick}
             >
