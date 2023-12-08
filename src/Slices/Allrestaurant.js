@@ -3,100 +3,11 @@ import { TbCurrencyTaka } from "react-icons/tb";
 import { GoClock } from "react-icons/go";
 import { MdOutlineDeliveryDining } from "react-icons/md";
 import { LuBadgePercent } from "react-icons/lu";
+import Slides from "../Slices/Slidesdb"
 
 const Allrestaurant = () => {
   
-  const imgAddress = [
-    {
-      id: 1,
-      photo:
-        "https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg?auto=compress&cs=tinysrgb&w=600",
-    },
-
-    {
-      id: 2,
-      photo:
-        "https://images.pexels.com/photos/67468/pexels-photo-67468.jpeg?auto=compress&cs=tinysrgb&w=600",
-    },
-
-    {
-      id: 3,
-      photo:
-        "https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=600"   
-      },
-
-    {
-      id: 4,
-      photo:
-        "https://images.pexels.com/photos/696218/pexels-photo-696218.jpeg?auto=compress&cs=tinysrgb&w=600",
-    },
-
-    {
-      id: 5,
-      photo:
-        "https://images.pexels.com/photos/1058277/pexels-photo-1058277.jpeg?auto=compress&cs=tinysrgb&w=600",
-    },
-
-    {
-      id: 6,
-      photo:
-        "https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?auto=compress&cs=tinysrgb&w=600",
-    },
-
-    {
-      id: 7,
-      photo:
-        "https://images.pexels.com/photos/761854/pexels-photo-761854.jpeg?auto=compress&cs=tinysrgb&w=600",
-    },
-
-    {
-      id: 8,
-      photo:
-        "https://images.pexels.com/photos/744780/pexels-photo-744780.jpeg?auto=compress&cs=tinysrgb&w=600",
-    },
-
-    {
-      id: 9,
-      photo:
-        "https://images.pexels.com/photos/1307698/pexels-photo-1307698.jpeg?auto=compress&cs=tinysrgb&w=600",
-    },
-
-    {
-      id: 10,
-      photo:
-        "https://images.pexels.com/photos/1581554/pexels-photo-1581554.jpeg?auto=compress&cs=tinysrgb&w=600",
-    },
-
-    {
-      id: 12,
-      photo:
-        "https://images.pexels.com/photos/64208/pexels-photo-64208.jpeg?auto=compress&cs=tinysrgb&w=600",
-    },
-
-    {
-      id: 13,
-      photo:
-        "https://images.pexels.com/photos/1126728/pexels-photo-1126728.jpeg?auto=compress&cs=tinysrgb&w=600",
-    },
-
-    {
-      id: 11,
-      photo:
-        "https://images.pexels.com/photos/299348/pexels-photo-299348.jpeg?auto=compress&cs=tinysrgb&w=600",
-    },
-
-    {
-      id: 22,
-      photo:
-        "https://images.pexels.com/photos/1310777/pexels-photo-1310777.jpeg?auto=compress&cs=tinysrgb&w=600",
-    },
-
-    {
-      id: 23,
-      photo:
-        "https://images.pexels.com/photos/693269/pexels-photo-693269.jpeg?auto=compress&cs=tinysrgb&w=600",
-    },
-  ];
+  
 
   return (
     <>
@@ -105,58 +16,75 @@ const Allrestaurant = () => {
       <div className="flex flex-wrap justify-center items-center md:mx-auto gap-5">
 
 
-        {imgAddress.map((data) => {
+        {Slides.map((data) => {
           return (
             <>
-              <div className="w-[500px] h-auto md:w-64  rounded-xl group relative" key={data.id} >
-                <div className="overflow-hidden">
-                  <img src={data.photo} className="bg-cover w-full h-full duration-700  group-hover:scale-110" alt="" />
-                </div>
+              <div className="w-[500px] h-auto md:w-[180px]  rounded-xl group relative" key={data.id} >
 
-                <div className="flex flex-col py-3">
-                  <div className="flex justify-between">
-                    <p className="px-2 text-xl font-bold">Res Name</p>
-                    <div className="flex justify-between items-center gap-1">
-                      <i className="text-pink-600">
-                        <PiStar size={13} />
-                      </i>
-                      <p>2.1</p>
-                      <p>(2000+)</p>
+              <div className="rounded-t-xl overflow-hidden md:w-[178px] md:h-[100px]">
+                      <img
+                        src={data.photo_url}
+                        className="bg-cover w-full h-full duration-700  group-hover:scale-110"
+                        alt=""
+                      />
                     </div>
-                  </div>
-                  <div className="flex items-center">
-                    <i className="flex items-center">
-                      <TbCurrencyTaka size={20} />
-                    </i>
-                    <p>Category</p>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <i className="text-slate-400 px-2">
-                      <GoClock size={11} />
-                    </i>
-                    <p className="text-slate-400">45 min</p>
-                    <i className="text-pink-400">
-                      <MdOutlineDeliveryDining size={20} />
-                    </i>
-                    <p className="text-pink-400">delivery</p>
-                  </div>
-                </div>
 
-                <div className="w-56 h-36 absolute top-3 left-3 flex flex-col gap-1 text-white">
-                  <span className="w-32 flex items-center gap-1 px-1 rounded-lg bg-gradient-to-r from-pink-500 to-pink-700">
-                    <i>
-                      <LuBadgePercent size={15} />
-                    </i>
-                    <p>Free Delivery</p>
-                  </span>
+                    <div className="flex flex-col py-3">
+                      <div className="flex justify-between items-center">
+                        <p className="md:text-[13px] font-bold px-1">{data.restaurant_name}</p>
+                        <div className="flex justify-between items-center gap-1 px-1">
+                          <i className="text-pink-600">
+                            <PiStar size={13} />
+                          </i>
+                          <p className="md:text-xs">{data.ratings}</p>
+                          <p className="md:text-xs">({data.subscriber}+)</p>
+                        </div>
+                      </div>
+                      <div className="flex items-center">
+                        <i className="flex items-center">
+                          <TbCurrencyTaka size={20} />
+                        </i>
+                        <p className="md:text-xs">{data.food_type}</p>
+                      </div>
 
-                  <span className="w-44 flex items-center gap-1 px-1 rounded-lg bg-gradient-to-r from-pink-500 to-pink-700">
-                    <i>
-                      <LuBadgePercent size={15} />
-                    </i>
-                    <p>Voucher </p>
-                  </span>
-                </div>
+                      <div className="flex justify-start items-center gap-2 md:justify-between md:gap-0">
+                        <div className="flex justify-start items-center px-1">
+                          <i className="text-slate-400 px-1">
+                            <GoClock size={11} />
+                          </i>
+                          <p className="text-slate-400 md:text-sm">{data.duration} min</p>
+                        </div>
+                        <div className="flex justify-start items-center px-1 gap-1">
+                          <i className="text-pink-400 md:text-sm">
+                            <MdOutlineDeliveryDining size={20} />
+                          </i>
+                          <p className="text-pink-400 md:text-sm">{data.service_charge}</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="w-56 h-36 md:w-40 md:h-20 absolute top-3 left-3 md:left-1 flex flex-col gap-1 text-white">
+                      <span className="w-32 flex items-center gap-1 px-1 rounded-lg bg-gradient-to-r from-pink-500 to-pink-700 md:w-[100px]">
+                        <i>
+                          <LuBadgePercent size={15} />
+                        </i>
+                        <p className="text-xs">Free Delivery</p>
+                      </span>
+
+                      <span className="w-44 flex items-center gap-1 px-1 rounded-lg bg-gradient-to-r from-pink-500 to-pink-700 md:w-[125px]">
+                        <i>
+                          <LuBadgePercent size={15} />
+                        </i>
+                        <p className="text-xs">Voucher </p>
+                      </span>
+                    </div>
+
+                    <div className=" absolute w-11 h-11 md:w-7 md:h-8 bg-white drop-shadow-xl top-[0px] right-[0px]">
+                      <p className="md:text-xs text-center">{data.duration} MIN</p>
+                    </div>
+
+                    
+
               </div>
             </>
           );

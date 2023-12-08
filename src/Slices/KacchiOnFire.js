@@ -127,10 +127,8 @@ const KacchiOnFire = () => {
             {Slides.map((data) => {
               return (
                 <>
-                  <div
-                    className="w-[450px] h-auto mx-auto md:w-[180px] rounded-xl border group relative"
-                    key={data.id}
-                  >
+                  <div className="w-[450px] h-auto mx-auto md:w-[180px] rounded-xl border group relative" key={data.id}>
+                  
                     <div className="rounded-t-xl overflow-hidden md:w-[178px] md:h-[100px]">
                       <img
                         src={data.photo_url}
@@ -205,6 +203,7 @@ const KacchiOnFire = () => {
                     >
                       <FaRegHeart />
                     </div>
+
                   </div>
                 </>
               );
