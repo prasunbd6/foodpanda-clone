@@ -1,4 +1,4 @@
- const Slides = [
+const Slides = [
     {
       id: 1,
       photo_url:
@@ -278,3 +278,4 @@
   ];
 
   export default Slides;
+

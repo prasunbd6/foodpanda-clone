@@ -154,7 +154,7 @@ function SampleNextArrow(props) {
                         <i className="flex items-center">
                           <TbCurrencyTaka size={20} />
                         </i>
-                        <p className="md:text-xs">Category</p>
+                        <p className="md:text-xs">{data.food_type}</p>
                       </div>
                       <div className="flex items-center gap-2">
                         <i className="text-slate-400 px-2">
