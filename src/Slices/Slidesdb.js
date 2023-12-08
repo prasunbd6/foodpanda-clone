@@ -9,6 +9,7 @@ const Slides = [
       envtype:"ghorer khabar",
       food_type: "Bangladeshi",
       service_charge: "delivery",
+    duration:"30",
     },
 
     {
@@ -21,6 +22,7 @@ const Slides = [
       envtype:"ghorer khabar",
       food_type: "Bangladeshi",
       service_charge: "delivery",
+    duration:"35",
     },
 
     {
@@ -33,6 +35,7 @@ const Slides = [
       envtype:"ghorer khabar",
       food_type: "Bangladeshi",
       service_charge: "delivery",
+    duration:"40",
     },
 
     {
@@ -45,6 +48,7 @@ const Slides = [
       envtype:"ghorer khabar",
       food_type: "Bangladeshi",
       service_charge: "delivery",
+    duration:"30",
     },
 
     {
@@ -57,6 +61,7 @@ const Slides = [
       envtype:"ghorer khabar",
       food_type: "Bangladeshi",
       service_charge: "delivery",
+    duration:"35",
     },
 
     {
@@ -69,6 +74,7 @@ const Slides = [
       envtype:"ghorer khabar",
       food_type: "Bangladeshi",
       service_charge: "delivery",
+    duration:"40",
     },
 
     {
@@ -81,6 +87,7 @@ const Slides = [
       envtype:"ghorer khabar",
       food_type: "Bangladeshi",
       service_charge: "delivery",
+    duration:"30",
     },
 
     {
@@ -93,6 +100,7 @@ const Slides = [
       envtype:"ghorer khabar",
       food_type: "Bangladeshi",
       service_charge: "delivery",
+    duration:"35",
     },
 
     {
@@ -105,6 +113,7 @@ const Slides = [
       envtype:"ghorer khabar",
       food_type: "Bangladeshi",
       service_charge: "delivery",
+    duration:"40",
     },
 
     {
@@ -117,6 +126,7 @@ const Slides = [
       envtype:"ghorer khabar",
       food_type: "Bangladeshi",
       service_charge: "delivery",
+    duration:"30",
     },
     {
       id: 11,
@@ -128,6 +138,7 @@ const Slides = [
       envtype:"Kacchi on Fire",
       food_type: "Bangladeshi",
       service_charge: "delivery",
+    duration:"35",
     },
     {
       id: 12,
@@ -139,6 +150,7 @@ const Slides = [
       envtype:"Kacchi on Fire",
       food_type: "Bangladeshi",
       service_charge: "delivery",
+    duration:"40",
     },
     {
       id: 13,
@@ -150,6 +162,7 @@ const Slides = [
       envtype:"Kacchi on Fire",
       food_type: "Bangladeshi",
       service_charge: "delivery",
+    duration:"30",
     },
     {
       id: 14,
@@ -161,6 +174,7 @@ const Slides = [
       envtype:"Kacchi on Fire",
       food_type: "Bangladeshi",
       service_charge: "delivery",
+    duration:"35",
     },
     {
       id: 15,
@@ -172,6 +186,7 @@ const Slides = [
       envtype:"Kacchi on Fire",
       food_type: "Bangladeshi",
       service_charge: "delivery",
+    duration:"40",
     },
     {
       id: 16,
@@ -183,6 +198,7 @@ const Slides = [
       envtype:"Kacchi on Fire",
       food_type: "Bangladeshi",
       service_charge: "delivery",
+    duration:"30",
     },
     {
       id: 17,
@@ -194,6 +210,7 @@ const Slides = [
       envtype:"Kacchi on Fire",
       food_type: "Bangladeshi",
       service_charge: "delivery",
+    duration:"35",
     },
     {
       id: 18,
@@ -205,6 +222,7 @@ const Slides = [
       envtype:"Kacchi on Fire",
       food_type: "Bangladeshi",
       service_charge: "delivery",
+    duration:"40",
     },
     {
       id: 19,
@@ -216,6 +234,7 @@ const Slides = [
       envtype:"Kacchi on Fire",
       food_type: "Bangladeshi",
       service_charge: "delivery",
+    duration:"30",
     },
 
     {
@@ -228,6 +247,7 @@ const Slides = [
       envtype:"Kacchi on Fire",
       food_type: "Bangladeshi",
       service_charge: "delivery",
+    duration:"35",
     },
 
     {
@@ -240,6 +260,7 @@ const Slides = [
       envtype:"Kacchi on Fire",
       food_type: "Bangladeshi",
       service_charge: "delivery",
+    duration:"40",
     },
     {
       id: 22,
@@ -251,6 +272,7 @@ const Slides = [
       envtype:"Kacchi on Fire",
       food_type: "Bangladeshi",
       service_charge: "delivery",
+    duration:"30",
     },
     {
       id: 23,
@@ -262,6 +284,7 @@ const Slides = [
       envtype:"Kacchi on Fire",
       food_type: "Bangladeshi",
       service_charge: "delivery",
+    duration:"35",
     },
     {
       id: 24,
@@ -273,6 +296,7 @@ const Slides = [
       envtype:"Kacchi on Fire",
       food_type: "Bangladeshi",
       service_charge: "delivery",
+    duration:"40",
     },
 
   ];

@@ -11,7 +11,7 @@ import Slides from "../Slices/Slidesdb"
 const KacchiOnFire = () => {
 
   //console.log(Slides)
-  
+
 
   const settings = {
     dots: false,
@@ -82,41 +82,41 @@ const KacchiOnFire = () => {
     ],
   };
 
- // Previous
- function SamplePrevArrow(props) {
-  const { onClick } = props;
-  return (
-    <div
-      className="text-white bg-pink-600 rounded-full transition ease-in-out duration-300
+  // Previous
+  function SamplePrevArrow(props) {
+    const { onClick } = props;
+    return (
+      <div
+        className="text-white bg-pink-600 rounded-full transition ease-in-out duration-300
       flex justify-center items-center
       w-7 h-7
       absolute top-52 -left-3
       md:top-20 md:-left-5
       hover:ring-2 hover:ring-pink-600 "
-      onClick={onClick}
-    >
-      <IoIosArrowRoundBack size={20} />
-    </div>
-  );
-}
+        onClick={onClick}
+      >
+        <IoIosArrowRoundBack size={20} />
+      </div>
+    );
+  }
 
-// Next
-function SampleNextArrow(props) {
-  const { onClick } = props;
-  return (
-    <div
-      className="text-white bg-pink-600 rounded-full transition ease-in-out duration-300
+  // Next
+  function SampleNextArrow(props) {
+    const { onClick } = props;
+    return (
+      <div
+        className="text-white bg-pink-600 rounded-full transition ease-in-out duration-300
     flex justify-center items-center
     w-7 h-7
     absolute top-52 -right-3
     md:top-20 md:-right-5
     hover:ring-2 hover:ring-pink-600"
-      onClick={onClick}
-    >
-      <IoIosArrowRoundForward size={20} />
-    </div>
-  );
-}
+        onClick={onClick}
+      >
+        <IoIosArrowRoundForward size={20} />
+      </div>
+    );
+  }
 
   return (
     <>
@@ -156,15 +156,20 @@ function SampleNextArrow(props) {
                         </i>
                         <p className="md:text-xs">{data.food_type}</p>
                       </div>
-                      <div className="flex items-center gap-2">
-                        <i className="text-slate-400 px-2">
-                          <GoClock size={11} />
-                        </i>
-                        <p className="text-slate-400 md:text-sm">45 min</p>
-                        <i className="text-pink-400 md:text-sm">
-                          <MdOutlineDeliveryDining size={20} />
-                        </i>
-                        <p className="text-pink-400 md:text-sm">delivery</p>
+
+                      <div className="flex justify-between items-center">
+                        <div className="flex justify-start items-center px-1">
+                          <i className="text-slate-400 px-1">
+                            <GoClock size={11} />
+                          </i>
+                          <p className="text-slate-400 md:text-sm">{data.duration} min</p>
+                        </div>
+                        <div className="flex justify-start items-center px-1 gap-1">
+                          <i className="text-pink-400 md:text-sm">
+                            <MdOutlineDeliveryDining size={20} />
+                          </i>
+                          <p className="text-pink-400 md:text-sm">delivery</p>
+                        </div>
                       </div>
                     </div>
 
@@ -185,7 +190,7 @@ function SampleNextArrow(props) {
                     </div>
 
                     <div className=" absolute w-11 h-11 md:w-7 md:h-8 bg-white drop-shadow-xl top-[0px] right-[0px]">
-                      <p className="md:text-xs text-center">40 MIN</p>
+                      <p className="md:text-xs text-center">{data.duration} MIN</p>
                     </div>
 
                     <div
