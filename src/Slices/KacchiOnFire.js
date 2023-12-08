@@ -6,9 +6,11 @@ import { MdOutlineDeliveryDining } from "react-icons/md";
 import { LuBadgePercent } from "react-icons/lu";
 import Slider from "react-slick";
 import { FaRegHeart } from "react-icons/fa";
-import slides from "../Slices/Slidesdb"
+import Slides from "../Slices/Slidesdb"
 
 const KacchiOnFire = () => {
+
+  //console.log(Slides)
   
 
   const settings = {
@@ -122,14 +124,14 @@ function SampleNextArrow(props) {
       <div className="mx-auto w-[490px] md:w-[401px] lg:w-[600px] xl:w-[800px] 2xl:w-[1040px] 3xl:w-[11px] h-auto">
         <div>
           <Slider {...settings}>
-            {slides.map((data) => {
+            {Slides.map((data) => {
               return (
                 <>
                   <div
                     className="w-[450px] h-auto mx-auto md:w-[180px] rounded-xl border group relative"
                     key={data.id}
                   >
-                    <div className="rounded-t-xl overflow-hidden">
+                    <div className="rounded-t-xl overflow-hidden md:w-[178px] md:h-[100px]">
                       <img
                         src={data.photo_url}
                         className="bg-cover w-full h-full duration-700  group-hover:scale-110"
@@ -139,13 +141,13 @@ function SampleNextArrow(props) {
 
                     <div className="flex flex-col py-3">
                       <div className="flex justify-between items-center">
-                        <p className="md:text-sm font-bold px-1">Res Name</p>
+                        <p className="md:text-[13px] font-bold px-1">{data.restaurant_name}</p>
                         <div className="flex justify-between items-center gap-1 px-1">
                           <i className="text-pink-600">
                             <PiStar size={13} />
                           </i>
-                          <p className="md:text-xs">2.1</p>
-                          <p className="md:text-xs">(2000+)</p>
+                          <p className="md:text-xs">{data.ratings}</p>
+                          <p className="md:text-xs">({data.subscriber}+)</p>
                         </div>
                       </div>
                       <div className="flex items-center">
@@ -166,7 +168,7 @@ function SampleNextArrow(props) {
                       </div>
                     </div>
 
-                    <div className="w-56 h-36 absolute top-3 left-3 flex flex-col gap-1 text-white">
+                    <div className="w-56 h-36 md:w-40 md:h-20 absolute top-3 left-3 md:left-1 flex flex-col gap-1 text-white">
                       <span className="w-32 flex items-center gap-1 px-1 rounded-lg bg-gradient-to-r from-pink-500 to-pink-700 md:w-[100px]">
                         <i>
                           <LuBadgePercent size={15} />

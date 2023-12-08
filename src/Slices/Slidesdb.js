@@ -1,4 +1,4 @@
-export const slides = [
+ const Slides = [
     {
       id: 1,
       photo_url:
@@ -275,8 +275,6 @@ export const slides = [
       service_charge: "delivery",
     },
 
-
-
-
-
   ];
+
+  export default Slides;

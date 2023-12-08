@@ -1,4 +1,4 @@
-import { slides } from "./Slidesdb";
+import Slides from "./Slidesdb";
 import Slider from "react-slick";
 import { IoIosArrowRoundBack, IoIosArrowRoundForward } from "react-icons/io";
 
@@ -116,7 +116,7 @@ const Allrestaurantdemo = () => {
             <div className="pt-5 mx-auto w-[500px] md:w-[401px] lg:w-[600px] xl:w-[800px] 2xl:w-[1040px] 3xl:w-[11px] h-auto">
                 <div>
                     <Slider {...settings}>
-                        {slides.map((i) => {
+                        {Slides.map((i) => {
                             return (
                                 <>
                                     <div className="flex flex-col justify-center items-center relative">
