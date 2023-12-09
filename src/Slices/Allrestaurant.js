@@ -13,7 +13,7 @@ const Allrestaurant = () => {
     <>
     <p className="text-2xl font-bold py-5">All Restaurants</p>
 
-      <div className="flex flex-wrap justify-center items-center md:mx-auto gap-5">
+      <div className="flex flex-wrap justify-center items-center gap-5 md:justify-start md:px-4">
 
 
         {Slides.map((data) => {
@@ -92,7 +92,7 @@ const Allrestaurant = () => {
 
 
       </div>
-    </>
+      </>
   );
 };
 

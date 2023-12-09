@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { IoIosArrowRoundBack, IoIosArrowRoundForward } from "react-icons/io";
 import { PiStar } from "react-icons/pi";
 import { TbCurrencyTaka } from "react-icons/tb";
@@ -8,9 +9,12 @@ import Slider from "react-slick";
 import { FaRegHeart } from "react-icons/fa";
 import Slides from "../Slices/Slidesdb"
 
+
 const KacchiOnFire = () => {
 
-  //console.log(Slides)
+const [item, setItem]=useState(Slides);
+
+//console.log(joinTable)
 
 
   const settings = {
@@ -124,7 +128,7 @@ const KacchiOnFire = () => {
       <div className="mx-auto w-[490px] md:w-[401px] lg:w-[600px] xl:w-[800px] 2xl:w-[1040px] 3xl:w-[11px] h-auto">
         <div>
           <Slider {...settings}>
-            {Slides.map((data) => {
+            {item.map((data) => {
               return (
                 <>
                   <div className="w-[450px] h-auto mx-auto md:w-[180px] rounded-xl border group relative" key={data.id}>
