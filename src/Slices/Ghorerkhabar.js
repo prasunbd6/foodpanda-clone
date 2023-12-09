@@ -10,7 +10,7 @@ import Slides from "../Slices/Slidesdb"
 
 const Ghorerkhabar = () => {
   
-  
+  const ghorerKhabar = Slides.filter(slide => slide.category === 'Ghorer khabar');
 
   const settings = {
     dots: false,
@@ -123,7 +123,7 @@ const Ghorerkhabar = () => {
       <div className="mx-auto w-[490px] md:w-[401px] lg:w-[600px] xl:w-[800px] 2xl:w-[1040px] 3xl:w-[11px] h-auto">
         <div>
           <Slider {...settings}>
-            {Slides.map((data) => {
+            {ghorerKhabar.map((data) => {
               return (
                 <>
                   <div
@@ -140,7 +140,7 @@ const Ghorerkhabar = () => {
 
                     <div className="flex flex-col py-3">
                       <div className="flex justify-between items-center">
-                        <p className="md:text-[13px] font-bold px-1">{data.restaurant_name}</p>
+                        <p className="md:text-[11px] font-bold px-1">{data.restaurant_name}</p>
                         <div className="flex justify-between items-center gap-1 px-1">
                           <i className="text-pink-600">
                             <PiStar size={13} />
@@ -153,7 +153,7 @@ const Ghorerkhabar = () => {
                         <i className="flex items-center">
                           <TbCurrencyTaka size={20} />
                         </i>
-                        <p className="md:text-xs">{data.food_type}</p>
+                        <p className="md:text-xs">{data.category}</p>
                       </div>
 
                       <div className="flex justify-between items-center">

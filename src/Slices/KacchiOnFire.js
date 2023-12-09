@@ -1,4 +1,4 @@
-import { useState } from "react";
+
 import { IoIosArrowRoundBack, IoIosArrowRoundForward } from "react-icons/io";
 import { PiStar } from "react-icons/pi";
 import { TbCurrencyTaka } from "react-icons/tb";
@@ -12,7 +12,10 @@ import Slides from "../Slices/Slidesdb"
 
 const KacchiOnFire = () => {
 
-const [item, setItem]=useState(Slides);
+//const [item, setItem]=useState(Slides);
+
+
+const kacchiOnFireSlides = Slides.filter(slide => slide.category === 'Kacchi on Fire');
 
 //console.log(joinTable)
 
@@ -128,7 +131,7 @@ const [item, setItem]=useState(Slides);
       <div className="mx-auto w-[490px] md:w-[401px] lg:w-[600px] xl:w-[800px] 2xl:w-[1040px] 3xl:w-[11px] h-auto">
         <div>
           <Slider {...settings}>
-            {item.map((data) => {
+            {kacchiOnFireSlides.map((data) => {
               return (
                 <>
                   <div className="w-[450px] h-auto mx-auto md:w-[180px] rounded-xl border group relative" key={data.id}>
@@ -143,7 +146,7 @@ const [item, setItem]=useState(Slides);
 
                     <div className="flex flex-col py-3">
                       <div className="flex justify-between items-center">
-                        <p className="md:text-[13px] font-bold px-1">{data.restaurant_name}</p>
+                        <p className="md:text-[11px] font-bold px-1">{data.restaurant_name}</p>
                         <div className="flex justify-between items-center gap-1 px-1">
                           <i className="text-pink-600">
                             <PiStar size={13} />
@@ -156,7 +159,7 @@ const [item, setItem]=useState(Slides);
                         <i className="flex items-center">
                           <TbCurrencyTaka size={20} />
                         </i>
-                        <p className="md:text-xs">{data.food_type}</p>
+                        <p className="md:text-xs">{data.category}</p>
                       </div>
 
                       <div className="flex justify-start items-center gap-2 md:justify-between md:gap-0">
