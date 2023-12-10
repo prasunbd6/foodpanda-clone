@@ -12,9 +12,6 @@ import Slides from "../Slices/Slidesdb"
 
 const KacchiOnFire = () => {
 
-//const [item, setItem]=useState(Slides);
-
-
 const kacchiOnFireSlides = Slides.filter(slide => slide.category === 'Kacchi on Fire');
 
 //console.log(joinTable)
@@ -146,7 +143,7 @@ const kacchiOnFireSlides = Slides.filter(slide => slide.category === 'Kacchi on 
 
                     <div className="flex flex-col py-3">
                       <div className="flex justify-between items-center">
-                        <p className="md:text-[11px] font-bold px-1">{data.restaurant_name}</p>
+                        <p className="md:text-[13px] font-bold px-1 md:overflow-hidden">{data.restaurant_name}</p>
                         <div className="flex justify-between items-center gap-1 px-1">
                           <i className="text-pink-600">
                             <PiStar size={13} />
