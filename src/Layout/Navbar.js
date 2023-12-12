@@ -78,10 +78,10 @@ const Navbar = () => {
           </div>
 
           {/* Menu Operation */}
-          <ul className="w-full h-auto flex justify-around items-center text-pink-500 gap-1 border-b-2 shadow-xl order-5 menu-operation-in-md-config">
-            <li>
+          <ul className="w-full h-auto flex justify-around items-center text-pink-500 gap-1  shadow-xl order-5 menu-operation-in-md-config">
+            <li className="">
               <NavLink
-                to="#"
+                to="/"
                 className=" menu-decoration-standby group relative"
               >
                 <MdOutlineDeliveryDining size={20} />
@@ -92,7 +92,7 @@ const Navbar = () => {
 
             <li>
               <NavLink
-                to="#"
+                to="/pickup"
                 className="menu-decoration-standby group relative"
               >
                 <MdOutlineEmojiPeople size={20} />
