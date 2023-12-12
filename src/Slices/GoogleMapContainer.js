@@ -2,7 +2,7 @@ import { useJsApiLoader, GoogleMap } from "@react-google-maps/api";
 
 const GoogleMapContainer = () => {
   const { isLoaded } = useJsApiLoader({
-    googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAP_API_KEY,
+    googleMapsApiKey:process.env.REACT_APP_GOOGLE_MAP_API_KEY,
     libraries: ["places"],
   });
 
