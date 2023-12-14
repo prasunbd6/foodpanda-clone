@@ -21,9 +21,9 @@ const Navbar = () => {
 
           <ul className="w-2/12 flex justify-start items-center text-pink-500 gap-4 p-2 md:hidden order-1">
             <li className="rounded md:rounded flex justify-center hover:rounded-full hover:bg-pink-100 p-2 duration-200">
-            <CiUser size={25} />
+              <CiUser size={25} />
             </li>
-            </ul>
+          </ul>
 
           {/* Logo & Brand Name */}
           <div className="md:w-auto flex items-center  text-pink-500 gap-2 md:order-2 order-2">
@@ -79,60 +79,42 @@ const Navbar = () => {
 
           {/* Menu Operation */}
           <ul className="w-full h-auto flex justify-around items-center text-pink-500 gap-1  shadow-xl order-5 menu-operation-in-md-config">
-            <li className="">
-              <NavLink
-                to="/"
-                className=" menu-decoration-standby group relative"
-              >
-                <MdOutlineDeliveryDining size={20} />
-                <p className="px-1 md:cursor-pointer">Delivery</p>
-                <span className="absolute top-9 menu-decoration-hover-active"></span>
+
+            <li className=" group relative">
+              <NavLink to="/" className="menu-decoration-standby" activeClassName="active">
+                <MdOutlineDeliveryDining size={20} /><p className="px-1 md:cursor-pointer">Delivery</p>
+                <span className="absolute -bottom-0 menu-decoration-hover-underline"></span>
               </NavLink>
             </li>
 
-            <li>
-              <NavLink
-                to="/pickup"
-                className="menu-decoration-standby group relative"
-              >
-                <MdOutlineEmojiPeople size={20} />
-                <p className=" px-1 md:cursor-pointer">Pick-Up</p>
-                <span className="absolute top-9 menu-decoration-hover-active"></span>
+            <li className=" group relative">
+              <NavLink to="/pickup" className="menu-decoration-standby" activeClassName="active">
+                <MdOutlineEmojiPeople size={20} /><p className=" px-1 md:cursor-pointer">Pick-Up</p>
+                <span className="absolute -bottom-0 menu-decoration-hover-underline"></span>
               </NavLink>
             </li>
 
-            <li>
-              <NavLink
-                to="#"
-                className=" menu-decoration-standby group relative"
-              >
-                <PiSuitcaseRollingThin size={20} />
-                <p className=" px-1 md:cursor-pointer">pandamart</p>
-                <span className="absolute top-9 menu-decoration-hover-active"></span>
+            <li className=" group relative">
+              <NavLink to="pandamart" className="menu-decoration-standby" activeClassName="active">
+                <PiSuitcaseRollingThin size={20} /><p className=" px-1 md:cursor-pointer">pandamart</p>
+                <span className="absolute -bottom-0 menu-decoration-hover-underline"></span>
               </NavLink>
             </li>
 
-            <li>
-              <NavLink
-                to="#"
-                className=" menu-decoration-standby group relative"
-              >
-                <GiShoppingCart size={20} />
-                <p className=" px-1 md:cursor-pointer">Shops</p>
-                <span className="absolute top-9 menu-decoration-hover-active"></span>
+            <li className=" group relative">
+              <NavLink to="shops" className="menu-decoration-standby" activeClassName="active">
+                <GiShoppingCart size={20} /><p className=" px-1 md:cursor-pointer">Shops</p>
+                <span className="absolute -bottom-0 menu-decoration-hover-underline"></span>
               </NavLink>
             </li>
 
-            <li>
-              <NavLink
-                to="#"
-                className=" menu-decoration-standby group relative"
-              >
-                <GiForkKnifeSpoon size={20} />
-                <p className=" px-1 md:cursor-pointer">Dine-in</p>
-                <span className="absolute top-9 menu-decoration-hover-active"></span>
+            <li className=" group relative">
+              <NavLink to="dinein" className="menu-decoration-standby" activeClassName="active">
+                <GiForkKnifeSpoon size={20} /><p className=" px-1 md:cursor-pointer">Dine-in</p>
+                <span className="absolute -bottom-0 menu-decoration-hover-underline"></span>
               </NavLink>
             </li>
+            
           </ul>
         </div>
       </div>

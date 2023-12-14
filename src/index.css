@@ -7,39 +7,35 @@
 /* login, Signup & language */
 
 .login-signup-language-md-config {
-  @apply md:w-4/12 md:h-14 md:flex md:justify-around md:items-center md:text-center md:py-1 
-    md:order-4;
+  @apply md:w-4/12 md:h-14 md:flex md:justify-around md:items-center md:text-center md:py-1 md:order-4;
 }
 
 /* Address */
 
 .address-ul {
-  @apply w-full 
-  flex 
-  flex-wrap 
-  justify-start 
-  items-center 
-  gap-1;
+  @apply w-full flex flex-wrap justify-start items-center gap-1;
 }
 
 /* Menu Operation */
 
 .menu-operation-in-md-config {
-  @apply md:justify-start  md:text-xl bg-white;
+  @apply md:justify-start md:text-xl bg-white;
 }
 
 .menu-decoration-standby {
-  @apply w-auto flex flex-wrap justify-center items-center px-1 py-2 
-  hover:bg-pink-200 transition duration-150;
+  @apply w-full flex justify-center items-center px-1 py-2 border-b-[3px] border-white transition ease-in duration-200
+  group-hover:bg-pink-200;
 }
 
-.menu-decoration-hover-active {
-  @apply flex justify-center items-center border-b-4 
-  border-pink-600 rounded-md  
-  group-hover:border-pink-600 group-hover:w-6 
-  group-focus:w-full group-focus:px-1
-  ;
+.menu-decoration-standby.active {
+  @apply group-hover:bg-white border-pink-600;
 }
+
+.menu-decoration-hover-underline {
+  @apply group-hover:w-6 border-b-[3px] border-pink-600
+}
+
+
 
 /* Filter */
 .filter-heading-text {
@@ -51,17 +47,7 @@
 }
 
 .filter-list-label-square {
-  @apply appearance-none w-5 h-5 border-2 border-pink-500  rounded-md ring-inset 
-
-    focus:outline-none checked:border-opacity-10 checked:bg-pink-600 
-
-    group-hover:text-pink-500 
-    group-hover:rounded-md 
-    group-hover:ring-2 
-    group-hover:ring-pink-600  
-    
-    group-checked:border-opacity-10 
-    group-checked:bg-pink-600;
+  @apply appearance-none w-5 h-5 border-2 border-pink-500 rounded-md ring-inset focus:outline-none checked:border-opacity-10 checked:bg-pink-600 group-hover:text-pink-500 group-hover:rounded-md group-hover:ring-2 group-hover:ring-pink-600 group-checked:border-opacity-10 group-checked:bg-pink-600;
 }
 
 .sort-marked {
@@ -85,7 +71,7 @@
 }
 
 .sort-hover-active {
-  @apply hover:active:ring-4  hover:active:ring-inset  hover:active:ring-pink-500;
+  @apply hover:active:ring-4 hover:active:ring-inset hover:active:ring-pink-500;
 }
 
 /* Footer */
