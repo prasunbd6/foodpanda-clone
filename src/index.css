@@ -24,7 +24,7 @@
 
 .menu-decoration-standby {
   @apply w-full flex justify-center items-center px-1 py-2 border-b-[3px] border-white transition ease-in duration-200
-  group-hover:bg-pink-200;
+  group-hover:bg-pink-50;
 }
 
 .menu-decoration-standby.active {
@@ -32,7 +32,7 @@
 }
 
 .menu-decoration-hover-underline {
-  @apply group-hover:w-6 border-b-[3px] border-pink-600
+  @apply group-hover:w-6 group-hover:bg-pink-50 border-b-[3px] border-pink-600
 }
 
 

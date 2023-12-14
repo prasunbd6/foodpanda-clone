@@ -18,7 +18,7 @@ const PickUp = () => {
 
 
       {/* Container */}
-      <div className="md:mt-[98px] md:w-5/6 md:h-[600px] mx-auto flex justify-center items-center">
+      <div className="md:mt-[98px] md:w-11/12 md:h-[600px] mx-auto flex justify-center items-center">
         <GoogleMapContainer />
       </div>
     </>
