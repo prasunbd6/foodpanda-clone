@@ -1,7 +1,8 @@
 import GoogleMapContainer from "../Slices/GoogleMapContainer";
 import Slides from "../Slices/Slidesdb";
 import { useState } from "react";
-import ApiMaps from "../Slices/ApiMaps";
+import { IoTimeOutline } from "react-icons/io5";
+
 
 const PickUp = () => {
 
@@ -15,39 +16,49 @@ const PickUp = () => {
 
   return (
     <>
-<div className="flex flex-col">
+      <div className="md:mt-[130px] flex flex-col">
 
 
-{/*Restaurant & Google Map - API Test Purpose*/}
-      <div className="md:mt-[130px] md:w-11/12 h-auto flex justify-start items-start mx-auto">
+        {/*Restaurant & Google Map - API Test Purpose*/}
+        <div className="md:w-11/12 h-auto flex items-start mx-auto">
 
-        {/* Restaurant List*/}
-        <div className="md:w-[150px] md:h-[470px] md:overflow-y-scroll bg-pink-700">
-          <ul className="px-1">
+          {/* Restaurant List*/}
+          <div className="md:w-[250px] md:h-[470px] md:overflow-y-scroll flex flex-col gap-5">
+
             {
               Slides.map(i => {
                 return (
                   <>
-                    <li key={i.id} onClick={() => handleRestaurantClick(i.map_link)} className=" cursor-pointer">{i.restaurant_name}</li>
+                    {/* Card */}
+                    <div className="md:w-[200px] h-auto flex flex-col mx-auto bg-slate-200 border cursor-pointer group hover:ring-1 hover:ring-pink-400" key={i.id} onClick={() => handleRestaurantClick(i.map_link)} >
+                      <div className="overflow-hidden w-auto h-[130px]">
+                        <img src={i.photo_url} className="w-full h-full duration-700 group-hover:scale-110" alt="" />
+                      </div>
+                      <p className="px-1 text-slate-900 font-semibold overflow-x-hidden">{i.restaurant_name}</p>
+                      <p className="px-1 text-slate-900 text-sm">Type: {i.food_type}</p>
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center px-1 gap-1 text-gray-400"><IoTimeOutline/><p className="text-sm">{i.duration} min</p></div>
+                        <div className="flex items-center px-1 text-pink-600"><p className="text-sm">delivery</p></div>
+                      </div>
+
+                    </div>
                   </>
                 )
               })
             }
-          </ul>
+          </div>
+
+
+
+          {/*Map Area*/}
+          <div className="md:w-11/12 md:h-[470px]">
+            <GoogleMapContainer selectedMapLink={selectedMapLink} />
+          </div>
+
         </div>
 
-        {/*Map Area*/}
-        <div className="md:w-11/12 md:h-[470px]">
-          <GoogleMapContainer selectedMapLink={selectedMapLink} />
-        </div>
 
       </div>
-
-        {/* Google Map - API Test Purpose*/}
-        <div className="mt-[50px] w-full h-full">
-          <ApiMaps />
-        </div>
-</div>
     </>
   );
 };
