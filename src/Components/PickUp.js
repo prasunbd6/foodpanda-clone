@@ -1,7 +1,7 @@
 import GoogleMapContainer from "../Slices/GoogleMapContainer";
-
 import Slides from "../Slices/Slidesdb";
 import { useState } from "react";
+import ApiMaps from "../Slices/ApiMaps";
 
 const PickUp = () => {
 
@@ -15,32 +15,39 @@ const PickUp = () => {
 
   return (
     <>
-
-      {/* Google Map  Search Box*/}
-      <ul className="px-1 md:absolute md:top-[100px] bg-pink-700 z-10">
+<div className="flex flex-col">
 
 
-        {
-          Slides.map(i => {
-            return (
-              <>
-                <li key={i.id} onClick={()=>handleRestaurantClick(i.map_link)} className=" cursor-pointer">{i.restaurant_name}</li>
-              </>
-            )
-          })
-        }
+{/*Restaurant & Google Map - API Test Purpose*/}
+      <div className="md:mt-[130px] md:w-11/12 h-auto flex justify-start items-start mx-auto">
 
+        {/* Restaurant List*/}
+        <div className="md:w-[150px] md:h-[470px] md:overflow-y-scroll bg-pink-700">
+          <ul className="px-1">
+            {
+              Slides.map(i => {
+                return (
+                  <>
+                    <li key={i.id} onClick={() => handleRestaurantClick(i.map_link)} className=" cursor-pointer">{i.restaurant_name}</li>
+                  </>
+                )
+              })
+            }
+          </ul>
+        </div>
 
-      </ul>
+        {/*Map Area*/}
+        <div className="md:w-11/12 md:h-[470px]">
+          <GoogleMapContainer selectedMapLink={selectedMapLink} />
+        </div>
 
-
-
-
-
-      {/* Container */}
-      <div className="md:mt-[98px] md:w-11/12 md:h-[600px] mx-auto flex justify-center items-center">
-        <GoogleMapContainer selectedMapLink={selectedMapLink}/>
       </div>
+
+        {/* Google Map - API Test Purpose*/}
+        <div className="mt-[50px] w-full h-full">
+          <ApiMaps />
+        </div>
+</div>
     </>
   );
 };

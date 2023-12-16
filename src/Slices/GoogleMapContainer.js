@@ -1,30 +1,35 @@
+import ApiMaps from "./ApiMaps";
 
 
 
-const GoogleMapContainer = ({selectedMapLink}) => {
+const GoogleMapContainer = ({ selectedMapLink }) => {
 
- 
+
 
 
   return (
     <>
-      {/* Google Map */}
-      <div className="w-full h-full flex justify-center items-center flex-col gap-4 md:relative">
+
+
+      {/* Google Map - Test Purpose*/}
+      <div className="w-full h-full flex justify-center items-center">
 
         {
           selectedMapLink && (
             <iframe
-                
-                src={selectedMapLink}
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-                className="w-full h-full"
-              ></iframe>
+
+              src={selectedMapLink}
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              className="w-full h-full"
+            ></iframe>
           )
         }
-               
-              
+
+
       </div>
+
+
     </>
   );
 };
