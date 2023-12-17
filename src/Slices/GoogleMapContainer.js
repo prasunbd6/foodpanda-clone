@@ -11,6 +11,7 @@ const GoogleMapContainer = ({ selectedMapLink }) => {
             <>
            
             <iframe
+            title="test"
               src={selectedMapLink}
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"

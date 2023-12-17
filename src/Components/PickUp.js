@@ -5,6 +5,7 @@ import { IoTimeOutline } from "react-icons/io5";
 import { BiChevronDown } from "react-icons/bi";
 import { AiOutlineSearch } from "react-icons/ai";
 
+
 const PickUp = () => {
   const [selectedMapLink, setSelectedMapLink] = useState(
     "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3690.4002078432613!2d91.83427857405155!3d22.338512641511638!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30ad275bd5a1127d%3A0x93d7e8fa447e57dd!2sSri%20Govinda%20Restaurant!5e0!3m2!1sen!2sbd!4v1702575054332!5m2!1sen!2sbd"
@@ -69,7 +70,7 @@ const PickUp = () => {
               className="md:hidden mt-36 w-[288px] h-auto py-1 absolute top-0" >
               <div
                 onClick={() => setOpen(!open)}
-                className={`flex justify-between items-center gap-5 ${!selected && " text-gray-700"}`}>
+                className={`flex justify-between items-center gap-5 cursor-pointer ${!selected && " text-gray-700"}`}>
                 {selected
                   ? selected?.length > 20
                     ? selected.substring(0, 20) + `...`
@@ -123,7 +124,7 @@ const PickUp = () => {
           </div>
 
           {/*Map Area*/}
-          <div className="mt-48 md:mt-0 md:w-full md:h-[470px] md:mx-auto">
+          <div className="mt-48 h-[380px] md:mt-0 md:w-full md:h-[470px] md:mx-auto">
             <GoogleMapContainer selectedMapLink={selectedMapLink} />
           </div>
         </div>
