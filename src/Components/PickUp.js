@@ -11,7 +11,7 @@ const PickUp = () => {
   );
   const [inputValue, setInputValue] = useState("");
   const [selected, setSelected] = useState("");
-  const [open, setOpen]=useState(false);
+  const [open, setOpen] = useState(false);
 
   const handleRestaurantClick = (mapLink) => {
     setSelectedMapLink(mapLink);
@@ -65,11 +65,11 @@ const PickUp = () => {
           {/*In Small Device*/}
           <div className="relative">
             {/* Restaurant List */}
-            <div 
-            className="md:hidden mt-36 w-[288px] h-auto py-1 absolute top-0" >
+            <div
+              className="md:hidden mt-36 w-[288px] h-auto py-1 absolute top-0" >
               <div
-              onClick={()=>setOpen(!open)} 
-              className={`flex justify-between items-center gap-5 ${!selected && " text-gray-700"}`}>
+                onClick={() => setOpen(!open)}
+                className={`flex justify-between items-center gap-5 ${!selected && " text-gray-700"}`}>
                 {selected
                   ? selected?.length > 20
                     ? selected.substring(0, 20) + `...`
@@ -77,7 +77,8 @@ const PickUp = () => {
                   : "Select Restaurant"}
                 <BiChevronDown size={20} />
               </div>
-              <ul className={`bg-white mt-2 overflow-y-scroll ${open ? ` h-40`:`h-0`}`}>
+
+              <ul className={`bg-white mt-2 overflow-y-scroll ${open ? ` h-40` : `h-0`}`}>
                 <div className="flex items-center px-2 sticky top-0 bg-white">
                   <AiOutlineSearch size={20} className="text-gray-700" />
                   <input
@@ -96,18 +97,20 @@ const PickUp = () => {
                     <>
                       <li
                         onClick={() => {
-                        
-                          if (s.restaurant_name.toLowerCase() !== selected.toLowerCase()) 
-                          {
+
+                          if (s.restaurant_name.toLowerCase() !== selected.toLowerCase()) {
                             setSelected(s.restaurant_name);
                             setOpen(false);
                             setInputValue("");
-                             
+                            handleRestaurantClick(s.map_link);
                           }
-                        }}
-                       
+
+                        }
+
+                        }
+
                         className={`p-1 text-sm hover:bg-pink-100 cursor-pointer ${s.restaurant_name.toLowerCase().startsWith(inputValue) ? `block` : `hidden`
-                        }`}
+                          }`}
                         key={s.id}
                       >
                         {s.restaurant_name}
