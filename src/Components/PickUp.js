@@ -11,6 +11,7 @@ const PickUp = () => {
   );
   const [inputValue, setInputValue] = useState("");
   const [selected, setSelected] = useState("");
+  const [open, setOpen]=useState(false);
 
   const handleRestaurantClick = (mapLink) => {
     setSelectedMapLink(mapLink);
@@ -62,18 +63,21 @@ const PickUp = () => {
           </div>
 
           {/*In Small Device*/}
-          <div>
+          <div className="relative">
             {/* Restaurant List */}
-            <div className="md:hidden mt-36 w-full h-auto py-1">
-              <div className={`flex justify-start items-center gap-5 ${!selected && " text-gray-500"}`}>
+            <div 
+            className="md:hidden mt-36 w-[288px] h-auto py-1 absolute top-0" >
+              <div
+              onClick={()=>setOpen(!open)} 
+              className={`flex justify-between items-center gap-5 ${!selected && " text-gray-700"}`}>
                 {selected
-                  ? selected?.length > 6
-                    ? selected.substring(0, 6) + `...`
+                  ? selected?.length > 20
+                    ? selected.substring(0, 20) + `...`
                     : selected
                   : "Select Restaurant"}
                 <BiChevronDown size={20} />
               </div>
-              <ul className="bg-white mt-2 overflow-y-scroll h-40">
+              <ul className={`bg-white mt-2 overflow-y-scroll ${open ? ` h-40`:`h-0`}`}>
                 <div className="flex items-center px-2 sticky top-0 bg-white">
                   <AiOutlineSearch size={20} className="text-gray-700" />
                   <input
@@ -92,11 +96,16 @@ const PickUp = () => {
                     <>
                       <li
                         onClick={() => {
+                        
                           if (s.restaurant_name.toLowerCase() !== selected.toLowerCase()) 
                           {
                             setSelected(s.restaurant_name);
+                            setOpen(false);
+                            setInputValue("");
+                             
                           }
                         }}
+                       
                         className={`p-1 text-sm hover:bg-pink-100 cursor-pointer ${s.restaurant_name.toLowerCase().startsWith(inputValue) ? `block` : `hidden`
                         }`}
                         key={s.id}
@@ -111,7 +120,7 @@ const PickUp = () => {
           </div>
 
           {/*Map Area*/}
-          <div className="md:w-full md:h-[470px] md:mx-auto">
+          <div className="mt-48 md:w-full md:h-[470px] md:mx-auto">
             <GoogleMapContainer selectedMapLink={selectedMapLink} />
           </div>
         </div>
