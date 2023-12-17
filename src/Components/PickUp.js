@@ -120,7 +120,7 @@ const PickUp = () => {
           </div>
 
           {/*Map Area*/}
-          <div className="mt-48 md:w-full md:h-[470px] md:mx-auto">
+          <div className="mt-48 md:mt-0 md:w-full md:h-[470px] md:mx-auto">
             <GoogleMapContainer selectedMapLink={selectedMapLink} />
           </div>
         </div>
