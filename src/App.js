@@ -6,6 +6,7 @@ import Dinein from "./Components/DineIn";
 import Pandamart from "./Components/PandaMart";
 import Shops from "./Components/Shops";
 import Pickup from "./Components/PickUp";
+import IntersactionObserver from "./Slices/IntersectionObserver";
 
 
 const App = () => {
@@ -19,6 +20,7 @@ const App = () => {
         <Route path="/pandamart" element={<Pandamart/>} />
         <Route path="/shops" element={<Shops/>} />
         <Route path="/pickup" element={<Pickup/>} />
+        <Route path="/observer" element={<IntersactionObserver/>}/>
       </Routes>
       
       <Footer />
