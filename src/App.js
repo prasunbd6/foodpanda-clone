@@ -7,6 +7,7 @@ import Pandamart from "./Components/PandaMart";
 import Shops from "./Components/Shops";
 import Pickup from "./Components/PickUp";
 import IntersactionObserver from "./Slices/IntersectionObserver";
+import { Home } from "./Components/Home";
 
 
 const App = () => {
@@ -15,7 +16,8 @@ const App = () => {
       <Navbar />
       
       <Routes>
-        <Route path="/" element={<Delivery/>} />
+      <Route path="/" element={<Home/>}/>
+        <Route path="/delivery" element={<Delivery/>} />
         <Route path="/dinein" element={<Dinein/>} />
         <Route path="/pandamart" element={<Pandamart/>} />
         <Route path="/shops" element={<Shops/>} />
