@@ -16,25 +16,18 @@ export const HomeContainer = () => {
 
             {/*Input Panel */}
             <div className="
-2xl:left-[80px]
-2xl:top-[450px]
-xl:left-[70px]
-xl:top-[400px]
+                2xl:left-[80px]
+                2xl:top-[450px]
+                xl:left-[70px]
+                xl:top-[400px]
 
-            lg:absolute 
-            lg:top-[340px]
-            lg:left-[60px]
-            lg:w-[458px]
-            lg:flex-row
+                lg:absolute 
+                lg:top-[340px]
+                lg:left-[60px]
+                lg:w-[458px]
+                lg:flex-row
 
-            w-full 
-            bg-white 
-            p-4 
-            rounded-xl 
-            flex 
-            flex-col 
-            items-center 
-            gap-2">
+            w-full bg-white p-4 rounded-xl flex flex-col items-center gap-2">
                 <input type="text" className="
                 lg:w-[340px]
                 w-full h-10 rounded-md focus:outline-none border border-gray-300" />
