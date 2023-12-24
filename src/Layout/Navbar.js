@@ -21,17 +21,17 @@ const Navbar = () => {
 
           <ul className="w-2/12 flex justify-start items-center text-pink-500 gap-4 p-2 md:hidden order-1">
             <li className="rounded md:rounded flex justify-center hover:rounded-full hover:bg-pink-100 p-2 duration-200">
-              <CiUser size={25} />
+              <CiUser size={25}/>
             </li>
           </ul>
 
           {/* Logo & Brand Name */}
-          <div className="md:w-auto flex items-center  text-pink-500 gap-2 md:order-2 order-2">
+          <NavLink to="/" className="md:w-auto flex items-center  text-pink-500 gap-2 md:order-2 order-2">
             <i className="p-1 rounded-lg bg-pink-500">
               <SiFoodpanda size={23} className="bg-white rounded-xl" />
             </i>
             <p className=" font-bold text-2xl md:text-xl">foodpanda</p>
-          </div>
+          </NavLink>
 
           {/* login, Signup & language */}
           <ul className="hidden login-signup-language-md-config md:justify-end gap-2">
@@ -81,7 +81,7 @@ const Navbar = () => {
           <ul className="w-full h-auto flex justify-around items-center text-pink-500 gap-1  shadow-xl order-5 menu-operation-in-md-config">
 
             <li className=" group relative">
-              <NavLink to="/" className="menu-decoration-standby" activeClassName="active">
+              <NavLink to="/delivery" className="menu-decoration-standby" activeClassName="active">
                 <MdOutlineDeliveryDining size={20} /><p className="px-1 md:cursor-pointer">Delivery</p>
                 <span className="absolute -bottom-0 menu-decoration-hover-underline"></span>
               </NavLink>
