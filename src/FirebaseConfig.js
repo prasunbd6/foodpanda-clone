@@ -2,6 +2,9 @@
 import { initializeApp } from "firebase/app";
 import {getAuth} from "firebase/auth"
 
+
+
+// Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyClUpS8sMcjgU0iIZE0ZxFp8PnaKIcUf98",
   authDomain: "foodpanda-clone-407709.firebaseapp.com",
@@ -13,4 +16,5 @@ const firebaseConfig = {
 
 // Initialize Firebase
 export const app = initializeApp(firebaseConfig);
-export const Auth=getAuth(app);
+
+export const Authentication=getAuth(app);

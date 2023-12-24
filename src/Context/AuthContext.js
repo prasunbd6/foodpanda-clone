@@ -1,37 +1,28 @@
 import { createContext, useContext, useEffect, useState } from "react";
-import {
-  // eslint-disable-next-line
-  createUserWithEmailAndPassword,
-  signInWithEmailAndPassword,
-  onAuthStateChanged,
-  signOut,
-  signInWithPopup,
-  GoogleAuthProvider,
-} from "firebase/auth";
-import { Auth } from "../Firebase-Config";
+import {createUserWithEmailAndPassword,signInWithEmailAndPassword,onAuthStateChanged,signOut,signInWithPopup,GoogleAuthProvider} from "firebase/auth";
+import { Authentication } from "../FirebaseConfig";
 
 //Create Context
-export const CreateUserContext = () => {
-  createContext();
-};
+export const UserAuthContext =createContext("");
+
 
 //Create Use Context
-export const UseUserContext = () => {
-  useContext(CreateUserContext);
-};
+export function useUserAuthContext() {
+ return useContext(UserAuthContext);
+}
 
 //Create Provider
-export const ContextProvider = (props) => {
-  const [user, setUser] = useState({});
+export function UserAuthContextProvider (props) {
+  const [user, setUser] = useState();
 
   //Register
   function register(email, password) {
-    return createUserWithEmailAndPassword(Auth, email, password);
+    return createUserWithEmailAndPassword(Authentication, email, password);
   }
 
   //Login
-  function login(email, password) {
-    return signInWithEmailAndPassword(Auth, email, password).then(
+  function Login(email, password) {
+    return signInWithEmailAndPassword(Authentication, email, password).then(
       (userCredential) => {
         // Save the token in Local Storage
         const token = userCredential.accessToken;
@@ -41,14 +32,14 @@ export const ContextProvider = (props) => {
   }
 
   // Logout
-  function logout() {
+  function Logout() {
     localStorage.removeItem("token");
-    return signOut(Auth);
+    return signOut(Authentication);
   }
 
   // On Authentication State Change
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(Auth, (currentUser) => {
+    const unsubscribe = onAuthStateChanged(Authentication, (currentUser) => {
       setUser(currentUser);
     });
     return () => unsubscribe();
@@ -57,17 +48,16 @@ export const ContextProvider = (props) => {
   // Google Sign In
   const googleSignIn = () => {
     const provider = new GoogleAuthProvider();
-    return signInWithPopup(Auth, provider);
-    // return signInWithRedirect(Auth,provider)
+    return signInWithPopup(Authentication, provider);
   };
 
-  const functionExport = { user, register, login, logout, googleSignIn };
+  const functionExport = { user, register, Login, Logout, googleSignIn };
 
   return (
     <>
-      <CreateUserContext.Provider value={functionExport}>
+      <UserAuthContext.Provider value={functionExport}>
         {props.children}
-      </CreateUserContext.Provider>
+      </UserAuthContext.Provider>
     </>
   );
 };

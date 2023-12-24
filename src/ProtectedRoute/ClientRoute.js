@@ -1,11 +1,11 @@
 import { Navigate, Outlet } from "react-router-dom";
-import {UseUserContext} from "../Context/AuthContext"
+import { useUserAuthContext } from "../Context/AuthContext"
 
 export const ClientRoute = () => {
 
-    const { user } = UseUserContext();
+    const { user } = useUserAuthContext();
 
-    return user ? <Outlet/>:<Navigate to="/delivery"/>
-        
-    
+    return user ? <Outlet /> : <Navigate to="/delivery" />
+
+
 }
