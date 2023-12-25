@@ -5,7 +5,7 @@ export const ClientRoute = () => {
 
     const { user } = useUserAuthContext();
 
-    return user ? <Outlet /> : <Navigate to="/delivery" />
+    return user ? <Outlet /> : <Navigate to="/error" />
 
 
 }
