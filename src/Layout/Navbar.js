@@ -1,21 +1,18 @@
 import { SiFoodpanda } from "react-icons/si";
+
 import { CiUser } from "react-icons/ci";
 import { HiOutlineShoppingBag } from "react-icons/hi";
 import { HiOutlineMapPin } from "react-icons/hi2";
-import { AiOutlineHeart } from "react-icons/ai";
+import { AiOutlineHeart, AiOutlineLogout } from "react-icons/ai";
 import { GiShoppingCart, GiForkKnifeSpoon } from "react-icons/gi";
 import { PiGlobeSimpleBold, PiSuitcaseRollingThin } from "react-icons/pi";
-import {
-  MdOutlineKeyboardArrowDown,
-  MdOutlineDeliveryDining,
-  MdOutlineEmojiPeople,
-} from "react-icons/md";
+import { MdOutlineKeyboardArrowDown, MdOutlineDeliveryDining, MdOutlineEmojiPeople } from "react-icons/md";
 import { NavLink } from "react-router-dom";
 import { useUserAuthContext } from "../Context/AuthContext"
 
 const Navbar = () => {
 
-  const { user, googleSignIn, Logout } = useUserAuthContext();
+  const { user, Logout, setOpen, googleSignIn } = useUserAuthContext();
 
 
   //Handle Logout
@@ -23,22 +20,36 @@ const Navbar = () => {
     Logout();
   }
 
-  //Google Sign-In Operation
-  const googleSign = () => {
-    googleSignIn();
-  }
+
+
 
 
   return (
     <>
       <div className="flex flex-col justify-center items-center">
-        <div className="w-full h-auto mt-32 pt-2 flex flex-wrap justify-between items-center bg-white fixed order-1 md:w-full md:h-20 md:mt-14 lg:w-11/12 z-50">
+        <div className="w-full h-auto mt-24 pt-2 flex flex-wrap justify-between items-center bg-white fixed order-1 md:w-full md:h-20 md:mt-14 lg:w-11/12 z-50">
           {/* User Logo & Brand */}
 
           <ul className="w-2/12 flex justify-start items-center text-pink-500 gap-4 p-2 md:hidden order-1">
+
             <li className="rounded md:rounded flex justify-center hover:rounded-full hover:bg-pink-100 p-2 duration-200">
-              <CiUser size={25} />
+              {
+                user && (
+                  <AiOutlineLogout size={25} onClick={handleLogout} />
+                )
+              }
+
+
+              {
+                !user && (
+                  <CiUser size={25} onClick={googleSignIn} />
+                )
+              }
+
+
+
             </li>
+
           </ul>
 
           {/* Logo & Brand Name */}
@@ -62,7 +73,7 @@ const Navbar = () => {
             }
             {!user && (<>
               <li className="md:w-20 border rounded-xl ring-1 ring-pink-500 text-pink-500 p-1 bg-white hover:bg-white hover:border hover:border-pink-500 hover:ring-inset hover:ring-1 hover:ring-pink-500 ease-in-out duration-500">
-                <p className="md:cursor-pointer" onClick={googleSign}>login</p>
+                <p className="md:cursor-pointer" onClick={googleSignIn}>login</p>
               </li>
 
               <li className="md:w-20 border rounded-xl ring-1 ring-pink-500  text-white p-1 bg-pink-500 hover:bg-pink-600 hover:border hover:border-pink-500 ease-in-out duration-300">
@@ -108,7 +119,7 @@ const Navbar = () => {
           </div>
 
           {/* Menu Operation */}
-          <ul className="w-full h-auto flex justify-around items-center text-pink-500 gap-1  shadow-xl order-5 menu-operation-in-md-config">
+          <ul className={`${user? "w-full h-auto flex justify-around items-center text-pink-500 gap-1  shadow-xl order-5 menu-operation-in-md-config":"hidden"}`}>
 
             {user && (<>
 

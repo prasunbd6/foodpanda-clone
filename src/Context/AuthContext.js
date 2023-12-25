@@ -12,8 +12,17 @@ export function useUserAuthContext() {
 }
 
 //Create Provider
-export function UserAuthContextProvider (props) {
+const UserAuthContextProvider=(props)=> {
+
+  //For Modal
+
+  const [open,setOpen]=useState(false);
+
+
+  //Authentication
+
   const [user, setUser] = useState();
+  
 
   //Register
   function register(email, password) {
@@ -39,11 +48,13 @@ export function UserAuthContextProvider (props) {
 
   // On Authentication State Change
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(Authentication, (currentUser) => {
-      setUser(currentUser);
+    const unsubscribe = onAuthStateChanged(Authentication, 
+      (currentUser) => {
+        setUser(currentUser);
     });
     return () => unsubscribe();
   }, []);
+
 
   // Google Sign In
   const googleSignIn = () => {
@@ -51,7 +62,11 @@ export function UserAuthContextProvider (props) {
     return signInWithPopup(Authentication, provider);
   };
 
-  const functionExport = { user, register, Login, Logout, googleSignIn };
+
+
+
+  const functionExport = { user, register, Login, Logout, googleSignIn, open, setOpen };
+
 
   return (
     <>
@@ -61,3 +76,5 @@ export function UserAuthContextProvider (props) {
     </>
   );
 };
+
+export default UserAuthContextProvider;
