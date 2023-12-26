@@ -4,10 +4,19 @@
 @tailwind components;
 @tailwind utilities;
 
-/* login, Signup & language */
 
-.login-signup-language-md-config {
-  @apply md:w-4/12 md:h-14 md:flex md:justify-around md:items-center md:text-center md:py-1 md:order-4;
+/* Others */
+
+
+  .others-ul {
+    @apply md:w-auto md:flex md:justify-between md:items-center md:gap-2;
+  }
+
+
+.others-li{
+  @apply md:w-auto md:border md:rounded-xl md:ring-1 md:ease-in-out md:duration-500
+  md:ring-pink-500 md:text-pink-500 md:p-1 md:bg-white 
+  md:hover:bg-white md:hover:border md:hover:border-pink-500 md:hover:ring-inset md:hover:ring-1 md:hover:ring-pink-500;
 }
 
 /* Address */
@@ -19,20 +28,31 @@
 /* Menu Operation */
 
 .menu-operation-in-md-config {
-  @apply md:justify-start md:text-xl bg-white;
+  @apply 
+  bg-white
+  md:justify-start md:text-xl ;
 }
 
 .menu-decoration-standby {
-  @apply w-full flex justify-center items-center px-1 py-2 border-b-[3px] border-white transition ease-in duration-200
+  @apply 
+  w-full flex justify-center items-center px-1 py-2 
+  border-b-[3px] border-white transition ease-in
+  text-[14px] 
+  duration-200
+
   group-hover:bg-pink-50;
 }
 
 .menu-decoration-standby.active {
-  @apply group-hover:bg-white border-pink-600;
+  @apply 
+  border-pink-600
+  group-hover:bg-white ;
 }
 
 .menu-decoration-hover-underline {
-  @apply group-hover:w-6 group-hover:bg-pink-50 border-b-[3px] border-pink-600
+  @apply 
+  border-b-[3px] border-pink-600
+  group-hover:w-6 group-hover:bg-pink-50
 }
 
 /* Pickup Card Decoration*/
