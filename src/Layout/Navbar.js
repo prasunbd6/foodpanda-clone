@@ -7,22 +7,25 @@ import { AiOutlineHeart, AiOutlineLogout } from "react-icons/ai";
 import { GiShoppingCart, GiForkKnifeSpoon } from "react-icons/gi";
 import { PiGlobeSimpleBold, PiSuitcaseRollingThin } from "react-icons/pi";
 import { MdOutlineKeyboardArrowDown, MdOutlineDeliveryDining, MdOutlineEmojiPeople } from "react-icons/md";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { useUserAuthContext } from "../Context/AuthContext"
 
 const Navbar = () => {
 
-  const { user, Logout, setOpen, googleSignIn } = useUserAuthContext();
+  const { user, Logout,  googleSignIn } = useUserAuthContext();
 
+  const navigate=useNavigate();
 
   //Handle Logout
-  const handleLogout = () => {
-    Logout();
-  }
+const handleLogout=()=>{
+  Logout()
+  .then(()=>{
+    navigate("/");
+  })
+  
+}
 
-
-
-
+  
 
   return (
     <>
