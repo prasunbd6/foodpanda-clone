@@ -1,45 +1,40 @@
-import heroImg from "../Assets/refresh-hero-home-bd.png"
+import heroImg from "../Assets/refresh-hero-home-bd.png";
 
 export const HomeContainer = () => {
-    return (
-        <>
-            <div className="w-full flex justify-center items-center lg:relative">
-                {/*Text & Inbox */}
-                <div className="w-11/12 flex flex-col justify-start items-center">
-                    <p className="text-2xl font-bold lg:text-3xl text-gray-700 px-2">It's the food and groceries you love, delivered</p>
-                </div>
-                {/*Image */}
-                <div className="w-11/12 h-auto flex justify-center items-center">
-                    <img src={heroImg} className="" alt="" />
-                </div>
-            </div>
+  return (
+    <>
+      <div className="w-full flex justify-center items-center">
+        <div className="w-auto h-60 flex flex-col justify-around items-start ">
+          <p className="text-2xl font-bold lg:text-3xl text-gray-700 px-2">
+            It's the food and groceries you love, delivered
+          </p>
 
-            {/*Input Panel */}
-            <div className="
-                2xl:left-[80px]
-                2xl:top-[450px]
-                xl:left-[70px]
-                xl:top-[400px]
+          <div
+            className=" w-[400px]  bg-white mx-2 p-2 rounded-xl flex flex-col justify-start items-center gap-2 
+          in-md-frame"
+          >
+            <input
+              type="text"
+              className="w-full h-10 rounded-md focus:outline-none border border-gray-300 
+        in-md-input"
+            />
 
-                lg:absolute 
-                lg:top-[340px]
-                lg:left-[60px]
-                lg:w-[458px]
-                lg:flex-row
+            <button className="w-full md:w-auto px-4 py-2  rounded-md bg-pink-500 text-white in-md-button">
+              Find
+            </button>
+          </div>
+        </div>
 
-            w-full bg-white p-4 rounded-xl flex flex-col items-center gap-2">
-                <input type="text" className="
-                lg:w-[340px]
-                w-full h-10 rounded-md focus:outline-none border border-gray-300" />
-                <button className="
-                lg:w-[90px]
-                lg:h-[40px]
-                lg:text-md
-                w-full p-1 rounded-md bg-pink-500 text-white">Find Food</button>
+        <div className="w-11/12 h-auto flex justify-center items-center">
+          <img src={heroImg} className="bg-cover" alt="" />
+        </div>
 
-            </div>
-
-
-        </>
-    )
-}
+        {/*
+   <div className="pt-16">
+        
+        </div>
+ */}
+      </div>
+    </>
+  );
+};
