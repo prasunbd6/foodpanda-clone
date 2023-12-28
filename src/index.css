@@ -7,7 +7,22 @@
 /* Input of home */
 
 .in-md-frame{
-  @apply md:flex-row
+  @apply md:flex-row md:hidden
+}
+
+.hidden-in-sm{
+@apply md:visible 
+md:w-[650px] 
+md:flex-row 
+md:bg-white 
+md:mx-2 
+md:p-3 
+md:rounded-xl 
+md:flex 
+md:justify-start 
+md:items-center 
+md:gap-2
+md:z-10
 }
 
 /* Others */
