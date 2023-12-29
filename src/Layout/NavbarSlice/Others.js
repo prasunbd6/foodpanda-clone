@@ -9,22 +9,22 @@ const Others = ({ user, handleLogout, googleSignIn }) => {
         {
           user ? (
             <>
-              <li className="others-li">
+              <li className="others-li text-pink-500">
                 <p className="md:cursor-pointer md:text-center" onClick={handleLogout}>logout</p>
               </li>
             </>) : (<>
-              <li className="others-li">
+              <li className="others-li text-pink-500 others-li-hover">
                 <p className="md:cursor-pointer md:text-center" onClick={googleSignIn}>login</p>
               </li>
 
-              <li className="others-li">
-                <p className="md:cursor-pointer md:text-center">Sign Up</p>
+              <li className="others-li text-white bg-pink-500 hover:ring-pink-500">
+                <p className="md:cursor-pointer md:text-center px-1">Sign Up</p>
               </li>
             </>
           )
         }
 
-        <li className="others-li">
+        <li className="others-li text-pink-500">
           <div className='md:flex'>
             <i>
               <PiGlobeSimpleBold size={20} />
