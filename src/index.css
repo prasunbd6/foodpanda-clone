@@ -6,13 +6,20 @@
 
 /* Input of home */
 
+input[type="text"]:focus~.input-text{
+  @apply
+  bg-white text-[12px] text-black text-opacity-50
+  transform duration-300 ease-in-out translate-x-0 -translate-y-4
+  ;
+}
+
 .in-md-frame{
   @apply md:flex-row md:hidden
 }
 
 .hidden-in-sm{
 @apply md:visible 
-md:w-[650px] 
+md:w-[690px] 
 md:flex-row 
 md:bg-white 
 md:mx-2 
@@ -25,6 +32,8 @@ md:gap-2
 md:z-10
 }
 
+
+
 /* Others */
   .others-ul {
     @apply md:w-[220px] md:h-[45px] md:flex md:justify-around md:items-center md:gap-2;
@@ -34,7 +43,7 @@ md:z-10
 .others-li{
   @apply 
   md:w-auto
-  duration-700 ease-in-out
+  transition duration-700 ease-in-out
   md:border-2 md:rounded-lg md:border-pink-500
   md:ring md:ring-white  
   md:ease-in-out md:duration-500 
@@ -110,19 +119,32 @@ md:z-10
 }
 
 .sort-checked-focus {
-  @apply checked:focus:ring-4 checked:focus:ring-inset checked:focus:ring-pink-500;
+  @apply 
+  checked:focus:ring-4 
+  checked:focus:ring-inset 
+  checked:focus:ring-pink-500;
 }
 
 .sort-focus {
-  @apply focus:outline-none focus:ring-4 focus:ring-inset focus:ring-pink-500;
+  @apply 
+  focus:outline-none 
+  focus:ring-4 
+  focus:ring-inset 
+  focus:ring-pink-500;
 }
 
 .sort-group-hover {
-  @apply group-hover:ring-2 group-hover:ring-inset group-hover:ring-pink-500;
+  @apply 
+  group-hover:ring-2 
+  group-hover:ring-inset 
+  group-hover:ring-pink-500;
 }
 
 .sort-hover-active {
-  @apply hover:active:ring-4 hover:active:ring-inset hover:active:ring-pink-500;
+  @apply 
+  hover:active:ring-4 
+  hover:active:ring-inset 
+  hover:active:ring-pink-500;
 }
 
 /* Footer */

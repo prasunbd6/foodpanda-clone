@@ -25,7 +25,7 @@ const Navbar = () => {
   return (
     <>
       {/*Main Area Fixed */}
-      <div className="bg-white w-full h-auto fixed top-0 z-50">
+      <div className="bg-white w-full h-auto shadow-xl fixed top-0 z-50">
         <div className="flex flex-col">
           {/*portion-1 */}
           <div className="flex justify-between items-center">
