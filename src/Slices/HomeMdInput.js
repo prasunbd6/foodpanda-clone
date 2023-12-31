@@ -17,7 +17,7 @@ const HomeMdInput = ({inputValue,handleInputChange,clearInput,RxCrossCircled}) =
                     placeholder="Street, Postal code"
                     className="
                     w-[530px] 
-                    h-10 
+                    h-14 
                     rounded-md 
                     outline-none 
                     border-2
@@ -28,8 +28,8 @@ const HomeMdInput = ({inputValue,handleInputChange,clearInput,RxCrossCircled}) =
                     transition duration-200
             "/>
                 <span className="
-                absolute left-1 top-5 
-                mx-5 text-md bg-white text-gray-400 text-opacity-80
+                absolute left-1 top-7 
+                mx-7 text-md bg-white text-gray-400 text-opacity-80
                 input-text
             ">
                     Your street and street number
