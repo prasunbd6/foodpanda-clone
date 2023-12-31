@@ -1,4 +1,4 @@
-import heroImg from "../Assets/refresh-hero-home-bd.png";
+import heroImg from "../../Assets/refresh-hero-home-bd.png";
 import HomeMdInput from "./HomeMdInput";
 import { useState } from "react";
 import { RxCrossCircled } from "react-icons/rx";

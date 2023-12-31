@@ -1,9 +1,9 @@
 
 
 
-const HomeMdInput = ({inputValue,handleInputChange,clearInput,RxCrossCircled}) => {
+const HomeMdInput = ({ inputValue, handleInputChange, clearInput, RxCrossCircled }) => {
 
-    
+
 
 
     return (
@@ -28,8 +28,8 @@ const HomeMdInput = ({inputValue,handleInputChange,clearInput,RxCrossCircled}) =
                     transition duration-200
             "/>
                 <span className="
-                absolute left-1 top-7 
-                mx-7 text-md bg-white text-gray-400 text-opacity-80
+                absolute left-0 top-7 
+                mx-6 text-md bg-white text-gray-400 text-opacity-80
                 input-text
             ">
                     Your street and street number
@@ -46,7 +46,7 @@ const HomeMdInput = ({inputValue,handleInputChange,clearInput,RxCrossCircled}) =
 
 
                 <button className="
-                w-full md:w-32 p-2  
+                w-full h-14 md:w-32 p-2  
                 rounded-md bg-pink-500 
                 text-white in-md-button 
                 md:text-[13px]

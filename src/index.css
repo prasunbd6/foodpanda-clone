@@ -9,7 +9,7 @@
 input[type="text"]:focus~.input-text{
   @apply
   bg-white text-[12px] text-black text-opacity-50
-  transform  translate-x-0 -translate-y-7 duration-300 ease-in-out;
+  transform  translate-x-0 -translate-y-6 duration-300 ease-in-out;
 }
 
 .in-md-frame{
